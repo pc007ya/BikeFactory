@@ -32,7 +32,7 @@ jobs:
       - name: Record tested artifact identity
         run: |
           mkdir -p artifacts/browser-qa
-          git rev-parse HEAD > artifacts/browser-qa/commit.txt
+          printf '%s\n' "$GITHUB_SHA" > artifacts/browser-qa/commit.txt
           cp docs/candidate.json artifacts/browser-qa/candidate.json
           sha256sum docs/index.html docs/app.bundle.js docs/asset-manifest.json > artifacts/browser-qa/site-sha256.txt
           node --version > artifacts/browser-qa/node-version.txt
