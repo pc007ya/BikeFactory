@@ -1,0 +1,721 @@
+{
+  "createdUtc": "2026-10-27T11:29:00Z",
+  "source": "https://huggingface.co/datasets/nvidia/simready-assets",
+  "revision": "9eadae061bf3f6fcee629b3286d5593c05415b42",
+  "completeOriginalPackagesDownloaded": {
+    "fileCount": 78,
+    "bytes": 80978194,
+    "location": "../upstream/ (not required by web GLBs)"
+  },
+  "conversionToolchain": {
+    "OpenUSD": "usd-core 26.11",
+    "Blender": "4.3.2",
+    "textures": "Pillow Lanczos, max 512x512 RGB PNG",
+    "validation": "Khronos glTF Validator"
+  },
+  "changes": [
+    "Composed official USD visual geometry; no modeled substitute and no mesh decimation.",
+    "Baked original mesh transforms, retained authored face-corner normals, UVs, material subsets and PreviewSurface PBR texture bindings.",
+    "Triangulated original polygons for glTF; generated tangent basis for normal-map portability.",
+    "Centered horizontal bounds and grounded minimum height at zero; converted Z-up USD to Y-up glTF in meters.",
+    "Resampled texture images to maximum 512 pixels and embedded all PNG textures in GLB.",
+    "Converted PreviewSurface to glTF metallic-roughness; preserved texture transforms including 30x ORM mapping for decals.",
+    "Removed runtime-specific USD/MDL representation and non-visual USD metadata from the web rendering artifact.",
+    "No geometry shape fabrication, substitutions, retopology, physical solver implementation or certification performed."
+  ],
+  "limitations": [
+    "Visual conversion only: GLB does not preserve USDPhysics/PhysX/MuJoCo/Newton variants, collision schemas, mass/friction metadata, semantic label schemas, nonvisual sensor material schemas or SimReady conformance.",
+    "Original packages and original conformance evidence are retained separately; package conformance does not certify this GLB as SimReady. Historical USD metadata also includes failed profile requirements; no current physics validation has been run.",
+    "The upstream cardboard trim material binds its normal input to the trim ORM image. This source binding is deliberately preserved rather than silently corrected.",
+    "Original OmniPBR source files import standard MDL and NVIDIA core_definitions runtime modules. They are preserved in upstream, but GLB uses PreviewSurface instead; no MDL runtime is shipped or required.",
+    "Round-trip renders use neutral QA lights and will not pixel-match NVIDIA thumbnails or other render engines."
+  ],
+  "assets": [
+    {
+      "asset": "barrier_fence_metal_a02",
+      "file": "barrier_fence_metal_a02.glb",
+      "creator": "NVIDIA",
+      "sourceRepository": "https://huggingface.co/datasets/nvidia/simready-assets",
+      "revision": "9eadae061bf3f6fcee629b3286d5593c05415b42",
+      "packageId": "simready.hf.nvidia.simready-assets.barrier_fence_metal_a02.2026.10.08_220144422240",
+      "packageMetadata": "https://huggingface.co/datasets/nvidia/simready-assets/blob/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/com.nvidia.simready.packaging.json",
+      "sourceUsd": "https://huggingface.co/datasets/nvidia/simready-assets/blob/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/sm_barrier_fence_metal_a02_01.usd",
+      "license": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "bytes": 865224,
+      "sha256": "a0d31e1a7b13ff55c9d24d947d4a3931905b296d28655e4a899ebf7e3458e1d5",
+      "triangles": 3388,
+      "vertices": 2544,
+      "meshCount": 1,
+      "materialCount": 1,
+      "drawCallsPerInstance": 1,
+      "embeddedImages": 3,
+      "dimensionsMetersXYZ": [
+        1.229800045490265,
+        1.0717845320024502,
+        0.22999998927116394
+      ],
+      "origin": "centered X/Z, min Y = 0",
+      "upAxis": "Y",
+      "unit": "meter",
+      "loadScale": 1,
+      "extensionsUsed": [],
+      "visualOnly": true,
+      "usdPhysicsOrSemanticSchemasPreserved": false,
+      "dependencyValidation": {
+        "resolvedLayers": 15,
+        "resolvedAssets": 4,
+        "unresolved": []
+      },
+      "gltfValidation": {
+        "validatorVersion": "2.0.0-dev.3.10",
+        "errors": 0,
+        "warnings": 0,
+        "infos": 0
+      },
+      "roundTripGLBRenderVerified": true,
+      "originalFiles": [
+        {
+          "path": "barrier_fence_metal_a02/.metadata/LICENSE.txt",
+          "bytes": 18657,
+          "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/.metadata/LICENSE.txt"
+        },
+        {
+          "path": "barrier_fence_metal_a02/.metadata/com.nvidia.simready.conformance.Package-Candidate@1.0.0.json",
+          "bytes": 891,
+          "sha256": "81ab351e89ae00d4c5dfab771e5da9e260f02c3ce7329b0e144ef6b5576a4f04",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/.metadata/com.nvidia.simready.conformance.Package-Candidate@1.0.0.json"
+        },
+        {
+          "path": "barrier_fence_metal_a02/.metadata/com.nvidia.simready.conformance.Package@1.0.0.json",
+          "bytes": 763,
+          "sha256": "c3912b4e137e4039dc005c144aaa68273c86849313603daffb93bedf34df55ad",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/.metadata/com.nvidia.simready.conformance.Package@1.0.0.json"
+        },
+        {
+          "path": "barrier_fence_metal_a02/.metadata/com.nvidia.simready.packaging.bom.json",
+          "bytes": 6930,
+          "sha256": "060962c86d8ae7e3c813afeeca6857d04413d03d56c4e2ffc2ae710be0c226cf",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/.metadata/com.nvidia.simready.packaging.bom.json"
+        },
+        {
+          "path": "barrier_fence_metal_a02/.metadata/com.nvidia.simready.root_usds.json",
+          "bytes": 103,
+          "sha256": "1821bfc94d71cae27c3332c578a001ed437f988c9b87cc96669c18f193af27e9",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/.metadata/com.nvidia.simready.root_usds.json"
+        },
+        {
+          "path": "barrier_fence_metal_a02/com.nvidia.simready.packaging.json",
+          "bytes": 568,
+          "sha256": "01460d7af4058a3bf89c04fd021625641802fda9c41f70d69a9f69df7f29effc",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/com.nvidia.simready.packaging.json"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/.thumbs/256x256/sm_barrier_fence_metal_a02_01.usd.png",
+          "bytes": 800354,
+          "sha256": "779af5c9915ef71397cb789409608458485454e3118f2013e85b2538d49c8747",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/.thumbs/256x256/sm_barrier_fence_metal_a02_01.usd.png"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/.thumbs/256x256/sm_barrier_fence_metal_a02_01.usd_light.png",
+          "bytes": 290180,
+          "sha256": "1c37159a7d3f53fe6c1d72d035e2e256b4cfedf0fc83388e9f966e73f7e7bed6",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/.thumbs/256x256/sm_barrier_fence_metal_a02_01.usd_light.png"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/.thumbs/256x256/sm_barrier_fence_metal_a02_01.usd_transparent.png",
+          "bytes": 214652,
+          "sha256": "37b86509b32d27d28ce503fbdc09b8962fd016b127f508e4bcf6ee5e2eb33d3d",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/.thumbs/256x256/sm_barrier_fence_metal_a02_01.usd_transparent.png"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/.thumbs/sm_barrier_fence_metal_a02_01_thumbnail.png",
+          "bytes": 503722,
+          "sha256": "5cb10e5f8df330447a5a2c22838f2c82b878f42c45ebc27de4e224d04ef7d821",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/.thumbs/sm_barrier_fence_metal_a02_01_thumbnail.png"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/.thumbs/sm_barrier_fence_metal_a02_01_thumbnail_dark.png",
+          "bytes": 388597,
+          "sha256": "c19a3ba610bf08e16dbaf48a6c530dc95f9c3da68d52b1638b8dcfd8ccbd2cae",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/.thumbs/sm_barrier_fence_metal_a02_01_thumbnail_dark.png"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/Textures/T_MetalFencing_A_Albedo.png",
+          "bytes": 3089662,
+          "sha256": "9b5e7159a6c4f7d55e348a6a5f989310be8f48d923b34e9e131eaad6ca6448a2",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/Textures/T_MetalFencing_A_Albedo.png"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/Textures/T_MetalFencing_A_Normal.png",
+          "bytes": 2615142,
+          "sha256": "b181ebed5b58c901ee914b223cfb035c1886c05892812e9f39407c811a84a2c7",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/Textures/T_MetalFencing_A_Normal.png"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/Textures/T_MetalFencing_A_ORM.png",
+          "bytes": 4292624,
+          "sha256": "89ea2486609d57dfd60245143606177d800d8e364cbb5a81678994304a491df6",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/Textures/T_MetalFencing_A_ORM.png"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/payloads/MuJoCo/disabled.usda",
+          "bytes": 7726,
+          "sha256": "3e608fedb9328133bf37960f7f2ed6ded7700afc744228feba0c57ca41f7c34e",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/payloads/MuJoCo/disabled.usda"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/payloads/MuJoCo/enabled.usda",
+          "bytes": 8363,
+          "sha256": "8cbe0386a61c295935fdaca06f7ee4d4281afa0acf61bff71af5d7d8ef085b1c",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/payloads/MuJoCo/enabled.usda"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/payloads/Newton/disabled.usda",
+          "bytes": 7726,
+          "sha256": "3e608fedb9328133bf37960f7f2ed6ded7700afc744228feba0c57ca41f7c34e",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/payloads/Newton/disabled.usda"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/payloads/Newton/enabled.usda",
+          "bytes": 8307,
+          "sha256": "c7f415e58efb48b9aa9be5594c86e053c7145e9ca4b225b2549fa8d25807d0b7",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/payloads/Newton/enabled.usda"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/payloads/PhysX/disabled.usda",
+          "bytes": 7726,
+          "sha256": "3e608fedb9328133bf37960f7f2ed6ded7700afc744228feba0c57ca41f7c34e",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/payloads/PhysX/disabled.usda"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/payloads/PhysX/enabled.usda",
+          "bytes": 8024,
+          "sha256": "ab0d90cbf5490d9166dab155c5d98f92cad7f134f6e91fd245f750b37a54958f",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/payloads/PhysX/enabled.usda"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/payloads/Physics/physics.usda",
+          "bytes": 8253,
+          "sha256": "701a6f089d948816a064a0f205ddbac428879742d9ac138f1a6a2d1255ba463d",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/payloads/Physics/physics.usda"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/payloads/base.usda",
+          "bytes": 10805,
+          "sha256": "3c285d3a670bdc8644dcec189195c59d737c5666492adede44a95b55d5d7220b",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/payloads/base.usda"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/payloads/geometries.usd",
+          "bytes": 269677,
+          "sha256": "9881aceae428a70a666771fdfdb970735195163f5ae1d76cb921206400f49dca",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/payloads/geometries.usd"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/payloads/instances.usda",
+          "bytes": 8727,
+          "sha256": "263b6cfce49cabef8c2ce511eb88307827ecdb3a7d5a53b7786fb7dfc009f63f",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/payloads/instances.usda"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/payloads/instances_mujoco.usda",
+          "bytes": 8999,
+          "sha256": "7ab9ace60a02803692f7a21944c2407b3ea2655fe662d0ee442ec1ea5abf5b04",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/payloads/instances_mujoco.usda"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/payloads/instances_newton.usda",
+          "bytes": 8850,
+          "sha256": "4fdfcef000d1f963ee31daad72e16b82d14ad054735dd0064f009213c09d329f",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/payloads/instances_newton.usda"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/payloads/instances_physx.usda",
+          "bytes": 8867,
+          "sha256": "7925da75ce2bde34e8d2af59f8fa28e6cef5f2296eeee480517332fdde4e1089",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/payloads/instances_physx.usda"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/payloads/materials.usda",
+          "bytes": 12813,
+          "sha256": "cd12a5d74c3ad69eb0236828df74f03faab803848c18ad26424995d46b092375",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/payloads/materials.usda"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/sm_barrier_fence_metal_a02_01.usd",
+          "bytes": 25011,
+          "sha256": "fdabc4dbd1f7b7894e9e8af27cac140553b702db4e58cf1537fede77d94176a4",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/sm_barrier_fence_metal_a02_01.usd"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/source_assets/OmniPBR.mdl",
+          "bytes": 16010,
+          "sha256": "6e6b3acbccd236e21a6c29964a431d2a53e77251cc6b8b1bc975eb1c62da1781",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/source_assets/OmniPBR.mdl"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/source_assets/OmniPBRBase.mdl",
+          "bytes": 19369,
+          "sha256": "a8fd9fe174e91892e94d06da90ba453a124024c2ce2c033be9d82c9e2f76a3b7",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/source_assets/OmniPBRBase.mdl"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/source_assets/OmniPBR_ClearCoat.mdl",
+          "bytes": 29789,
+          "sha256": "d84c5ba482561c0eaea2e0c5b607358af549e36cd921773462f92dbc4f32cbc3",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/source_assets/OmniPBR_ClearCoat.mdl"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/source_assets/T_MetalFencing_A_Albedo.png",
+          "bytes": 3089662,
+          "sha256": "9b5e7159a6c4f7d55e348a6a5f989310be8f48d923b34e9e131eaad6ca6448a2",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/source_assets/T_MetalFencing_A_Albedo.png"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/source_assets/T_MetalFencing_A_Normal.png",
+          "bytes": 2615142,
+          "sha256": "b181ebed5b58c901ee914b223cfb035c1886c05892812e9f39407c811a84a2c7",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/source_assets/T_MetalFencing_A_Normal.png"
+        },
+        {
+          "path": "barrier_fence_metal_a02/simready_usd/source_assets/T_MetalFencing_A_ORM.png",
+          "bytes": 4292624,
+          "sha256": "89ea2486609d57dfd60245143606177d800d8e364cbb5a81678994304a491df6",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/barrier_fence_metal_a02/simready_usd/source_assets/T_MetalFencing_A_ORM.png"
+        }
+      ],
+      "textures": {
+        "web/textures/barrier_fence_metal_a02/T_MetalFencing_A_Albedo.png": {
+          "source": "upstream/barrier_fence_metal_a02/simready_usd/Textures/T_MetalFencing_A_Albedo.png",
+          "originalSize": [
+            2048,
+            2048
+          ],
+          "webSize": [
+            512,
+            512
+          ],
+          "sourceSha256": "9b5e7159a6c4f7d55e348a6a5f989310be8f48d923b34e9e131eaad6ca6448a2"
+        },
+        "web/textures/barrier_fence_metal_a02/T_MetalFencing_A_ORM.png": {
+          "source": "upstream/barrier_fence_metal_a02/simready_usd/Textures/T_MetalFencing_A_ORM.png",
+          "originalSize": [
+            2048,
+            2048
+          ],
+          "webSize": [
+            512,
+            512
+          ],
+          "sourceSha256": "89ea2486609d57dfd60245143606177d800d8e364cbb5a81678994304a491df6"
+        },
+        "web/textures/barrier_fence_metal_a02/T_MetalFencing_A_Normal.png": {
+          "source": "upstream/barrier_fence_metal_a02/simready_usd/Textures/T_MetalFencing_A_Normal.png",
+          "originalSize": [
+            2048,
+            2048
+          ],
+          "webSize": [
+            512,
+            512
+          ],
+          "sourceSha256": "b181ebed5b58c901ee914b223cfb035c1886c05892812e9f39407c811a84a2c7"
+        }
+      }
+    },
+    {
+      "asset": "box_corrugated_brown_b08",
+      "file": "box_corrugated_brown_b08.glb",
+      "creator": "NVIDIA",
+      "sourceRepository": "https://huggingface.co/datasets/nvidia/simready-assets",
+      "revision": "9eadae061bf3f6fcee629b3286d5593c05415b42",
+      "packageId": "simready.hf.nvidia.simready-assets.box_corrugated_brown_b08.2026.10.09_202034913367",
+      "packageMetadata": "https://huggingface.co/datasets/nvidia/simready-assets/blob/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/com.nvidia.simready.packaging.json",
+      "sourceUsd": "https://huggingface.co/datasets/nvidia/simready-assets/blob/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/sm_box_corrugated_brown_b08_01.usd",
+      "license": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "bytes": 2274120,
+      "sha256": "5c3ca1853f2032965a30b37ccb4af2a11a0fdab1a439896b37d50e91341fce82",
+      "triangles": 15999,
+      "vertices": 14059,
+      "meshCount": 1,
+      "materialCount": 5,
+      "drawCallsPerInstance": 5,
+      "embeddedImages": 7,
+      "dimensionsMetersXYZ": [
+        0.297277495265007,
+        0.3036590814590454,
+        0.3037722557783127
+      ],
+      "origin": "centered X/Z, min Y = 0",
+      "upAxis": "Y",
+      "unit": "meter",
+      "loadScale": 1,
+      "extensionsUsed": [
+        "KHR_texture_transform"
+      ],
+      "visualOnly": true,
+      "usdPhysicsOrSemanticSchemasPreserved": false,
+      "dependencyValidation": {
+        "resolvedLayers": 15,
+        "resolvedAssets": 8,
+        "unresolved": []
+      },
+      "gltfValidation": {
+        "validatorVersion": "2.0.0-dev.3.10",
+        "errors": 0,
+        "warnings": 0,
+        "infos": 2
+      },
+      "roundTripGLBRenderVerified": true,
+      "originalFiles": [
+        {
+          "path": "box_corrugated_brown_b08/.metadata/LICENSE.txt",
+          "bytes": 18657,
+          "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/.metadata/LICENSE.txt"
+        },
+        {
+          "path": "box_corrugated_brown_b08/.metadata/com.nvidia.simready.conformance.Package-Candidate@1.0.0.json",
+          "bytes": 892,
+          "sha256": "6f1c125d874937b32e3acd632a3f2ff7016c179cb1c70830674a7614d61c2f09",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/.metadata/com.nvidia.simready.conformance.Package-Candidate@1.0.0.json"
+        },
+        {
+          "path": "box_corrugated_brown_b08/.metadata/com.nvidia.simready.conformance.Package@1.0.0.json",
+          "bytes": 763,
+          "sha256": "eac960bad7ba3e0bdcf18b8aa299569a34aa95f69843a6bc8f09b11cddd89a48",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/.metadata/com.nvidia.simready.conformance.Package@1.0.0.json"
+        },
+        {
+          "path": "box_corrugated_brown_b08/.metadata/com.nvidia.simready.packaging.bom.json",
+          "bytes": 9597,
+          "sha256": "d773a6fb5bae992b80203f7dd70de87c5700c23d219b1a9c3cbfd2f63504fe73",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/.metadata/com.nvidia.simready.packaging.bom.json"
+        },
+        {
+          "path": "box_corrugated_brown_b08/.metadata/com.nvidia.simready.root_usds.json",
+          "bytes": 104,
+          "sha256": "e69f3adb09ce86321f4a5ded50329734eca31e6acf04cc2855914519d46f2411",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/.metadata/com.nvidia.simready.root_usds.json"
+        },
+        {
+          "path": "box_corrugated_brown_b08/com.nvidia.simready.packaging.json",
+          "bytes": 569,
+          "sha256": "ab8b56b8c6ad1169940ba9d7b786912830b0306b8c4c0f10e2881d5475b4bfe8",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/com.nvidia.simready.packaging.json"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/.thumbs/256x256/sm_box_corrugated_brown_b08_01.usd.png",
+          "bytes": 1069336,
+          "sha256": "c2c4f37089cb98f5ee855d92f915328884ebc0f3445fdbc55550e3ceac36717d",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/.thumbs/256x256/sm_box_corrugated_brown_b08_01.usd.png"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/.thumbs/256x256/sm_box_corrugated_brown_b08_01.usd_light.png",
+          "bytes": 837571,
+          "sha256": "7b3fcb921c280e8f4900d311d690db3bbcd0686081c216a9433d9fc2ba055ed6",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/.thumbs/256x256/sm_box_corrugated_brown_b08_01.usd_light.png"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/.thumbs/256x256/sm_box_corrugated_brown_b08_01.usd_transparent.png",
+          "bytes": 792586,
+          "sha256": "054084ca38e5f76098ad150a6912b88a42e924841f86fae32ae6464497313607",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/.thumbs/256x256/sm_box_corrugated_brown_b08_01.usd_transparent.png"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/.thumbs/sm_box_corrugated_brown_b08_01_thumbnail.png",
+          "bytes": 600054,
+          "sha256": "c2b852d1ed070dd020adde35cd2327c08a9d2f925cb93f4c46a184d7c3432b5e",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/.thumbs/sm_box_corrugated_brown_b08_01_thumbnail.png"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/.thumbs/sm_box_corrugated_brown_b08_01_thumbnail_dark.png",
+          "bytes": 597196,
+          "sha256": "db32537883699ab66288a0a6730b0717c5541f528bb05e76735bd36cf813dc4a",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/.thumbs/sm_box_corrugated_brown_b08_01_thumbnail_dark.png"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/Textures/T_Plastic_Black_A_ORM.png",
+          "bytes": 844997,
+          "sha256": "86a06701c6898c5d0026c92432c01a06ca43b34eb37f08376b9746f0ffa8b6b5",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/Textures/T_Plastic_Black_A_ORM.png"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/Textures/t_corrugatedboxes_b01_tile01_albedo.png",
+          "bytes": 7528129,
+          "sha256": "5db82f3c8f9700b79bb4d2f801c33718c6ea9f406699948ba7c971a676adc5ea",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/Textures/t_corrugatedboxes_b01_tile01_albedo.png"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/Textures/t_corrugatedboxes_b01_tile01_normal.png",
+          "bytes": 8397701,
+          "sha256": "be1966633f7aa8f8156f47f146927a17f35568c3f4a0e5d39260fb4f268c53ac",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/Textures/t_corrugatedboxes_b01_tile01_normal.png"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/Textures/t_corrugatedboxes_b01_tile01_orm.png",
+          "bytes": 4211848,
+          "sha256": "2ad7183e78cb49bcfe1a9591a0c23b423c9fd1a6eb2ea77e07b4cf8386058222",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/Textures/t_corrugatedboxes_b01_tile01_orm.png"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/Textures/t_corrugatedboxes_b01_trim_Albedo.png",
+          "bytes": 2459866,
+          "sha256": "4a24c65f53b4a7420ac8b3cf570e4dd77df0df81c37a730a65c93305b05289b3",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/Textures/t_corrugatedboxes_b01_trim_Albedo.png"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/Textures/t_corrugatedboxes_b01_trim_normal.png",
+          "bytes": 1290348,
+          "sha256": "1061dc411be515d6f2a95a02b4ebf9fcf897c7d5dbe4692a96889d0cd390713f",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/Textures/t_corrugatedboxes_b01_trim_normal.png"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/Textures/t_corrugatedboxes_b01_trim_orm.png",
+          "bytes": 1817980,
+          "sha256": "37aedb3d2bc48129f27d282c604ff2e8ccb152f1ac091067d6cb70c3aedc5005",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/Textures/t_corrugatedboxes_b01_trim_orm.png"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/payloads/MuJoCo/disabled.usda",
+          "bytes": 4395,
+          "sha256": "24f7d30d7530d65f43c849e97807ed26ada3f127356ba10f14766f911bead7c3",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/payloads/MuJoCo/disabled.usda"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/payloads/MuJoCo/enabled.usda",
+          "bytes": 5458,
+          "sha256": "ad2805801cff94e4d05ad7caefbbaaa070fb8edd44ebf7dd844066105ec6181f",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/payloads/MuJoCo/enabled.usda"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/payloads/Newton/disabled.usda",
+          "bytes": 4395,
+          "sha256": "24f7d30d7530d65f43c849e97807ed26ada3f127356ba10f14766f911bead7c3",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/payloads/Newton/disabled.usda"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/payloads/Newton/enabled.usda",
+          "bytes": 5952,
+          "sha256": "ae0c419c8b2ad1970b392b51973682b6cb7a3df84b7da8c99e812fdef3f7913f",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/payloads/Newton/enabled.usda"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/payloads/PhysX/disabled.usda",
+          "bytes": 4395,
+          "sha256": "24f7d30d7530d65f43c849e97807ed26ada3f127356ba10f14766f911bead7c3",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/payloads/PhysX/disabled.usda"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/payloads/PhysX/enabled.usda",
+          "bytes": 4696,
+          "sha256": "0b34a50b917a1d80d03c04fb49cad3e2f335b07939be0cfdc4297c9408867ff9",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/payloads/PhysX/enabled.usda"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/payloads/Physics/physics.usda",
+          "bytes": 6215,
+          "sha256": "bcb90f7e26598d8f3fdead7e5526219d0220a9a983e2decbead78e2b42a74f2e",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/payloads/Physics/physics.usda"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/payloads/base.usda",
+          "bytes": 8907,
+          "sha256": "ef838ddeb69f7482edd6527ff359f566c5cf6b54d43cf374f0ea8774dac5e8ac",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/payloads/base.usda"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/payloads/geometries.usd",
+          "bytes": 1059187,
+          "sha256": "080f4593a2281921ccd7a93cbb33252ba9b4254f651a095f7fda4e428f29472a",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/payloads/geometries.usd"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/payloads/instances.usda",
+          "bytes": 8006,
+          "sha256": "bf39a4062f3cbc471569ffcff38a242e39b194e6be753db3897087fe8fc89739",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/payloads/instances.usda"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/payloads/instances_mujoco.usda",
+          "bytes": 8278,
+          "sha256": "5d7c2f2004c85f3edf74639f3c7c7db9f8428b99753a303b411217b314385dd9",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/payloads/instances_mujoco.usda"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/payloads/instances_newton.usda",
+          "bytes": 8129,
+          "sha256": "11d31a7f6f987249431c4b6aa31c2c299ea9b5680ed3d5a04781aeb2287fbce1",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/payloads/instances_newton.usda"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/payloads/instances_physx.usda",
+          "bytes": 8254,
+          "sha256": "dd4b4dbf9154baccdf1cfae0e242e8cbdf57bb556ab512fbc7586b2a79d95b1f",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/payloads/instances_physx.usda"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/payloads/materials.usda",
+          "bytes": 29433,
+          "sha256": "bbee8d3ffe27012ddae6d73c994712cfbe342d1acd8a8904a3f7497ea372c1d2",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/payloads/materials.usda"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/sm_box_corrugated_brown_b08_01.usd",
+          "bytes": 22948,
+          "sha256": "284db7089bb3f34fdb528b38615100f07328557fe6ca3f514b57e1db8185dd5b",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/sm_box_corrugated_brown_b08_01.usd"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/source_assets/OmniPBR.mdl",
+          "bytes": 16010,
+          "sha256": "6e6b3acbccd236e21a6c29964a431d2a53e77251cc6b8b1bc975eb1c62da1781",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/source_assets/OmniPBR.mdl"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/source_assets/OmniPBRBase.mdl",
+          "bytes": 19369,
+          "sha256": "a8fd9fe174e91892e94d06da90ba453a124024c2ce2c033be9d82c9e2f76a3b7",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/source_assets/OmniPBRBase.mdl"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/source_assets/OmniPBR_ClearCoat.mdl",
+          "bytes": 29789,
+          "sha256": "d84c5ba482561c0eaea2e0c5b607358af549e36cd921773462f92dbc4f32cbc3",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/source_assets/OmniPBR_ClearCoat.mdl"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/source_assets/T_Plastic_Black_A_ORM.png",
+          "bytes": 844997,
+          "sha256": "86a06701c6898c5d0026c92432c01a06ca43b34eb37f08376b9746f0ffa8b6b5",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/source_assets/T_Plastic_Black_A_ORM.png"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/source_assets/t_corrugatedboxes_b01_tile01_albedo.png",
+          "bytes": 7528129,
+          "sha256": "5db82f3c8f9700b79bb4d2f801c33718c6ea9f406699948ba7c971a676adc5ea",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/source_assets/t_corrugatedboxes_b01_tile01_albedo.png"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/source_assets/t_corrugatedboxes_b01_tile01_normal.png",
+          "bytes": 8397701,
+          "sha256": "be1966633f7aa8f8156f47f146927a17f35568c3f4a0e5d39260fb4f268c53ac",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/source_assets/t_corrugatedboxes_b01_tile01_normal.png"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/source_assets/t_corrugatedboxes_b01_tile01_orm.png",
+          "bytes": 4211848,
+          "sha256": "2ad7183e78cb49bcfe1a9591a0c23b423c9fd1a6eb2ea77e07b4cf8386058222",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/source_assets/t_corrugatedboxes_b01_tile01_orm.png"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/source_assets/t_corrugatedboxes_b01_trim_Albedo.png",
+          "bytes": 2459866,
+          "sha256": "4a24c65f53b4a7420ac8b3cf570e4dd77df0df81c37a730a65c93305b05289b3",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/source_assets/t_corrugatedboxes_b01_trim_Albedo.png"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/source_assets/t_corrugatedboxes_b01_trim_normal.png",
+          "bytes": 1290348,
+          "sha256": "1061dc411be515d6f2a95a02b4ebf9fcf897c7d5dbe4692a96889d0cd390713f",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/source_assets/t_corrugatedboxes_b01_trim_normal.png"
+        },
+        {
+          "path": "box_corrugated_brown_b08/simready_usd/source_assets/t_corrugatedboxes_b01_trim_orm.png",
+          "bytes": 1817980,
+          "sha256": "37aedb3d2bc48129f27d282c604ff2e8ccb152f1ac091067d6cb70c3aedc5005",
+          "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/box_corrugated_brown_b08/simready_usd/source_assets/t_corrugatedboxes_b01_trim_orm.png"
+        }
+      ],
+      "textures": {
+        "web/textures/box_corrugated_brown_b08/t_corrugatedboxes_b01_tile01_albedo.png": {
+          "source": "upstream/box_corrugated_brown_b08/simready_usd/Textures/t_corrugatedboxes_b01_tile01_albedo.png",
+          "originalSize": [
+            2048,
+            2048
+          ],
+          "webSize": [
+            512,
+            512
+          ],
+          "sourceSha256": "5db82f3c8f9700b79bb4d2f801c33718c6ea9f406699948ba7c971a676adc5ea"
+        },
+        "web/textures/box_corrugated_brown_b08/t_corrugatedboxes_b01_tile01_orm.png": {
+          "source": "upstream/box_corrugated_brown_b08/simready_usd/Textures/t_corrugatedboxes_b01_tile01_orm.png",
+          "originalSize": [
+            2048,
+            2048
+          ],
+          "webSize": [
+            512,
+            512
+          ],
+          "sourceSha256": "2ad7183e78cb49bcfe1a9591a0c23b423c9fd1a6eb2ea77e07b4cf8386058222"
+        },
+        "web/textures/box_corrugated_brown_b08/t_corrugatedboxes_b01_tile01_normal.png": {
+          "source": "upstream/box_corrugated_brown_b08/simready_usd/Textures/t_corrugatedboxes_b01_tile01_normal.png",
+          "originalSize": [
+            2048,
+            2048
+          ],
+          "webSize": [
+            512,
+            512
+          ],
+          "sourceSha256": "be1966633f7aa8f8156f47f146927a17f35568c3f4a0e5d39260fb4f268c53ac"
+        },
+        "web/textures/box_corrugated_brown_b08/t_corrugatedboxes_b01_trim_Albedo.png": {
+          "source": "upstream/box_corrugated_brown_b08/simready_usd/Textures/t_corrugatedboxes_b01_trim_Albedo.png",
+          "originalSize": [
+            2048,
+            2048
+          ],
+          "webSize": [
+            512,
+            512
+          ],
+          "sourceSha256": "4a24c65f53b4a7420ac8b3cf570e4dd77df0df81c37a730a65c93305b05289b3"
+        },
+        "web/textures/box_corrugated_brown_b08/t_corrugatedboxes_b01_trim_orm.png": {
+          "source": "upstream/box_corrugated_brown_b08/simready_usd/Textures/t_corrugatedboxes_b01_trim_orm.png",
+          "originalSize": [
+            2048,
+            2048
+          ],
+          "webSize": [
+            512,
+            512
+          ],
+          "sourceSha256": "37aedb3d2bc48129f27d282c604ff2e8ccb152f1ac091067d6cb70c3aedc5005"
+        },
+        "web/textures/box_corrugated_brown_b08/T_Plastic_Black_A_ORM.png": {
+          "source": "upstream/box_corrugated_brown_b08/simready_usd/Textures/T_Plastic_Black_A_ORM.png",
+          "originalSize": [
+            1024,
+            1024
+          ],
+          "webSize": [
+            512,
+            512
+          ],
+          "sourceSha256": "86a06701c6898c5d0026c92432c01a06ca43b34eb37f08376b9746f0ffa8b6b5"
+        },
+        "web/textures/box_corrugated_brown_b08/t_corrugatedboxes_b01_trim_normal.png": {
+          "source": "upstream/box_corrugated_brown_b08/simready_usd/Textures/t_corrugatedboxes_b01_trim_normal.png",
+          "originalSize": [
+            2048,
+            2048
+          ],
+          "webSize": [
+            512,
+            512
+          ],
+          "sourceSha256": "1061dc411be515d6f2a95a02b4ebf9fcf897c7d5dbe4692a96889d0cd390713f"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {LeanSimulation} from '../lean-simulation.js';
+import {Simulation} from '../simulation.js';
+import {defaultDevices,ROUTES} from '../plan.js';
+test('unlimited experiment matches original baseline completion',()=>{for(const route of Object.values(ROUTES)){const a=new Simulation(defaultDevices(),{route}),b=new LeanSimulation(defaultDevices(),{route});a.advance(28800);b.advance(28800);assert.equal(b.completed,a.completed);assert.equal(b.wip,a.wip);}});
+test('WIP cap, finite buffers and serial conservation hold at every second',()=>{const s=new LeanSimulation(defaultDevices(),{route:ROUTES.ebike,wipLimit:12,bufferCapacity:2,arrival:60});for(let i=0;i<28800;i++){s.advance(1);assert.ok(s.wip<=12);assert.ok(Object.values(s.queues).every(n=>n<=2));assert.equal(s.wip,Object.values(s.queues).reduce((a,b)=>a+b,0)+Object.values(s.states).filter(p=>p.busy).length);}assert.ok(s.deferred>0);assert.ok(Object.values(s.states).some(p=>p.blockedSeconds>0));});
+test('one-machine route has exact lead time and serial trace',()=>{const s=new LeanSimulation([{id:'a',type:'one',cycle:10}],{route:['one'],arrival:1,wipLimit:1,bufferCapacity:1});s.advance(11);assert.equal(s.completed,1);assert.equal(s.averageLeadSeconds,10);assert.deepEqual(s.finished[0].history.map(e=>e.kind),['release','start','finish','complete']);assert.equal(new Set(s.events.map(e=>e.serial)).size,1);});
+test('fixed timestep batching preserves trace exactly',()=>{const opts={route:ROUTES.bicycle,wipLimit:12,bufferCapacity:2};const a=new LeanSimulation(defaultDevices(),opts),b=new LeanSimulation(defaultDevices(),opts);a.advance(3600);for(let i=0;i<36000;i++)b.advance(.1);assert.deepEqual(b.events,a.events);});
+test('invalid limits and missing stations cannot produce phantom vehicles',()=>{assert.throws(()=>new LeanSimulation([],{route:['a'],bufferCapacity:0}));const s=new LeanSimulation([],{route:['a']});s.advance(1000);assert.equal(s.released,0);assert.equal(s.completed,0);});

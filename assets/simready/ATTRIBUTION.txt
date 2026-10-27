@@ -1,0 +1,23 @@
+NVIDIA SimReady source assets — visual-only glTF adaptations
+
+Creator / attribution: NVIDIA
+Source: https://huggingface.co/datasets/nvidia/simready-assets
+Pinned source revision: 9eadae061bf3f6fcee629b3286d5593c05415b42
+Original asset names: barrier_fence_metal_a02; box_corrugated_brown_b08
+Original USD names: sm_barrier_fence_metal_a02_01.usd; sm_box_corrugated_brown_b08_01.usd
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+License link: https://creativecommons.org/licenses/by/4.0/
+Full license: LICENSE-CC-BY-4.0.txt (copied unchanged from original packages)
+
+Changes made 2026-10-27 for the bicycle production-line prototype:
+- Converted original composed OpenUSD visual geometry/materials to GLB.
+- Retained geometry shape, normals, UVs, material subsets and PreviewSurface texture bindings.
+- Triangulated and generated tangents; no mesh decimation or substitute modeling.
+- Grounded/centered the origin; changed Z-up to Y-up; kept meter scale.
+- Resized PBR textures to max 512px and embedded them in each GLB.
+- Converted shader representation to glTF PBR.
+- Omitted USD physics/semantic schemas and runtime variants. GLBs are VISUAL ONLY, not SimReady-certified simulation assets.
+
+Original source packages, hashes and detailed modifications: provenance.json.
+NVIDIA does not endorse this project or adaptation. No warranties are provided.
+Retain this attribution, the license and change notices when redistributing the adaptations.

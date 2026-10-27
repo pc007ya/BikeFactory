@@ -1,0 +1,11 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {TYPES,defaultDevices,ROUTES} from '../plan.js';
+import {validate,spacingWarnings} from '../layout.js';
+import {Simulation} from '../simulation.js';
+import {createEquipment} from '../models.js';
+import {Box3} from 'three';
+test('27 devices fit factory and maintain 1m assumed rectangles',()=>{const d=defaultDevices();assert.equal(validate(d,TYPES).length,27);assert.deepEqual(spacingWarnings(d,TYPES),[]);});
+test('every equipment mesh stays inside declared footprint',()=>{for(const [type,t] of Object.entries(TYPES)){const b=new Box3().setFromObject(createEquipment(type));assert.ok(b.min.x>=-t.w/2-1e-6&&b.max.x<=t.w/2+1e-6,type+' width');assert.ok(b.min.z>=-t.d/2-1e-6&&b.max.z<=t.d/2+1e-6,type+' depth');}});
+test('routes produce conservative WIP and distinct 8-hour outcomes',()=>{const counts=[];for(const route of Object.values(ROUTES)){const s=new Simulation(defaultDevices(),{route});s.advance(28800);assert.equal(s.released,s.completed+s.wip);assert.equal(s.wip,Object.values(s.queues).reduce((a,b)=>a+b,0)+Object.values(s.states).filter(x=>x.busy).length);assert.ok(s.completed>0);counts.push(s.completed);}assert.ok(counts[0]>counts[1]);});
+test('rotation validates full bounds and rejects nonfinite values',()=>{const d={id:'x',type:'frame',x:38.5,z:0,cycle:0,rotation:90};validate([d],TYPES);assert.throws(()=>validate([{...d,rotation:0}],TYPES));assert.throws(()=>validate([{...d,rotation:NaN}],TYPES));});

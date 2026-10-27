@@ -1,0 +1,214 @@
+{
+  "format_version": "1.0",
+  "items": [
+    {
+      "relative_path": "simready_usd/sm_barrier_fence_metal_a02_01.usd",
+      "size": 25011,
+      "hash": {
+        "sha256": "fdabc4dbd1f7b7894e9e8af27cac140553b702db4e58cf1537fede77d94176a4"
+      }
+    },
+    {
+      "relative_path": "simready_usd/.thumbs/sm_barrier_fence_metal_a02_01_thumbnail.png",
+      "size": 503722,
+      "hash": {
+        "sha256": "5cb10e5f8df330447a5a2c22838f2c82b878f42c45ebc27de4e224d04ef7d821"
+      }
+    },
+    {
+      "relative_path": "simready_usd/.thumbs/sm_barrier_fence_metal_a02_01_thumbnail_dark.png",
+      "size": 388597,
+      "hash": {
+        "sha256": "c19a3ba610bf08e16dbaf48a6c530dc95f9c3da68d52b1638b8dcfd8ccbd2cae"
+      }
+    },
+    {
+      "relative_path": "simready_usd/.thumbs/256x256/sm_barrier_fence_metal_a02_01.usd.png",
+      "size": 800354,
+      "hash": {
+        "sha256": "779af5c9915ef71397cb789409608458485454e3118f2013e85b2538d49c8747"
+      }
+    },
+    {
+      "relative_path": "simready_usd/.thumbs/256x256/sm_barrier_fence_metal_a02_01.usd_light.png",
+      "size": 290180,
+      "hash": {
+        "sha256": "1c37159a7d3f53fe6c1d72d035e2e256b4cfedf0fc83388e9f966e73f7e7bed6"
+      }
+    },
+    {
+      "relative_path": "simready_usd/.thumbs/256x256/sm_barrier_fence_metal_a02_01.usd_transparent.png",
+      "size": 214652,
+      "hash": {
+        "sha256": "37b86509b32d27d28ce503fbdc09b8962fd016b127f508e4bcf6ee5e2eb33d3d"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_MetalFencing_A_Albedo.png",
+      "size": 3089662,
+      "hash": {
+        "sha256": "9b5e7159a6c4f7d55e348a6a5f989310be8f48d923b34e9e131eaad6ca6448a2",
+        "sha256-first1m": "5ffb0b9c4d4e6a6186e8930a4ea3e583e04a8a8234bf31cee0e44192379687cf"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_MetalFencing_A_Normal.png",
+      "size": 2615142,
+      "hash": {
+        "sha256": "b181ebed5b58c901ee914b223cfb035c1886c05892812e9f39407c811a84a2c7",
+        "sha256-first1m": "ee8b80fdcc791ad6d3711d193ee41195b86d5d368fe22a282371ac6286e2a583"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_MetalFencing_A_ORM.png",
+      "size": 4292624,
+      "hash": {
+        "sha256": "89ea2486609d57dfd60245143606177d800d8e364cbb5a81678994304a491df6",
+        "sha256-first1m": "dcff03d73a05952c96ea5dd2ae0645cba1ebf33bc3c1cbc70fda43e632ff3496"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/base.usda",
+      "size": 10805,
+      "hash": {
+        "sha256": "3c285d3a670bdc8644dcec189195c59d737c5666492adede44a95b55d5d7220b"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/instances.usda",
+      "size": 8727,
+      "hash": {
+        "sha256": "263b6cfce49cabef8c2ce511eb88307827ecdb3a7d5a53b7786fb7dfc009f63f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/instances_mujoco.usda",
+      "size": 8999,
+      "hash": {
+        "sha256": "7ab9ace60a02803692f7a21944c2407b3ea2655fe662d0ee442ec1ea5abf5b04"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/instances_newton.usda",
+      "size": 8850,
+      "hash": {
+        "sha256": "4fdfcef000d1f963ee31daad72e16b82d14ad054735dd0064f009213c09d329f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/materials.usda",
+      "size": 12813,
+      "hash": {
+        "sha256": "cd12a5d74c3ad69eb0236828df74f03faab803848c18ad26424995d46b092375"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/geometries.usd",
+      "size": 269677,
+      "hash": {
+        "sha256": "9881aceae428a70a666771fdfdb970735195163f5ae1d76cb921206400f49dca"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/instances_physx.usda",
+      "size": 8867,
+      "hash": {
+        "sha256": "7925da75ce2bde34e8d2af59f8fa28e6cef5f2296eeee480517332fdde4e1089"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/MuJoCo/disabled.usda",
+      "size": 7726,
+      "hash": {
+        "sha256": "3e608fedb9328133bf37960f7f2ed6ded7700afc744228feba0c57ca41f7c34e"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/MuJoCo/enabled.usda",
+      "size": 8363,
+      "hash": {
+        "sha256": "8cbe0386a61c295935fdaca06f7ee4d4281afa0acf61bff71af5d7d8ef085b1c"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/Newton/disabled.usda",
+      "size": 7726,
+      "hash": {
+        "sha256": "3e608fedb9328133bf37960f7f2ed6ded7700afc744228feba0c57ca41f7c34e"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/Newton/enabled.usda",
+      "size": 8307,
+      "hash": {
+        "sha256": "c7f415e58efb48b9aa9be5594c86e053c7145e9ca4b225b2549fa8d25807d0b7"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/PhysX/disabled.usda",
+      "size": 7726,
+      "hash": {
+        "sha256": "3e608fedb9328133bf37960f7f2ed6ded7700afc744228feba0c57ca41f7c34e"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/PhysX/enabled.usda",
+      "size": 8024,
+      "hash": {
+        "sha256": "ab0d90cbf5490d9166dab155c5d98f92cad7f134f6e91fd245f750b37a54958f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/Physics/physics.usda",
+      "size": 8253,
+      "hash": {
+        "sha256": "701a6f089d948816a064a0f205ddbac428879742d9ac138f1a6a2d1255ba463d"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/OmniPBR.mdl",
+      "size": 16010,
+      "hash": {
+        "sha256": "6e6b3acbccd236e21a6c29964a431d2a53e77251cc6b8b1bc975eb1c62da1781"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/OmniPBRBase.mdl",
+      "size": 19369,
+      "hash": {
+        "sha256": "a8fd9fe174e91892e94d06da90ba453a124024c2ce2c033be9d82c9e2f76a3b7"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/OmniPBR_ClearCoat.mdl",
+      "size": 29789,
+      "hash": {
+        "sha256": "d84c5ba482561c0eaea2e0c5b607358af549e36cd921773462f92dbc4f32cbc3"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_MetalFencing_A_Albedo.png",
+      "size": 3089662,
+      "hash": {
+        "sha256": "9b5e7159a6c4f7d55e348a6a5f989310be8f48d923b34e9e131eaad6ca6448a2",
+        "sha256-first1m": "5ffb0b9c4d4e6a6186e8930a4ea3e583e04a8a8234bf31cee0e44192379687cf"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_MetalFencing_A_Normal.png",
+      "size": 2615142,
+      "hash": {
+        "sha256": "b181ebed5b58c901ee914b223cfb035c1886c05892812e9f39407c811a84a2c7",
+        "sha256-first1m": "ee8b80fdcc791ad6d3711d193ee41195b86d5d368fe22a282371ac6286e2a583"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_MetalFencing_A_ORM.png",
+      "size": 4292624,
+      "hash": {
+        "sha256": "89ea2486609d57dfd60245143606177d800d8e364cbb5a81678994304a491df6",
+        "sha256-first1m": "dcff03d73a05952c96ea5dd2ae0645cba1ebf33bc3c1cbc70fda43e632ff3496"
+      }
+    }
+  ]
+}

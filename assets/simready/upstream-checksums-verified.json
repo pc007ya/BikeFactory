@@ -1,0 +1,14 @@
+[
+  {
+    "asset": "barrier_fence_metal_a02",
+    "upstreamBomHashVerified": true,
+    "bomFilesVerified": 29,
+    "failed": []
+  },
+  {
+    "asset": "box_corrugated_brown_b08",
+    "upstreamBomHashVerified": true,
+    "bomFilesVerified": 37,
+    "failed": []
+  }
+]
