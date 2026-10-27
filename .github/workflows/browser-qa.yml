@@ -1,0 +1,60 @@
+name: browser-qa
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: browser-qa-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  chromium-webgl:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out the exact tested commit
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install locked npm dependencies
+        run: npm ci --ignore-scripts
+      - name: Install official Playwright Chromium and OS dependencies
+        run: npx --no-install playwright install --with-deps chromium
+      - name: Record tested artifact identity
+        run: |
+          mkdir -p artifacts/browser-qa
+          git rev-parse HEAD > artifacts/browser-qa/commit.txt
+          sha256sum docs/index.html > artifacts/browser-qa/site-sha256.txt
+          node --version > artifacts/browser-qa/node-version.txt
+          npx --no-install playwright --version > artifacts/browser-qa/playwright-version.txt
+      - name: Serve this commit's Pages files locally
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 --directory docs > /tmp/bikefactory-http.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:4173/ -o /dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/bikefactory-http.log
+          exit 1
+      - name: Real Chromium WebGL visual and interaction checks
+        run: npm run test:browser
+        env:
+          BASE_URL: http://127.0.0.1:4173/
+          CI: true
+      - name: Keep this repository's browser verification evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: browser-qa-${{ github.sha }}
+          path: artifacts/browser-qa/
+          if-no-files-found: error
+          retention-days: 14
