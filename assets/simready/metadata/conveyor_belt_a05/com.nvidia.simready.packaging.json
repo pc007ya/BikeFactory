@@ -1,0 +1,19 @@
+{
+  "format_version": "1.0",
+  "package_id": "simready.hf.nvidia.simready-assets.conveyor_belt_a05.2026.10.09_001821510634",
+  "license": "CC-BY-4.0",
+  "metadata": [
+    {
+      "name": "com.nvidia.simready.packaging.bom.json",
+      "hash": {
+        "sha256": "7e1591e64d1830668b1b499247247c86895f45e2554e986ad691b984c098becc"
+      }
+    }
+  ],
+  "content_hash": {
+    "sha256": "0df9c739c802bf8bd5d46cdf060140ced3f42138df89ef9a3c3b5faf171fbe35"
+  },
+  "package_hash": {
+    "sha256": "67d15527910b53d38ff5297fd235c9f67e034d8023f717bf372260b773182ffd"
+  }
+}

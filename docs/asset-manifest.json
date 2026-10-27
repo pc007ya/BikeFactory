@@ -1,0 +1,125 @@
+[
+  {
+    "id": "barrier_fence_metal_a02",
+    "label": "金屬護欄",
+    "sha256": "a0d31e1a7b13ff55c9d24d947d4a3931905b296d28655e4a899ebf7e3458e1d5",
+    "encoding": "gzip",
+    "byteLength": 865224,
+    "compressedBytes": 793285,
+    "compressedSha256": "4906344d41a0628780986fe7be0e2899b0dfb5fdfd96e2a19ee118e72b7b4e17",
+    "url": "assets/simready/barrier_fence_metal_a02.glb.gz?v=a0d31e1a7b13"
+  },
+  {
+    "id": "box_corrugated_brown_b08",
+    "label": "瓦楞紙箱",
+    "sha256": "5c3ca1853f2032965a30b37ccb4af2a11a0fdab1a439896b37d50e91341fce82",
+    "encoding": "gzip",
+    "byteLength": 2274120,
+    "compressedBytes": 1890244,
+    "compressedSha256": "689c81b5f06734fc24fd9f8a622d47377dd46f2331a770ad44f4198226b03470",
+    "url": "assets/simready/box_corrugated_brown_b08.glb.gz?v=5c3ca1853f20"
+  },
+  {
+    "id": "conveyor_belt_a05",
+    "label": "工業滾筒輸送機",
+    "sha256": "bc8439c574afa753c16a544787e2f449582f1aaaa8250917363449593ff810f7",
+    "encoding": "gzip",
+    "byteLength": 12270108,
+    "compressedBytes": 7460593,
+    "compressedSha256": "7577e4f47ffe8c2c68fc52988540cd51e633b36955204aa6bcc112e1527c08be",
+    "chunks": [
+      {
+        "url": "assets/simready/conveyor_belt_a05.glb.gz.part001?v=bc8439c574af",
+        "bytes": 7340032,
+        "sha256": "38a677282945ba592dfe71293c9abcb7c7dd49703d2c89908d8c5b58ea2b3ed2"
+      },
+      {
+        "url": "assets/simready/conveyor_belt_a05.glb.gz.part002?v=bc8439c574af",
+        "bytes": 120561,
+        "sha256": "58851e2be1b78a375a3986b87c5bd008b28a40af960ff75cd0f088ee1308c340"
+      }
+    ]
+  },
+  {
+    "id": "table_deluxe_packing_a01",
+    "label": "包裝工作台",
+    "sha256": "d495efaec8503871c86e1215d9ed46202f49f8f101941fc7155dfb0f069de2de",
+    "encoding": "gzip",
+    "byteLength": 18332896,
+    "compressedBytes": 12583225,
+    "compressedSha256": "9ef1553a5786d237e6487518a531d58e833c8e460976dabe71c0ed0d94677e62",
+    "chunks": [
+      {
+        "url": "assets/simready/table_deluxe_packing_a01.glb.gz.part001?v=d495efaec850",
+        "bytes": 7340032,
+        "sha256": "2d0da446903706232e6237881e33c71faf53e472cc07da1d3cb09813b4d98b9f"
+      },
+      {
+        "url": "assets/simready/table_deluxe_packing_a01.glb.gz.part002?v=d495efaec850",
+        "bytes": 5243193,
+        "sha256": "db595f130b5be42b3d678a59bf38317dbf791c6cc761617dded99af30898cc7c"
+      }
+    ]
+  },
+  {
+    "id": "table_metal_stainless_a03",
+    "label": "不鏽鋼總裝工作台",
+    "sha256": "6597fa6a5a131851835b5bac4a532ba2b65e1da9379138bca602327196d10c4c",
+    "encoding": "gzip",
+    "byteLength": 1573316,
+    "compressedBytes": 1367187,
+    "compressedSha256": "ef80d0aaea84e3b2dee20cc03d1bd7ef7d0eaf172ce5e1b51b7df9309ec15336",
+    "url": "assets/simready/table_metal_stainless_a03.glb.gz?v=6597fa6a5a13"
+  },
+  {
+    "id": "rack_h3m_s01",
+    "label": "三米倉儲貨架",
+    "sha256": "7d2397c73bad8101037e252bd23486495af104c533f535a02ce55e16b1baba8d",
+    "encoding": "gzip",
+    "byteLength": 14766456,
+    "compressedBytes": 6146961,
+    "compressedSha256": "549bfdbc41a021fd1ff5b3690d88b0818605b470c6f0be0e89d324cdfa327d48",
+    "url": "assets/simready/rack_h3m_s01.glb.gz?v=7d2397c73bad"
+  },
+  {
+    "id": "equipment_mechanic_tool_cart_g01",
+    "label": "機修工具車",
+    "sha256": "53f3025e40dd307f1b576789b377e0de26caa7edec43a870ac6727053884a1cc",
+    "encoding": "gzip",
+    "byteLength": 26782932,
+    "compressedBytes": 13014782,
+    "compressedSha256": "60adcdea94c58e8808d792b20a789eab871b08cb0294190a82c75cc1b0eeb823",
+    "chunks": [
+      {
+        "url": "assets/simready/equipment_mechanic_tool_cart_g01.glb.gz.part001?v=53f3025e40dd",
+        "bytes": 7340032,
+        "sha256": "8dfd0cbc69abab3298b1d57aafea0a00777356eb5a78dc3f41defcfe120dd901"
+      },
+      {
+        "url": "assets/simready/equipment_mechanic_tool_cart_g01.glb.gz.part002?v=53f3025e40dd",
+        "bytes": 5674750,
+        "sha256": "7e1629c642f4f21b132798d4a4c35e52b33678f8b8e9c086f5f1f044f9462909"
+      }
+    ]
+  },
+  {
+    "id": "pallet_wood_recycled_a05",
+    "label": "木托盤",
+    "sha256": "d1a8a370ecb170f28a3ed222d3839274c9888c9a58f070a7fff2d5150bb4792a",
+    "encoding": "gzip",
+    "byteLength": 1279404,
+    "compressedBytes": 1191579,
+    "compressedSha256": "3ced671084efb741f7d23b177356c109ffe9f9801cb8542592ef493f80f80d84",
+    "url": "assets/simready/pallet_wood_recycled_a05.glb.gz?v=d1a8a370ecb1"
+  },
+  {
+    "id": "equipment_bench_vise_a01",
+    "label": "通用桌虎鉗",
+    "sha256": "b30bbb4ad93d2ee3c5197fdf83282d8f28bcd53abc7a6c012ab40cc68b7924d5",
+    "encoding": "gzip",
+    "byteLength": 4698972,
+    "compressedBytes": 3367414,
+    "compressedSha256": "f8c1b825f5753582a384bbc9b606c5c35f8942f510acc3257a293d130c316d5f",
+    "url": "assets/simready/equipment_bench_vise_a01.glb.gz?v=b30bbb4ad93d"
+  }
+]

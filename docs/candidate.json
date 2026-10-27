@@ -1,0 +1,18 @@
+{
+  "candidate": "v0.9-C03.1",
+  "status": "authorized test-site candidate; browser visual approval pending",
+  "files": {
+    "index.html": {
+      "bytes": 23697,
+      "sha256": "8e54417729332a4d89ad11ab06a48fc8061956002fd6ca85c14efee0ba297c61"
+    },
+    "app.bundle.js": {
+      "bytes": 756844,
+      "sha256": "ab9cfeaf0f1f760abb39b30e3e4643d7f918facc2075e95ee4eb7bd5faf3cf46"
+    },
+    "asset-manifest.json": {
+      "bytes": 4835,
+      "sha256": "0721bbd389be4d81c841ba4b5c771d8f271e35399835f20dbfea4128aba150c0"
+    }
+  }
+}

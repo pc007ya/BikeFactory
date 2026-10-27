@@ -1,0 +1,424 @@
+{
+  "format_version": "1.0",
+  "items": [
+    {
+      "relative_path": "simready_usd/sm_pallet_wood_recycled_a05_01.usd",
+      "size": 22288,
+      "hash": {
+        "sha256": "83e0054b3bc16394c971397cdbf86d98e60d31601241783d0418fbd45ea56b9c"
+      }
+    },
+    {
+      "relative_path": "simready_usd/.thumbs/sm_pallet_wood_recycled_a05_01_thumbnail.png",
+      "size": 617341,
+      "hash": {
+        "sha256": "d4878514b9abf342b179c1e66b2847e12ad72595c948275217a403862bd8ad8d"
+      }
+    },
+    {
+      "relative_path": "simready_usd/.thumbs/sm_pallet_wood_recycled_a05_01_thumbnail_dark.png",
+      "size": 523305,
+      "hash": {
+        "sha256": "0af3d107a3b56dda74a9e8e55afb341eb19da7feb9fbc6ced1b21a5aff86a877"
+      }
+    },
+    {
+      "relative_path": "simready_usd/.thumbs/256x256/sm_pallet_wood_recycled_a05_01.usd.png",
+      "size": 937738,
+      "hash": {
+        "sha256": "a88d1d755306d33459eaaf06d9b35ab700d878fc74cf0fd9052d909ab8baafdd"
+      }
+    },
+    {
+      "relative_path": "simready_usd/.thumbs/256x256/sm_pallet_wood_recycled_a05_01.usd_light.png",
+      "size": 593144,
+      "hash": {
+        "sha256": "4970fa12474503661b0a62f513ef31fdbc7d7ceb1f83f8e4dc0ec41c2b64063e"
+      }
+    },
+    {
+      "relative_path": "simready_usd/.thumbs/256x256/sm_pallet_wood_recycled_a05_01.usd_transparent.png",
+      "size": 513357,
+      "hash": {
+        "sha256": "ae45da9025500652622a6344f67e944ae8b90fc3ca0c3b36e018f629e3b3a1fb"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Metal_Glossy_A_Albedo_1.png",
+      "size": 634053,
+      "hash": {
+        "sha256": "4e233488d3d42d94fc8889dde78ca8e546cd5fed08d51f5373384964c9b3a6e5"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Metal_Glossy_A_Normal_1.png",
+      "size": 56586,
+      "hash": {
+        "sha256": "e8254a2ca1b07a70fd151f752acb75b763bbcafb38681ddbb8a000f3452d2da3"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Metal_Glossy_A_ORM_1.png",
+      "size": 531802,
+      "hash": {
+        "sha256": "48f7f6d85358d271f393382ee013635e970bf1ff4d5d66d91537a2f423f1361c"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Wood_Recycled_A1_Albedo.png",
+      "size": 5842346,
+      "hash": {
+        "sha256": "45418be8727fe592d632e2dc99e2eaac17b257ada833703de3a89c662ab3e88b",
+        "sha256-first1m": "5f8bb747d297cf8539a32a9d5b1c8adf1d04ffec5586fa26a0e34bb1f6637bd9"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Wood_Recycled_A1_Normal.png",
+      "size": 3988612,
+      "hash": {
+        "sha256": "7d79fae351f3398b9f1a5685d79dde0d8d6155ac7678e9c0a143204b9e9609ab",
+        "sha256-first1m": "ae7ad1439cef7080b1d009af1d3d3a89799bdec79ddd6183e544347da682e506"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Wood_Recycled_A1_ORM.png",
+      "size": 2772655,
+      "hash": {
+        "sha256": "04d04a0a61420c843b0cee7364f31f137505f3f05f8348c80cb8cff36e83d371",
+        "sha256-first1m": "ef590e1db42f3d8b8980da88e1c55fa713ef5630282e2010478157d26d6c6b41"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Metal_Glossy_A_Albedo_1.png.png",
+      "size": 63946,
+      "hash": {
+        "sha256": "08311ce4d6c7bd7a70c1b0640d2a3b83d2f32c705a8dc251fdf8973dee4de54f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Metal_Glossy_A_Normal_1.png.png",
+      "size": 12313,
+      "hash": {
+        "sha256": "d9532b849fafcb546a5730c391e40d82d21bc6b2a1f2336ab362bac7d59a92b8"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Metal_Glossy_A_ORM_1.png.png",
+      "size": 46968,
+      "hash": {
+        "sha256": "ee7def5e75fd7a440e4b758319db9599f2db548f674ab56caa1ea2158f1baf29"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Wood_Recycled_A1_Albedo.png.png",
+      "size": 88479,
+      "hash": {
+        "sha256": "fc429e69dcc1f89e66562bfa948b56a694f360c56607178285b8eb2d155a491f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Wood_Recycled_A1_Normal.png.png",
+      "size": 57967,
+      "hash": {
+        "sha256": "a954bd96bb14bc19d6387ca981ed65d2b7d78601af074542ac0194082f45d542"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Wood_Recycled_A1_ORM.png.png",
+      "size": 63987,
+      "hash": {
+        "sha256": "d0d291ec63c2ea042f8c86f5a71a16ed857521e796c53d19c56e2fd4e340b7e6"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Metal_Glossy_A_Albedo_1.png.png",
+      "size": 282597,
+      "hash": {
+        "sha256": "470d1a848ae8d1bd59935229c4a54b825f2c2409e85dea872f632597de59de74"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Metal_Glossy_A_Normal_1.png.png",
+      "size": 36314,
+      "hash": {
+        "sha256": "a5d66b8b7f66bbf4421b3b06ccea9aceda39d185aea4209de60beb6c7d582449"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Wood_Recycled_A1_Albedo.png.png",
+      "size": 365919,
+      "hash": {
+        "sha256": "e25c6420a47185122bdfb97d9b03574f797b201a015244a3f03b110f73e90f29"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Wood_Recycled_A1_Normal.png.png",
+      "size": 266478,
+      "hash": {
+        "sha256": "2ed57bd38a48c266058f8c11149b9914af0325a108abb1a5a501acd88c6f9e29"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Metal_Glossy_A_ORM_1.png.png",
+      "size": 205714,
+      "hash": {
+        "sha256": "02d2483653668bc08578d6a84bc8b7cc7f06ae6058eaec192a46693dd84cea78"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Wood_Recycled_A1_ORM.png.png",
+      "size": 260165,
+      "hash": {
+        "sha256": "ea40850b097e75849319359d8b8551bd7538f2eb5a09960287b804bfbf9229d6"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/base.usda",
+      "size": 8856,
+      "hash": {
+        "sha256": "c521165f1e9a8ca2a63a170fd2b79a494e30e0429117a7d96d31d11e26df2a1f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/geometries.usd",
+      "size": 917803,
+      "hash": {
+        "sha256": "670def1938b8a7b6d4454e3918eed79a4f4b68a393d0c4784628eff6aad69ed6"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/instances.usda",
+      "size": 6390,
+      "hash": {
+        "sha256": "4a2829475228582b902309641b2e375ba99a8762cf8458ac44f9dac80814a96e"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/instances_mujoco.usda",
+      "size": 6662,
+      "hash": {
+        "sha256": "c0a6049ffd51d3ba319f3e52286fdfc5948efb9a61a26c6eb9547688ec57376f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/instances_newton.usda",
+      "size": 6513,
+      "hash": {
+        "sha256": "9bf69b7f88a336539f2565da3b6b9fccac3a6f2f275fae142a3558eef5454da3"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/materials.usda",
+      "size": 15335,
+      "hash": {
+        "sha256": "5f9ba603945aebffe2acc4bfc79327a1a86100daed9ae4cedf60b2c2824c8c93"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/instances_physx.usda",
+      "size": 6530,
+      "hash": {
+        "sha256": "8c0f1c39c54839e77aa2485f14f65832aa2b3ec0b35affd1ae88f17b464c430d"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/MuJoCo/disabled.usda",
+      "size": 4394,
+      "hash": {
+        "sha256": "7eb3828088b932c31242217509185478b346b48a394dce16517f60c1532de2e5"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/MuJoCo/enabled.usda",
+      "size": 5369,
+      "hash": {
+        "sha256": "c1d4af3c33ca3d7fe67948f7844057d725b83b471470c1cc0e05a118984aa99f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/Newton/disabled.usda",
+      "size": 4394,
+      "hash": {
+        "sha256": "7eb3828088b932c31242217509185478b346b48a394dce16517f60c1532de2e5"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/Newton/enabled.usda",
+      "size": 5330,
+      "hash": {
+        "sha256": "f8bb80cf814dc9cef681daf9708d3ace4e4ab3155e1e9f76114ba9cddc3b5430"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/PhysX/disabled.usda",
+      "size": 4394,
+      "hash": {
+        "sha256": "7eb3828088b932c31242217509185478b346b48a394dce16517f60c1532de2e5"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/PhysX/enabled.usda",
+      "size": 4802,
+      "hash": {
+        "sha256": "d8b1392989ca66846bc15f360ea21af6aab798303aac47452f4d572b36c9b199"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/Physics/physics.usda",
+      "size": 5251,
+      "hash": {
+        "sha256": "8445dcaa3d4cbdeac28468a919a66205a2ee6577cce25b88b2271e4a4fa18844"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/OmniPBR.mdl",
+      "size": 16010,
+      "hash": {
+        "sha256": "6e6b3acbccd236e21a6c29964a431d2a53e77251cc6b8b1bc975eb1c62da1781"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/OmniPBRBase.mdl",
+      "size": 19369,
+      "hash": {
+        "sha256": "a8fd9fe174e91892e94d06da90ba453a124024c2ce2c033be9d82c9e2f76a3b7"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/OmniPBR_ClearCoat.mdl",
+      "size": 29789,
+      "hash": {
+        "sha256": "d84c5ba482561c0eaea2e0c5b607358af549e36cd921773462f92dbc4f32cbc3"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Metal_Glossy_A_Albedo_1.png",
+      "size": 634053,
+      "hash": {
+        "sha256": "4e233488d3d42d94fc8889dde78ca8e546cd5fed08d51f5373384964c9b3a6e5"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Metal_Glossy_A_ORM_1.png",
+      "size": 531802,
+      "hash": {
+        "sha256": "48f7f6d85358d271f393382ee013635e970bf1ff4d5d66d91537a2f423f1361c"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Metal_Glossy_A_Normal_1.png",
+      "size": 56586,
+      "hash": {
+        "sha256": "e8254a2ca1b07a70fd151f752acb75b763bbcafb38681ddbb8a000f3452d2da3"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Wood_Recycled_A1_Albedo.png",
+      "size": 5842346,
+      "hash": {
+        "sha256": "45418be8727fe592d632e2dc99e2eaac17b257ada833703de3a89c662ab3e88b",
+        "sha256-first1m": "5f8bb747d297cf8539a32a9d5b1c8adf1d04ffec5586fa26a0e34bb1f6637bd9"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Wood_Recycled_A1_Normal.png",
+      "size": 3988612,
+      "hash": {
+        "sha256": "7d79fae351f3398b9f1a5685d79dde0d8d6155ac7678e9c0a143204b9e9609ab",
+        "sha256-first1m": "ae7ad1439cef7080b1d009af1d3d3a89799bdec79ddd6183e544347da682e506"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Wood_Recycled_A1_ORM.png",
+      "size": 2772655,
+      "hash": {
+        "sha256": "04d04a0a61420c843b0cee7364f31f137505f3f05f8348c80cb8cff36e83d371",
+        "sha256-first1m": "ef590e1db42f3d8b8980da88e1c55fa713ef5630282e2010478157d26d6c6b41"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Metal_Glossy_A_Albedo_1.png.png",
+      "size": 63946,
+      "hash": {
+        "sha256": "08311ce4d6c7bd7a70c1b0640d2a3b83d2f32c705a8dc251fdf8973dee4de54f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Metal_Glossy_A_Normal_1.png.png",
+      "size": 12313,
+      "hash": {
+        "sha256": "d9532b849fafcb546a5730c391e40d82d21bc6b2a1f2336ab362bac7d59a92b8"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Metal_Glossy_A_ORM_1.png.png",
+      "size": 46968,
+      "hash": {
+        "sha256": "ee7def5e75fd7a440e4b758319db9599f2db548f674ab56caa1ea2158f1baf29"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Wood_Recycled_A1_Albedo.png.png",
+      "size": 88479,
+      "hash": {
+        "sha256": "fc429e69dcc1f89e66562bfa948b56a694f360c56607178285b8eb2d155a491f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Wood_Recycled_A1_Normal.png.png",
+      "size": 57967,
+      "hash": {
+        "sha256": "a954bd96bb14bc19d6387ca981ed65d2b7d78601af074542ac0194082f45d542"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Wood_Recycled_A1_ORM.png.png",
+      "size": 63987,
+      "hash": {
+        "sha256": "d0d291ec63c2ea042f8c86f5a71a16ed857521e796c53d19c56e2fd4e340b7e6"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Metal_Glossy_A_Albedo_1.png.png",
+      "size": 282597,
+      "hash": {
+        "sha256": "470d1a848ae8d1bd59935229c4a54b825f2c2409e85dea872f632597de59de74"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Metal_Glossy_A_Normal_1.png.png",
+      "size": 36314,
+      "hash": {
+        "sha256": "a5d66b8b7f66bbf4421b3b06ccea9aceda39d185aea4209de60beb6c7d582449"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Metal_Glossy_A_ORM_1.png.png",
+      "size": 205714,
+      "hash": {
+        "sha256": "02d2483653668bc08578d6a84bc8b7cc7f06ae6058eaec192a46693dd84cea78"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Wood_Recycled_A1_Albedo.png.png",
+      "size": 365919,
+      "hash": {
+        "sha256": "e25c6420a47185122bdfb97d9b03574f797b201a015244a3f03b110f73e90f29"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Wood_Recycled_A1_Normal.png.png",
+      "size": 266478,
+      "hash": {
+        "sha256": "2ed57bd38a48c266058f8c11149b9914af0325a108abb1a5a501acd88c6f9e29"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Wood_Recycled_A1_ORM.png.png",
+      "size": 260165,
+      "hash": {
+        "sha256": "ea40850b097e75849319359d8b8551bd7538f2eb5a09960287b804bfbf9229d6"
+      }
+    }
+  ]
+}

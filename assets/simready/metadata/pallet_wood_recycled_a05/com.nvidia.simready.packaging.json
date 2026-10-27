@@ -1,0 +1,19 @@
+{
+  "format_version": "1.0",
+  "package_id": "simready.hf.nvidia.simready-assets.pallet_wood_recycled_a05.2026.10.09_144651003373",
+  "license": "CC-BY-4.0",
+  "metadata": [
+    {
+      "name": "com.nvidia.simready.packaging.bom.json",
+      "hash": {
+        "sha256": "98d826a68a576d83cdd4c9f5b695189ee0b5e169d5d135eba02cbeefac7d8008"
+      }
+    }
+  ],
+  "content_hash": {
+    "sha256": "af55236877171154f1132a84cac0612733f9092c1377da48080ca54020c875f7"
+  },
+  "package_hash": {
+    "sha256": "d69fcb19ab8fef33223a0f127265b837aedae0f037ac288bbbc9450b7de7d6fc"
+  }
+}

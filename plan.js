@@ -27,7 +27,7 @@ export const ZONES=[
 ];
 const entries=[
  ['R01','receive',-34,-18],['R02','storage',-26,-19],['R03','storage',-19,-19],['R04','storage',-26,-12],['R05','storage',-19,-12],
- ['P01','frame',-8,-19],['P02','frame',-1,-19],['P03','wheel',7,-19],['P04','wheel',7,-11],['P05','cart',0,-10],
+ ['P01','frame',-8,-19],['P02','frame',-1,-19],['P03','wheel',7,-19],['P04','wheel',7,-11],['P05','cart',-13,-3],
  ['E01','motor',23,-18],['E02','battery',31,-11],
  ['A01','kit',-34,0],['A02','fork',-22,0],['A03','drive',-10,0],['A04','drive',-10,4],['A05','final',4,0],
  ['C01','conveyor',-28,0],['C02','conveyor',-16,0],['C03','conveyor',-3,0],['C04','conveyor',11,0],

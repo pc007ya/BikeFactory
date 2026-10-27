@@ -1,0 +1,19 @@
+{
+  "format_version": "1.0",
+  "package_id": "simready.hf.nvidia.simready-assets.equipment_mechanic_tool_cart_g01.2026.10.09_022612548149",
+  "license": "CC-BY-4.0",
+  "metadata": [
+    {
+      "name": "com.nvidia.simready.packaging.bom.json",
+      "hash": {
+        "sha256": "275dfd689bd94350c1b3e562f91bdc54f30d8cf5b2fa2a68dff1309655762771"
+      }
+    }
+  ],
+  "content_hash": {
+    "sha256": "b5062b1034c7ff0cc5e6a54746b458da6958d16f3504fbc3084aad72a135888d"
+  },
+  "package_hash": {
+    "sha256": "ddc95c5617c713b5b85e06265c88ce3e3ddce736c56d7bd2110ce3d6dd35cba2"
+  }
+}

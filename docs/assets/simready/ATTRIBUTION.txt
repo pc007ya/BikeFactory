@@ -1,3 +1,32 @@
+NVIDIA SimReady source equipment — visual glTF adaptations for bicycle-line v0.8
+
+Creator / attribution: NVIDIA
+Source: https://huggingface.co/datasets/nvidia/simready-assets
+Pinned source revision: 9eadae061bf3f6fcee629b3286d5593c05415b42
+Assets: conveyor_belt_a05, table_deluxe_packing_a01, rack_h3m_s01, equipment_mechanic_tool_cart_g01, pallet_wood_recycled_a05, table_metal_stainless_a03
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+License link: https://creativecommons.org/licenses/by/4.0/
+Full unchanged upstream license: LICENSE-CC-BY-4.0.txt
+
+Adaptation performed 2026-10-27:
+- Converted original composed OpenUSD visuals to self-contained GLB.
+- Retained all geometry; no decimation, fake replacement meshes, or altered proportions.
+- Retained source UVs, normals, material subsets, PBR constants and texture transforms.
+- Triangulated and generated tangents; merged static meshes and identical materials losslessly.
+- Centered/grounded origins, converted Z-up to Y-up, and kept meter units.
+- Resized original PBR images to maximum 512 px, preserving alpha where present.
+- Applied OpenUSD fallback values for source texture nodes lacking an authored file.
+- Added lossless gzip copies for offline embedding.
+- Removed physics/semantic schema and runtime layers from the GLB visual artifact.
+
+These GLBs are VISUAL-ONLY derivatives, NOT validated SimReady simulation models.
+They contain no process telemetry, engineering analysis, working robot controls, or real-world safety certification.
+NVIDIA does not endorse this project or adaptation. No warranties are provided.
+Retain this attribution, license, source references and change notices when sharing the adaptations.
+Full per-asset SHA, original file BOM, dimensions and changes: provenance.json.
+
+
+Additional v0.7 original props retained:
 NVIDIA SimReady source assets — visual-only glTF adaptations
 
 Creator / attribution: NVIDIA

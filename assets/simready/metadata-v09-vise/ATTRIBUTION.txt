@@ -1,0 +1,24 @@
+NVIDIA SimReady bench vise — visual glTF adaptation
+
+Creator / attribution: NVIDIA
+Original asset: equipment_bench_vise_a01
+Source: https://huggingface.co/datasets/nvidia/simready-assets
+Pinned source revision: 9eadae061bf3f6fcee629b3286d5593c05415b42
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+License link: https://creativecommons.org/licenses/by/4.0/
+Full unchanged original license: LICENSE-CC-BY-4.0.txt
+
+Changes made 2026-10-27:
+- Converted original composed OpenUSD visual geometry and PreviewSurface materials to GLB.
+- Preserved geometry shape, normals, UVs and original material assignments; no decimation.
+- Triangulated faces, generated tangent bases, joined static meshes and deduplicated identical materials.
+- Centered horizontal bounds, grounded origin, changed Z-up to glTF Y-up; kept meter units.
+- Resized original PBR textures to maximum 512 px and embedded all image data.
+- Added a lossless gzip copy verified to decompress to identical GLB bytes.
+- Omitted USD physics/semantics and articulated runtime behavior.
+
+This is a generic bench vise visual model, NOT a bicycle welding fixture or alignment gauge.
+No clamping force, material compatibility, fixture accuracy, process safety or physical behavior has been validated.
+NVIDIA does not endorse this adaptation or the project. No warranties are provided.
+Retain this attribution, license and change notice when sharing.
+Per-file source SHA/BOM and exact dimensions: provenance.json.

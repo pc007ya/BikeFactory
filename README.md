@@ -1,36 +1,29 @@
-# BikeFactory — v0.7 browser-test baseline
+# BikeFactory — v0.9 雙廠測試候選
 
-自行車動態產線的公開測試基線。**這不是正式完成品，也不代表已通過真實瀏覽器或視覺驗收。** 視覺與操作修正版仍在進行。
+公開驗收候選 **v0.9-C03.1**：車架廠、總裝廠與雙廠供料物流。這不是正式交付，也不代表真實瀏覽器畫面已獲品質放行。
 
-## 開啟與部署
+## 開啟與驗收
 
-- `docs/index.html`：已封裝的獨立靜態入口，包含 Three.js 與必要視覺道具，不依賴 CDN；需要 WebGL。
-- `START.html`：相同的離線獨立版。
-- GitHub Pages 初次設定：Settings → Pages → Build and deployment → Source 選 **Deploy from a branch** → Branch 選 **main**，Folder 選 **/docs**，Save。
-- 請以 GitHub Pages 設定頁的實際發布網址為準；提交程式碼不代表 Pages 已啟用或部署成功。
+GitHub Pages 發布 `main` 的 `/docs`。多檔入口 `docs/index.html`、`app.bundle.js`、manifest 與完整資產片段必須一起保留。需要 WebGL 與 gzip `DecompressionStream`。
 
-## 開發
+`docs/candidate.json` 記錄候選名稱及實際網頁雜湊。官方 Playwright/Chromium 工作流測試該 commit 的靜態檔，產出真截圖、互動結果及雙廠供料/品質/物流證據；artifact 記錄 commit。自動測試綠燈不等於視覺放行，須檢查 `REVIEW_REQUIRED` 指定的實際畫面。
+
+## 開發與重建
 
 ```sh
-npm ci --ignore-scripts
+npm ci
 npm test
 npm run dev
-npm run standalone
-cp START.html docs/index.html
+npm run build:web
+# 可選：npm run standalone 產生大體積離線單檔
 ```
 
-Node.js 20+、Python 3。`npm run dev` 後開啟 `http://localhost:8000`。根目錄 `index.html` 是開發入口。
+Node.js 20+、Python 3。prepare 會依公開 manifest 核對每片、串回gzip及解壓GLB的長度/SHA-256，再重建忽略追蹤的中間檔。`npm test` 保留車架/總裝原測試，另檢查實際公開入口；standalone測試前自動生成START。
 
-## 測試範圍與限制
+開發頁 `http://localhost:8000`；web build 輸出 `dist-web/`，須經檢查再整棵更新 `docs/`。不提交巨型START、未壓縮GLB、中間embedded.js、node_modules、快取或內部驗收報告。
 
-本版本包括一般車／電動車工單、物流模式、工序與工時設定、JSON 配置保存及示意機構動作。尺寸、工時與物流參數都是規劃假設，沒有連接真實工廠、PLC 或 MES，不是物理、安全或工程驗證。
+## 範圍及限制
 
-只保存配置；關閉頁面後不保存即時在製品進度。既有自動測試通過不等於真實瀏覽器或視覺驗收完成。
+僅工廠程式、展示素材與測試，沒有 Nevo5 模型。所有工時、品質結果及物流參數皆合成規劃假設；非PLC/MES連線、物理或安全驗證。保存配置，不保存重新開啟後的即時在製品狀態。
 
-## 第三方素材
-
-Three.js：MIT，見 `THIRD_PARTY_NOTICES.txt`。
-
-兩件 NVIDIA SimReady 道具使用 CC BY 4.0 視覺衍生資產。來源、版本、修改、授權與限制見 `assets/simready/ATTRIBUTION.txt`、`LICENSE-CC-BY-4.0.txt` 與 `provenance.json`。轉換未保留 USD 物理與語意結構，不是 SimReady 認證整廠；NVIDIA 不背書本專案。
-
-本 repository 不包含原始 USD 下載包、node_modules、快取、內部代理報告、私有來源或舊版錄影。
+Nine NVIDIA SimReady 視覺衍生資產採 CC BY 4.0；未保留USD物理/語意結構，不是SimReady認證整廠，也無NVIDIA背書。授權與修改見 `docs/assets/simready/ATTRIBUTION.txt`、`ATTRIBUTION-v09-vise.txt`、相應provenance及LICENSE。Three.js MIT見 `THIRD_PARTY_NOTICES.txt`。

@@ -1,0 +1,19 @@
+{
+  "format_version": "1.0",
+  "package_id": "simready.hf.nvidia.simready-assets.table_metal_stainless_a03.2026.10.09_174629469614",
+  "license": "CC-BY-4.0",
+  "metadata": [
+    {
+      "name": "com.nvidia.simready.packaging.bom.json",
+      "hash": {
+        "sha256": "cbf6ed9d3e2c18e611097f48a931e64173a340166896e1865764251d52f0ee41"
+      }
+    }
+  ],
+  "content_hash": {
+    "sha256": "f2e3a685994355fe52789ede46c82eb0f06e68c974c89658af9c2718c6c10150"
+  },
+  "package_hash": {
+    "sha256": "9630bc38ce84a55daefde1e42d700e93ad4b0ece9c2ef764fa907c040e49a1fc"
+  }
+}

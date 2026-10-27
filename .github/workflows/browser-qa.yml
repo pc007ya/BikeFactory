@@ -15,6 +15,8 @@ concurrency:
 jobs:
   chromium-webgl:
     runs-on: ubuntu-24.04
+    container:
+      image: mcr.microsoft.com/playwright:v1.64.1-noble@sha256:47b510dd9230bf0b9bfc9b20102241e577ea7a99334ab4c3ca19f19770e9b8ea
     timeout-minutes: 20
     steps:
       - name: Check out the exact tested commit
@@ -27,13 +29,12 @@ jobs:
           cache: npm
       - name: Install locked npm dependencies
         run: npm ci --ignore-scripts
-      - name: Install official Playwright Chromium and OS dependencies
-        run: npx --no-install playwright install --with-deps chromium
       - name: Record tested artifact identity
         run: |
           mkdir -p artifacts/browser-qa
           git rev-parse HEAD > artifacts/browser-qa/commit.txt
-          sha256sum docs/index.html > artifacts/browser-qa/site-sha256.txt
+          cp docs/candidate.json artifacts/browser-qa/candidate.json
+          sha256sum docs/index.html docs/app.bundle.js docs/asset-manifest.json > artifacts/browser-qa/site-sha256.txt
           node --version > artifacts/browser-qa/node-version.txt
           npx --no-install playwright --version > artifacts/browser-qa/playwright-version.txt
       - name: Serve this commit's Pages files locally
@@ -46,6 +47,7 @@ jobs:
           cat /tmp/bikefactory-http.log
           exit 1
       - name: Real Chromium WebGL visual and interaction checks
+        timeout-minutes: 12
         run: npm run test:browser
         env:
           BASE_URL: http://127.0.0.1:4173/

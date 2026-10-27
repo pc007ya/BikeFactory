@@ -1,0 +1,19 @@
+{
+  "format_version": "1.0",
+  "package_id": "simready.hf.nvidia.simready-assets.equipment_bench_vise_a01.2026.10.09_021419523581",
+  "license": "CC-BY-4.0",
+  "metadata": [
+    {
+      "name": "com.nvidia.simready.packaging.bom.json",
+      "hash": {
+        "sha256": "d29dafefbbe042355caf08c562a53d758e4b0326926883cf8280fcb093877738"
+      }
+    }
+  ],
+  "content_hash": {
+    "sha256": "b6212d91953f3067c254268327a1bfa6ba5901fdefdf5451cc02fae0f82d3f81"
+  },
+  "package_hash": {
+    "sha256": "6438074289326fab5064b365eb7c1ae9c07dc359723272ebb1b35f7276a472f8"
+  }
+}

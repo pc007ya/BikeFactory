@@ -1,0 +1,1418 @@
+{
+  "format_version": "1.0",
+  "items": [
+    {
+      "relative_path": "simready_usd/sm_table_deluxe_packing_a01_01.usd",
+      "size": 22969,
+      "hash": {
+        "sha256": "8a42c068b96a8cb266a296cade1cc0edc6fb02c9bdf18dbfd1e7565954c7ac58"
+      }
+    },
+    {
+      "relative_path": "simready_usd/.thumbs/sm_table_deluxe_packing_a01_01_thumbnail.png",
+      "size": 548089,
+      "hash": {
+        "sha256": "0be29e8f3e2d9d01ae0b0dbfc2cdd4252dc7147d201b458c95338476106133d0"
+      }
+    },
+    {
+      "relative_path": "simready_usd/.thumbs/sm_table_deluxe_packing_a01_01_thumbnail_dark.png",
+      "size": 460364,
+      "hash": {
+        "sha256": "73954a72d7efbdca69876c85b47e7043aa5c1c0f46437f45e5e3c03f2a68a60b"
+      }
+    },
+    {
+      "relative_path": "simready_usd/.thumbs/256x256/sm_table_deluxe_packing_a01_01.usd.png",
+      "size": 662824,
+      "hash": {
+        "sha256": "fa80020c7057226dfee76aff74091056f20468b041203e75124bd943ef1d1f51"
+      }
+    },
+    {
+      "relative_path": "simready_usd/.thumbs/256x256/sm_table_deluxe_packing_a01_01.usd_dark.png",
+      "size": 452745,
+      "hash": {
+        "sha256": "89769e50a7d27a40bbdd0778e2a48a2770eff650cb778d7a4dbbf2bfb616340f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/.thumbs/256x256/sm_table_deluxe_packing_a01_01.usd_light.png",
+      "size": 543081,
+      "hash": {
+        "sha256": "ab2c21e105eb7fa2ad775e779f4586027fbcc6923e3027e8b2886401ebd06705"
+      }
+    },
+    {
+      "relative_path": "simready_usd/.thumbs/256x256/sm_table_deluxe_packing_a01_01.usd_transparent.png",
+      "size": 420849,
+      "hash": {
+        "sha256": "3bb0622b23ad6fe8d9ba043df9af9b00220555e655fcbda4f7d221e78f9b2d92"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_DeluxePackingTable_A01_BubbleRoll_Albedo.png",
+      "size": 5335,
+      "hash": {
+        "sha256": "db30cdcb298bd85df8eddaa8947a9c79b62d3fb914b16f1a6cbf42f2698bb97f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_DeluxePackingTable_A01_BubbleRoll_Normal.png",
+      "size": 778779,
+      "hash": {
+        "sha256": "bb0b04798263d14ef3791a7d81751b25e79ce569b7f3cda0daf1cc9154a32432"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_DeluxePackingTable_A01_BubbleRoll_ORM.png",
+      "size": 505570,
+      "hash": {
+        "sha256": "2a868f2e73fbad2df41b0110b27196aba71d6f186bab43a29035e61b34970ae0"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_DeluxePackingTable_A01_Decal_Albedo.png",
+      "size": 72570,
+      "hash": {
+        "sha256": "b4904be8b64fae91913692d13cedb1af8523a9cea52ff9a7091195744c84e839"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_DeluxePackingTable_A01_Decal_Normal.png",
+      "size": 5356,
+      "hash": {
+        "sha256": "baacedfda9ce8c1bfdab361a1349c5649c351a4d3120267e4f4a092e31d39512"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_DeluxePackingTable_A01_Decal_ORM.png",
+      "size": 5356,
+      "hash": {
+        "sha256": "7457f9f7fcca9ec7299b6137b9a55ba0f2af2e3309bf1a237a269de0a78856f2"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_DeluxePackingTable_A01_PaperRoll_Albedo.png",
+      "size": 1090234,
+      "hash": {
+        "sha256": "fb5b1e1466834c1445a25d958b50770a68ef458d6400bcf6599bf5b1fc709253",
+        "sha256-first1m": "a08c45e6be8bf0ba3d01e2e7d66c01efe70de8cc2235a5153c8d46db304c300a"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_DeluxePackingTable_A01_PaperRoll_Normal.png",
+      "size": 1177892,
+      "hash": {
+        "sha256": "23704d7262194a67a990ec306ce732ec5bf10fec3f57fcd8790f20198490dcde",
+        "sha256-first1m": "cbbf15e00e943573b7b6c60e6322461e70d3791bfd9ec9a442bfa4bdddcd764f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_DeluxePackingTable_A01_PaperRoll_ORM.png",
+      "size": 472859,
+      "hash": {
+        "sha256": "a1880df54af9a7408af2152d6f241e8759a8942132013e14f912b6c0669ed6f8"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_MetalPainted_White_Glossy_A_Normal.png",
+      "size": 548912,
+      "hash": {
+        "sha256": "4afde307066d971a1535dce49b4605a9e58810bd11e591285ba834b9e58b4723"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_MetalPainted_White_Glossy_A_ORM.png",
+      "size": 440396,
+      "hash": {
+        "sha256": "b0e3182b3ba4892cd23a359f7ce37c00612636c3dab824a000654be230c03614"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Metal_Chrome_A_Albedo.png",
+      "size": 1008403,
+      "hash": {
+        "sha256": "24f1d4379e9e0eb0610853e0e3f8f2db8b912e42fea704528c0262882da2a7ed"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Metal_Chrome_A_Normal.png",
+      "size": 235417,
+      "hash": {
+        "sha256": "9b3f4d4be323528e6f23d3d8c9d510a6312bc7eb1df4b4c1e5bd36d535c8e2ca"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Metal_Chrome_A_ORM.png",
+      "size": 787295,
+      "hash": {
+        "sha256": "13a6f8c04ba3102ad702bfd785d5c3045eaf55b23f6677a0b8ea8fdc7e16a26c"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Metal_Glossy_A_Albedo_1.png",
+      "size": 634053,
+      "hash": {
+        "sha256": "4e233488d3d42d94fc8889dde78ca8e546cd5fed08d51f5373384964c9b3a6e5"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Metal_Glossy_A_Normal_1.png",
+      "size": 56586,
+      "hash": {
+        "sha256": "e8254a2ca1b07a70fd151f752acb75b763bbcafb38681ddbb8a000f3452d2da3"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Metal_Glossy_A_ORM_1.png",
+      "size": 531802,
+      "hash": {
+        "sha256": "48f7f6d85358d271f393382ee013635e970bf1ff4d5d66d91537a2f423f1361c"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Metal_Rough_A_Albedo.png",
+      "size": 1365938,
+      "hash": {
+        "sha256": "64a45fe44a159b9b9f87acff71f25e01e2a7ce3c8aec7bd498449e1b118cb2d5",
+        "sha256-first1m": "398f65751f1ae19811c3b54e2d650e09f61766a95edde4dffa6a50f5d75159a7"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Metal_Rough_A_Normal.png",
+      "size": 972205,
+      "hash": {
+        "sha256": "3c9cbdd52c64347f797768c61a66bb695b2fdb2dec2321c2611b52cb99c7d6b9"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Metal_Rough_A_ORM.png",
+      "size": 786272,
+      "hash": {
+        "sha256": "997c646c1d996b45bfd4f4f3c8c7b549785e3fbd24306795f6e9f95ac655f745"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Plastic_Rough_Black_A_Albedo.png",
+      "size": 2772954,
+      "hash": {
+        "sha256": "7fefce8d8de3acadf6dd8da7431388fcf93da75dddd65cb6ad6672ac2bb3f7a4",
+        "sha256-first1m": "359a3d5a8ddb1a980aae3752ed36c5bae0e5815d68484b4363aaf80991773016"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Plastic_Rough_Black_A_Normal.png",
+      "size": 885595,
+      "hash": {
+        "sha256": "29669bb74da1b07ae5aff11a448c9a66a9ba1bfbf2434533618b41016047b40f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Plastic_Rough_Black_A_ORM.png",
+      "size": 845019,
+      "hash": {
+        "sha256": "c928cfc816ece9588e048644b393a485b4c6b88ec8aaa410aad9de3c22fbb0c2"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Rubber_Black_Glossy_A_Albedo_1.png",
+      "size": 616471,
+      "hash": {
+        "sha256": "2df68c99a98b062217be75bd164dd3f40b11f0968869d752baa81f30d8e4f98f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Rubber_Black_Glossy_A_Normal.png",
+      "size": 492391,
+      "hash": {
+        "sha256": "21a6d36dc7a3f23e72e2886bf39da39ba17a6ce4a8751d5a1a73ee0bac3d848f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Rubber_Black_Glossy_A_ORM.png",
+      "size": 867781,
+      "hash": {
+        "sha256": "956abf8e162b955c8a642a09e7d9b7f3287c3aeea8673227e1def9a5ec88f52c"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Wood_Laminate_Gray_A_Albedo.png",
+      "size": 16914,
+      "hash": {
+        "sha256": "c0566c4fc38f4004c8db6d20009d3af675891bd30b574ec24ceb5325597bfbab"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Wood_Laminate_Gray_A_Normal.png",
+      "size": 4655646,
+      "hash": {
+        "sha256": "81ebfea8c17d8942fed2cebd5e13ade2f12729e99c9525320537fc447ca0c848",
+        "sha256-first1m": "bce88cb44238ce85af2e821d9b944dc069a0de613d342872b497ff2e2ccbc5e7"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/T_Wood_Laminate_Gray_A_ORM.png",
+      "size": 5055979,
+      "hash": {
+        "sha256": "915b2f6f4690dad4f6ea14d98751bbde91fd14329200a3d2528174b65ef5084b",
+        "sha256-first1m": "ec83d0a41d5e13cf03d8f83e4e6ee0ed05e5bb54bc21e10445081dc5990399fe"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_DeluxePackingTable_A01_BubbleRoll_Albedo.png.png",
+      "size": 1592,
+      "hash": {
+        "sha256": "e8a12356df1dbae994fb42615698deb0d78df39e420d4c84df549e12bb08f387"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_DeluxePackingTable_A01_BubbleRoll_Normal.png.png",
+      "size": 87006,
+      "hash": {
+        "sha256": "25dddb0cab172a4279f0186536d0f04ce57feccfb5b9312b3a2f01a866c99d83"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_DeluxePackingTable_A01_Decal_Albedo.png.png",
+      "size": 39351,
+      "hash": {
+        "sha256": "a8c7820d038a1230516701b3cefbfb5422e4cde80901f266d7d8b784e98bda40"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_DeluxePackingTable_A01_PaperRoll_ORM.png.png",
+      "size": 39364,
+      "hash": {
+        "sha256": "2febcd6fe4428aa0b6fdd12cd5fb0d7715c27f33057e09cc039a47b4d3ad56b8"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_DeluxePackingTable_A01_Decal_Normal.png.png",
+      "size": 1592,
+      "hash": {
+        "sha256": "7f0e576c26e3ab514910af1f6c5092db27b7c189a4ce37bf609c1774ae53d76d"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_MetalPainted_White_Glossy_A_ORM.png.png",
+      "size": 41334,
+      "hash": {
+        "sha256": "06fc5000a529233f995f9d408bb7acf62f60fc3c89ee4a37294491567e49b544"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_DeluxePackingTable_A01_BubbleRoll_ORM.png.png",
+      "size": 59666,
+      "hash": {
+        "sha256": "2e5ef161dbd8a06dc3aebd6fbc09b96d50c7448a1bfd24f55c4a8018e1656de2"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_DeluxePackingTable_A01_Decal_ORM.png.png",
+      "size": 1591,
+      "hash": {
+        "sha256": "bc1cf57781bc23719665c129fc04e0d3b004bb9dc1c8ee50a94fe13309723953"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Metal_Chrome_A_Albedo.png.png",
+      "size": 72124,
+      "hash": {
+        "sha256": "2105098d4e51ce5cfe1c39260c6a812e3ca33f4bb3451b42149bedfe742b9161"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_MetalPainted_White_Glossy_A_Normal.png.png",
+      "size": 39140,
+      "hash": {
+        "sha256": "c827c4452d8220b3289a9a393d237a4bf10ebb7519de9a4672e4ebab9c5c33b4"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_DeluxePackingTable_A01_PaperRoll_Normal.png.png",
+      "size": 73722,
+      "hash": {
+        "sha256": "18247bd89b083d4c96ae83b90c847c53e780130c29bd1f6b315b4946285ee9fd"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Metal_Chrome_A_ORM.png.png",
+      "size": 61546,
+      "hash": {
+        "sha256": "7d886b1abe36bb6f2b37b10a94e53f29d964aa1b455ffae4966a7082957f37ec"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_DeluxePackingTable_A01_PaperRoll_Albedo.png.png",
+      "size": 73826,
+      "hash": {
+        "sha256": "7b8e07319da137e14979ca14f643591eb76dda4053defd24b2832f2c6ac741ea"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Metal_Chrome_A_Normal.png.png",
+      "size": 43281,
+      "hash": {
+        "sha256": "1fcb54d9d96f0d6c02fd9f17b5e8e6b1760726d5a760d211819d77d8825c6571"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Metal_Glossy_A_Albedo_1.png.png",
+      "size": 63946,
+      "hash": {
+        "sha256": "08311ce4d6c7bd7a70c1b0640d2a3b83d2f32c705a8dc251fdf8973dee4de54f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Metal_Glossy_A_Normal_1.png.png",
+      "size": 12313,
+      "hash": {
+        "sha256": "d9532b849fafcb546a5730c391e40d82d21bc6b2a1f2336ab362bac7d59a92b8"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Metal_Glossy_A_ORM_1.png.png",
+      "size": 46968,
+      "hash": {
+        "sha256": "ee7def5e75fd7a440e4b758319db9599f2db548f674ab56caa1ea2158f1baf29"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Metal_Rough_A_Albedo.png.png",
+      "size": 82364,
+      "hash": {
+        "sha256": "71ce26628eea788a3d8877ba1072ee975f967a11381b9043c23b32873bded34d"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Metal_Rough_A_Normal.png.png",
+      "size": 42831,
+      "hash": {
+        "sha256": "f4373adadc8a50d32fef9de86d8af5dca7201f1a8ae318e74a822bf54ac82696"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Metal_Rough_A_ORM.png.png",
+      "size": 66956,
+      "hash": {
+        "sha256": "b437a1480c1126361944188cf1df825837fb3ec9dfa9909745cdd695293f237c"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Plastic_Rough_Black_A_Albedo.png.png",
+      "size": 49890,
+      "hash": {
+        "sha256": "91164d5fe123d46bb0ab0cc22fea51fbc87ec6cec23ba20d12834ebf490d99a3"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Plastic_Rough_Black_A_Normal.png.png",
+      "size": 35462,
+      "hash": {
+        "sha256": "418ff50faf635338d26103707573be154353d9087b47662d43de1de265bb97cb"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Plastic_Rough_Black_A_ORM.png.png",
+      "size": 62740,
+      "hash": {
+        "sha256": "f19c97838c687d73c715c14994e148f5563c120ffaf8d1135683297782540f82"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Rubber_Black_Glossy_A_Albedo_1.png.png",
+      "size": 75484,
+      "hash": {
+        "sha256": "d4f05c974253b66728905bf0fb36c5a4099a0bcfc20931f441f706f2969f2880"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Rubber_Black_Glossy_A_Normal.png.png",
+      "size": 39940,
+      "hash": {
+        "sha256": "4c3486295361f0f2ccedb7f823b3c1a826d85105a4aec2de2cb47a03e9fca09e"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Rubber_Black_Glossy_A_ORM.png.png",
+      "size": 65718,
+      "hash": {
+        "sha256": "b254376dd03de415ee99e9db7b676223b95867b7be8087e0f14475204b91b822"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Wood_Laminate_Gray_A_Albedo.png.png",
+      "size": 1593,
+      "hash": {
+        "sha256": "6f428b9a53a2c77762fdd8c080bd49a1c72ab62df74cec6bbc1b315716520bfc"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Wood_Laminate_Gray_A_Normal.png.png",
+      "size": 86131,
+      "hash": {
+        "sha256": "5158b604781e6af1b8804997cf43726b0aa16ecd58831b67bb01723608a91830"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/256x256/T_Wood_Laminate_Gray_A_ORM.png.png",
+      "size": 127419,
+      "hash": {
+        "sha256": "86df928bdb0ea22504e099783d1504d0d3de8bc68139325a0df28b5023c66ff8"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_DeluxePackingTable_A01_BubbleRoll_Albedo.png.png",
+      "size": 4984,
+      "hash": {
+        "sha256": "06bd129cf487916ecd51eb73afab7946df67fc5e74326ab7e5dbae5224a8c3f3"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_DeluxePackingTable_A01_BubbleRoll_Normal.png.png",
+      "size": 326363,
+      "hash": {
+        "sha256": "ec17c0f0cd843001a5b2dd52de0b3b24de3b4f1c25f84ebf165a2ff3eaa8bbd1"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_DeluxePackingTable_A01_BubbleRoll_ORM.png.png",
+      "size": 204911,
+      "hash": {
+        "sha256": "2568221b158e008ee3329534ef36ff4037f998fac16be1c4890dc8defcb3e458"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_DeluxePackingTable_A01_Decal_Albedo.png.png",
+      "size": 80667,
+      "hash": {
+        "sha256": "6b2afee65e0058b7cebbfa714900d5ffd0fbc001a95a2b65e626c3ff479389d1"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_DeluxePackingTable_A01_Decal_Normal.png.png",
+      "size": 4984,
+      "hash": {
+        "sha256": "515a7e061f92cbe4e988010d327ededa5903cb10e0db2abab03db4da18b39e98"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_DeluxePackingTable_A01_Decal_ORM.png.png",
+      "size": 4983,
+      "hash": {
+        "sha256": "ab4e997fcfc9aaa0237fd22dac4f0591c1a635e628cc6b11d28bcc8e719f4b4f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_DeluxePackingTable_A01_PaperRoll_Albedo.png.png",
+      "size": 312113,
+      "hash": {
+        "sha256": "602de8228a43d74171640b899b0e6cbfd99ee851097be3285d7439b8bf9b791c"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_DeluxePackingTable_A01_PaperRoll_Normal.png.png",
+      "size": 308035,
+      "hash": {
+        "sha256": "55b0a23ec326f0506b58c6bba4a83b681cf304da1d362175d9f8d89ac3dc7cdd"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_DeluxePackingTable_A01_PaperRoll_ORM.png.png",
+      "size": 168615,
+      "hash": {
+        "sha256": "469e8c89583a1d53cd1ef8f96475b8f6f3f3028d26fa93ec928da23e1a5d7838"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_MetalPainted_White_Glossy_A_Normal.png.png",
+      "size": 202256,
+      "hash": {
+        "sha256": "1504f23ebec31ab504825f643de0d004c8289649fc557b792ec244daf07b0b6f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_MetalPainted_White_Glossy_A_ORM.png.png",
+      "size": 181470,
+      "hash": {
+        "sha256": "ab9e1c12f9282e8381a0b28e29a8b76605a2c52bf5bbe370d93cf473bae2db86"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Metal_Chrome_A_Albedo.png.png",
+      "size": 287728,
+      "hash": {
+        "sha256": "48610781c15d13b13c69854437806ffbb84d240f53ff7adf4738e972c37013e0"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Metal_Chrome_A_Normal.png.png",
+      "size": 151188,
+      "hash": {
+        "sha256": "5b4908375639fac1d8bf312345aa13d04919062a3231f484ea6c897c9a592bb3"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Metal_Chrome_A_ORM.png.png",
+      "size": 248814,
+      "hash": {
+        "sha256": "2a3297f2c44a08716a28e29f1f42c99ffcf38ebb0ea84bc1a93077c53e6ced8a"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Metal_Glossy_A_Albedo_1.png.png",
+      "size": 282597,
+      "hash": {
+        "sha256": "470d1a848ae8d1bd59935229c4a54b825f2c2409e85dea872f632597de59de74"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Metal_Glossy_A_Normal_1.png.png",
+      "size": 36314,
+      "hash": {
+        "sha256": "a5d66b8b7f66bbf4421b3b06ccea9aceda39d185aea4209de60beb6c7d582449"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Metal_Glossy_A_ORM_1.png.png",
+      "size": 205714,
+      "hash": {
+        "sha256": "02d2483653668bc08578d6a84bc8b7cc7f06ae6058eaec192a46693dd84cea78"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Metal_Rough_A_Albedo.png.png",
+      "size": 355094,
+      "hash": {
+        "sha256": "e1461d9eb09457c313a74fd6831c9c6171a7ff627816d7241e79fa1a07d51188"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Metal_Rough_A_Normal.png.png",
+      "size": 234771,
+      "hash": {
+        "sha256": "18779fe9de188bc09325f3c8d2c7ba4c17bedcae578a3f421d83a2f2aa123ac5"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Metal_Rough_A_ORM.png.png",
+      "size": 258876,
+      "hash": {
+        "sha256": "4335f38e6a4d8cd9f60b3e56c10bde8cc81eb40e86622a30628f1a020b9dadd0"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Plastic_Rough_Black_A_Albedo.png.png",
+      "size": 211003,
+      "hash": {
+        "sha256": "5f6a0c849a0c88f4393c3360732faccefd5063409ab2ebc10aa4ad350a2e2a65"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Plastic_Rough_Black_A_Normal.png.png",
+      "size": 208035,
+      "hash": {
+        "sha256": "b6f6983d2a533a0f5668168c5a6aac5ff25e3953330f7b7578438634f7df54fe"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Plastic_Rough_Black_A_ORM.png.png",
+      "size": 265925,
+      "hash": {
+        "sha256": "1205c4c1b16a34966d7eda537ee91c592602cf0db440b0977431c88213005164"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Rubber_Black_Glossy_A_Albedo_1.png.png",
+      "size": 305315,
+      "hash": {
+        "sha256": "df42e70ebf227735122ac77ca57867c476b08405a11ab1f627f7f5e46af703ca"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Rubber_Black_Glossy_A_Normal.png.png",
+      "size": 178390,
+      "hash": {
+        "sha256": "6e7618dc9aa475faa965fd61fc2edc4246066460b8b5fed2704121225c25ee77"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Rubber_Black_Glossy_A_ORM.png.png",
+      "size": 266823,
+      "hash": {
+        "sha256": "e6c8d038fa6fcbc1940444f119ed1795661fb2f65b67564df0d213771da887ff"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Wood_Laminate_Gray_A_Albedo.png.png",
+      "size": 4985,
+      "hash": {
+        "sha256": "9816bec8f19890fa427733bdf46f264e6c0cfe7c5b461f49bd624433c6fcbd2f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Wood_Laminate_Gray_A_Normal.png.png",
+      "size": 404368,
+      "hash": {
+        "sha256": "022d97829867ceb09da6cadce8b5f16e07314d001f3a52b58d9be4925b11f081"
+      }
+    },
+    {
+      "relative_path": "simready_usd/Textures/.thumbs/512x512/T_Wood_Laminate_Gray_A_ORM.png.png",
+      "size": 545023,
+      "hash": {
+        "sha256": "13b32042b80afb6b5fc0da84f7ea5d66196638bed16d14828d088c9c7cbd9ec1"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/base.usda",
+      "size": 29822,
+      "hash": {
+        "sha256": "d27d4183f5fad4536cf5c68d72d4bd537dcaffff59fa5adcdfe53531a0d28aff"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/geometries.usd",
+      "size": 26817653,
+      "hash": {
+        "sha256": "fe18bd4df5630af94f3bc89cf6122cc38c36711f66bc6113e9970fe57e0878e4",
+        "sha256-first1m": "6e5f195064460a4cb88bf4ad268d12ae1d4c05371bf3aaaf4d1101a5a57f6474"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/instances.usda",
+      "size": 24681,
+      "hash": {
+        "sha256": "d271a7565ffb3a6f568762ea22ab45ad529214515b1aaa9c572ddb8fe03e2fc1"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/instances_mujoco.usda",
+      "size": 27129,
+      "hash": {
+        "sha256": "49cf61af87bcfa3df5a2b7c9ec79ef9aab9b149ae1adf186a04877b9e74e9328"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/instances_newton.usda",
+      "size": 25788,
+      "hash": {
+        "sha256": "37227c0377b1185222143dd3ff818b35f3e873856b092a1f8381bbb69cf52a3f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/instances_physx.usda",
+      "size": 26897,
+      "hash": {
+        "sha256": "ace4fa1a7975f4edabb27e67d0900b8d75e051fbca047a5c73981d686d070ef1"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/materials.usda",
+      "size": 63713,
+      "hash": {
+        "sha256": "b73634f244dfcee77339548462dc8db0d2efc2e8eccea3cc4eaa281fae2081d4"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/MuJoCo/disabled.usda",
+      "size": 5911,
+      "hash": {
+        "sha256": "9dabf519592083526c459b2c699974c8490008b04d503310e2dcf1ce8b98a4da"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/MuJoCo/enabled.usda",
+      "size": 10752,
+      "hash": {
+        "sha256": "e0a2ebb733e469c5c61392e657b5496fe278510970eee7cd6834f63bfad52147"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/Newton/disabled.usda",
+      "size": 5911,
+      "hash": {
+        "sha256": "9dabf519592083526c459b2c699974c8490008b04d503310e2dcf1ce8b98a4da"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/Newton/enabled.usda",
+      "size": 10559,
+      "hash": {
+        "sha256": "21a8d18d46483fa5237dc347d9259d7922ef20fe5021a8485d6e31f8d2cda44d"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/PhysX/disabled.usda",
+      "size": 5911,
+      "hash": {
+        "sha256": "9dabf519592083526c459b2c699974c8490008b04d503310e2dcf1ce8b98a4da"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/PhysX/enabled.usda",
+      "size": 8652,
+      "hash": {
+        "sha256": "b2ce05a56ba59ef973288432e5ced38ff36cb3423558e74aa03e24b7e06af90b"
+      }
+    },
+    {
+      "relative_path": "simready_usd/payloads/Physics/physics.usda",
+      "size": 18396,
+      "hash": {
+        "sha256": "0cb57fce4ade80671040bcaf7fc62ff8f672df8b5840848edd2ac52658995fe3"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/OmniGlass.mdl",
+      "size": 10205,
+      "hash": {
+        "sha256": "31a93eda2387572db4930a8b22f51e100716809e859505c97b82a17ac43d1e30"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/OmniGlass_Opacity.mdl",
+      "size": 17706,
+      "hash": {
+        "sha256": "b6110a46bb9e8cd94f20cf7d78992f6f81cd5546bbab277cf950256faae80261"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/OmniPBR.mdl",
+      "size": 16010,
+      "hash": {
+        "sha256": "6e6b3acbccd236e21a6c29964a431d2a53e77251cc6b8b1bc975eb1c62da1781"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/OmniPBRBase.mdl",
+      "size": 19369,
+      "hash": {
+        "sha256": "a8fd9fe174e91892e94d06da90ba453a124024c2ce2c033be9d82c9e2f76a3b7"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/OmniPBR_ClearCoat.mdl",
+      "size": 29789,
+      "hash": {
+        "sha256": "d84c5ba482561c0eaea2e0c5b607358af549e36cd921773462f92dbc4f32cbc3"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_DeluxePackingTable_A01_BubbleRoll_Albedo.png",
+      "size": 5335,
+      "hash": {
+        "sha256": "db30cdcb298bd85df8eddaa8947a9c79b62d3fb914b16f1a6cbf42f2698bb97f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_DeluxePackingTable_A01_BubbleRoll_Normal.png",
+      "size": 778779,
+      "hash": {
+        "sha256": "bb0b04798263d14ef3791a7d81751b25e79ce569b7f3cda0daf1cc9154a32432"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_DeluxePackingTable_A01_BubbleRoll_ORM.png",
+      "size": 505570,
+      "hash": {
+        "sha256": "2a868f2e73fbad2df41b0110b27196aba71d6f186bab43a29035e61b34970ae0"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_DeluxePackingTable_A01_Decal_Albedo.png",
+      "size": 72570,
+      "hash": {
+        "sha256": "b4904be8b64fae91913692d13cedb1af8523a9cea52ff9a7091195744c84e839"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_DeluxePackingTable_A01_Decal_Normal.png",
+      "size": 5356,
+      "hash": {
+        "sha256": "baacedfda9ce8c1bfdab361a1349c5649c351a4d3120267e4f4a092e31d39512"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_DeluxePackingTable_A01_Decal_ORM.png",
+      "size": 5356,
+      "hash": {
+        "sha256": "7457f9f7fcca9ec7299b6137b9a55ba0f2af2e3309bf1a237a269de0a78856f2"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_DeluxePackingTable_A01_PaperRoll_Albedo.png",
+      "size": 1090234,
+      "hash": {
+        "sha256": "fb5b1e1466834c1445a25d958b50770a68ef458d6400bcf6599bf5b1fc709253",
+        "sha256-first1m": "a08c45e6be8bf0ba3d01e2e7d66c01efe70de8cc2235a5153c8d46db304c300a"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_DeluxePackingTable_A01_PaperRoll_Normal.png",
+      "size": 1177892,
+      "hash": {
+        "sha256": "23704d7262194a67a990ec306ce732ec5bf10fec3f57fcd8790f20198490dcde",
+        "sha256-first1m": "cbbf15e00e943573b7b6c60e6322461e70d3791bfd9ec9a442bfa4bdddcd764f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_DeluxePackingTable_A01_PaperRoll_ORM.png",
+      "size": 472859,
+      "hash": {
+        "sha256": "a1880df54af9a7408af2152d6f241e8759a8942132013e14f912b6c0669ed6f8"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_MetalPainted_White_Glossy_A_Normal.png",
+      "size": 548912,
+      "hash": {
+        "sha256": "4afde307066d971a1535dce49b4605a9e58810bd11e591285ba834b9e58b4723"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_MetalPainted_White_Glossy_A_ORM.png",
+      "size": 440396,
+      "hash": {
+        "sha256": "b0e3182b3ba4892cd23a359f7ce37c00612636c3dab824a000654be230c03614"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Metal_Chrome_A_Albedo.png",
+      "size": 1008403,
+      "hash": {
+        "sha256": "24f1d4379e9e0eb0610853e0e3f8f2db8b912e42fea704528c0262882da2a7ed"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Metal_Chrome_A_Normal.png",
+      "size": 235417,
+      "hash": {
+        "sha256": "9b3f4d4be323528e6f23d3d8c9d510a6312bc7eb1df4b4c1e5bd36d535c8e2ca"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Metal_Chrome_A_ORM.png",
+      "size": 787295,
+      "hash": {
+        "sha256": "13a6f8c04ba3102ad702bfd785d5c3045eaf55b23f6677a0b8ea8fdc7e16a26c"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Metal_Glossy_A_Albedo_1.png",
+      "size": 634053,
+      "hash": {
+        "sha256": "4e233488d3d42d94fc8889dde78ca8e546cd5fed08d51f5373384964c9b3a6e5"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Metal_Glossy_A_Normal_1.png",
+      "size": 56586,
+      "hash": {
+        "sha256": "e8254a2ca1b07a70fd151f752acb75b763bbcafb38681ddbb8a000f3452d2da3"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Metal_Glossy_A_ORM_1.png",
+      "size": 531802,
+      "hash": {
+        "sha256": "48f7f6d85358d271f393382ee013635e970bf1ff4d5d66d91537a2f423f1361c"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Metal_Rough_A_Albedo.png",
+      "size": 1365938,
+      "hash": {
+        "sha256": "64a45fe44a159b9b9f87acff71f25e01e2a7ce3c8aec7bd498449e1b118cb2d5",
+        "sha256-first1m": "398f65751f1ae19811c3b54e2d650e09f61766a95edde4dffa6a50f5d75159a7"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Metal_Rough_A_Normal.png",
+      "size": 972205,
+      "hash": {
+        "sha256": "3c9cbdd52c64347f797768c61a66bb695b2fdb2dec2321c2611b52cb99c7d6b9"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Metal_Rough_A_ORM.png",
+      "size": 786272,
+      "hash": {
+        "sha256": "997c646c1d996b45bfd4f4f3c8c7b549785e3fbd24306795f6e9f95ac655f745"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Plastic_Rough_Black_A_Albedo.png",
+      "size": 2772954,
+      "hash": {
+        "sha256": "7fefce8d8de3acadf6dd8da7431388fcf93da75dddd65cb6ad6672ac2bb3f7a4",
+        "sha256-first1m": "359a3d5a8ddb1a980aae3752ed36c5bae0e5815d68484b4363aaf80991773016"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Plastic_Rough_Black_A_Normal.png",
+      "size": 885595,
+      "hash": {
+        "sha256": "29669bb74da1b07ae5aff11a448c9a66a9ba1bfbf2434533618b41016047b40f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Plastic_Rough_Black_A_ORM.png",
+      "size": 845019,
+      "hash": {
+        "sha256": "c928cfc816ece9588e048644b393a485b4c6b88ec8aaa410aad9de3c22fbb0c2"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Rubber_Black_Glossy_A_Albedo_1.png",
+      "size": 616471,
+      "hash": {
+        "sha256": "2df68c99a98b062217be75bd164dd3f40b11f0968869d752baa81f30d8e4f98f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Rubber_Black_Glossy_A_Normal.png",
+      "size": 492391,
+      "hash": {
+        "sha256": "21a6d36dc7a3f23e72e2886bf39da39ba17a6ce4a8751d5a1a73ee0bac3d848f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Rubber_Black_Glossy_A_ORM.png",
+      "size": 867781,
+      "hash": {
+        "sha256": "956abf8e162b955c8a642a09e7d9b7f3287c3aeea8673227e1def9a5ec88f52c"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Wood_Laminate_Gray_A_Albedo.png",
+      "size": 16914,
+      "hash": {
+        "sha256": "c0566c4fc38f4004c8db6d20009d3af675891bd30b574ec24ceb5325597bfbab"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Wood_Laminate_Gray_A_Normal.png",
+      "size": 4655646,
+      "hash": {
+        "sha256": "81ebfea8c17d8942fed2cebd5e13ade2f12729e99c9525320537fc447ca0c848",
+        "sha256-first1m": "bce88cb44238ce85af2e821d9b944dc069a0de613d342872b497ff2e2ccbc5e7"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/T_Wood_Laminate_Gray_A_ORM.png",
+      "size": 5055979,
+      "hash": {
+        "sha256": "915b2f6f4690dad4f6ea14d98751bbde91fd14329200a3d2528174b65ef5084b",
+        "sha256-first1m": "ec83d0a41d5e13cf03d8f83e4e6ee0ed05e5bb54bc21e10445081dc5990399fe"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_DeluxePackingTable_A01_BubbleRoll_Albedo.png.png",
+      "size": 1592,
+      "hash": {
+        "sha256": "e8a12356df1dbae994fb42615698deb0d78df39e420d4c84df549e12bb08f387"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_DeluxePackingTable_A01_BubbleRoll_Normal.png.png",
+      "size": 87006,
+      "hash": {
+        "sha256": "25dddb0cab172a4279f0186536d0f04ce57feccfb5b9312b3a2f01a866c99d83"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_DeluxePackingTable_A01_BubbleRoll_ORM.png.png",
+      "size": 59666,
+      "hash": {
+        "sha256": "2e5ef161dbd8a06dc3aebd6fbc09b96d50c7448a1bfd24f55c4a8018e1656de2"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_DeluxePackingTable_A01_Decal_Albedo.png.png",
+      "size": 39351,
+      "hash": {
+        "sha256": "a8c7820d038a1230516701b3cefbfb5422e4cde80901f266d7d8b784e98bda40"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_DeluxePackingTable_A01_Decal_Normal.png.png",
+      "size": 1592,
+      "hash": {
+        "sha256": "7f0e576c26e3ab514910af1f6c5092db27b7c189a4ce37bf609c1774ae53d76d"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_DeluxePackingTable_A01_Decal_ORM.png.png",
+      "size": 1591,
+      "hash": {
+        "sha256": "bc1cf57781bc23719665c129fc04e0d3b004bb9dc1c8ee50a94fe13309723953"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_DeluxePackingTable_A01_PaperRoll_Albedo.png.png",
+      "size": 73826,
+      "hash": {
+        "sha256": "7b8e07319da137e14979ca14f643591eb76dda4053defd24b2832f2c6ac741ea"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_DeluxePackingTable_A01_PaperRoll_Normal.png.png",
+      "size": 73722,
+      "hash": {
+        "sha256": "18247bd89b083d4c96ae83b90c847c53e780130c29bd1f6b315b4946285ee9fd"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_DeluxePackingTable_A01_PaperRoll_ORM.png.png",
+      "size": 39364,
+      "hash": {
+        "sha256": "2febcd6fe4428aa0b6fdd12cd5fb0d7715c27f33057e09cc039a47b4d3ad56b8"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_MetalPainted_White_Glossy_A_Normal.png.png",
+      "size": 39140,
+      "hash": {
+        "sha256": "c827c4452d8220b3289a9a393d237a4bf10ebb7519de9a4672e4ebab9c5c33b4"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_MetalPainted_White_Glossy_A_ORM.png.png",
+      "size": 41334,
+      "hash": {
+        "sha256": "06fc5000a529233f995f9d408bb7acf62f60fc3c89ee4a37294491567e49b544"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Metal_Chrome_A_Albedo.png.png",
+      "size": 72124,
+      "hash": {
+        "sha256": "2105098d4e51ce5cfe1c39260c6a812e3ca33f4bb3451b42149bedfe742b9161"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Metal_Chrome_A_Normal.png.png",
+      "size": 43281,
+      "hash": {
+        "sha256": "1fcb54d9d96f0d6c02fd9f17b5e8e6b1760726d5a760d211819d77d8825c6571"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Metal_Chrome_A_ORM.png.png",
+      "size": 61546,
+      "hash": {
+        "sha256": "7d886b1abe36bb6f2b37b10a94e53f29d964aa1b455ffae4966a7082957f37ec"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Metal_Glossy_A_Albedo_1.png.png",
+      "size": 63946,
+      "hash": {
+        "sha256": "08311ce4d6c7bd7a70c1b0640d2a3b83d2f32c705a8dc251fdf8973dee4de54f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Metal_Glossy_A_Normal_1.png.png",
+      "size": 12313,
+      "hash": {
+        "sha256": "d9532b849fafcb546a5730c391e40d82d21bc6b2a1f2336ab362bac7d59a92b8"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Metal_Glossy_A_ORM_1.png.png",
+      "size": 46968,
+      "hash": {
+        "sha256": "ee7def5e75fd7a440e4b758319db9599f2db548f674ab56caa1ea2158f1baf29"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Metal_Rough_A_Albedo.png.png",
+      "size": 82364,
+      "hash": {
+        "sha256": "71ce26628eea788a3d8877ba1072ee975f967a11381b9043c23b32873bded34d"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Metal_Rough_A_Normal.png.png",
+      "size": 42831,
+      "hash": {
+        "sha256": "f4373adadc8a50d32fef9de86d8af5dca7201f1a8ae318e74a822bf54ac82696"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Metal_Rough_A_ORM.png.png",
+      "size": 66956,
+      "hash": {
+        "sha256": "b437a1480c1126361944188cf1df825837fb3ec9dfa9909745cdd695293f237c"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Plastic_Rough_Black_A_Albedo.png.png",
+      "size": 49890,
+      "hash": {
+        "sha256": "91164d5fe123d46bb0ab0cc22fea51fbc87ec6cec23ba20d12834ebf490d99a3"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Plastic_Rough_Black_A_Normal.png.png",
+      "size": 35462,
+      "hash": {
+        "sha256": "418ff50faf635338d26103707573be154353d9087b47662d43de1de265bb97cb"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Plastic_Rough_Black_A_ORM.png.png",
+      "size": 62740,
+      "hash": {
+        "sha256": "f19c97838c687d73c715c14994e148f5563c120ffaf8d1135683297782540f82"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Rubber_Black_Glossy_A_Albedo_1.png.png",
+      "size": 75484,
+      "hash": {
+        "sha256": "d4f05c974253b66728905bf0fb36c5a4099a0bcfc20931f441f706f2969f2880"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Rubber_Black_Glossy_A_Normal.png.png",
+      "size": 39940,
+      "hash": {
+        "sha256": "4c3486295361f0f2ccedb7f823b3c1a826d85105a4aec2de2cb47a03e9fca09e"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Rubber_Black_Glossy_A_ORM.png.png",
+      "size": 65718,
+      "hash": {
+        "sha256": "b254376dd03de415ee99e9db7b676223b95867b7be8087e0f14475204b91b822"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Wood_Laminate_Gray_A_Albedo.png.png",
+      "size": 1593,
+      "hash": {
+        "sha256": "6f428b9a53a2c77762fdd8c080bd49a1c72ab62df74cec6bbc1b315716520bfc"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Wood_Laminate_Gray_A_Normal.png.png",
+      "size": 86131,
+      "hash": {
+        "sha256": "5158b604781e6af1b8804997cf43726b0aa16ecd58831b67bb01723608a91830"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/256x256/T_Wood_Laminate_Gray_A_ORM.png.png",
+      "size": 127419,
+      "hash": {
+        "sha256": "86df928bdb0ea22504e099783d1504d0d3de8bc68139325a0df28b5023c66ff8"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_DeluxePackingTable_A01_BubbleRoll_Albedo.png.png",
+      "size": 4984,
+      "hash": {
+        "sha256": "06bd129cf487916ecd51eb73afab7946df67fc5e74326ab7e5dbae5224a8c3f3"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_DeluxePackingTable_A01_BubbleRoll_Normal.png.png",
+      "size": 326363,
+      "hash": {
+        "sha256": "ec17c0f0cd843001a5b2dd52de0b3b24de3b4f1c25f84ebf165a2ff3eaa8bbd1"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_DeluxePackingTable_A01_BubbleRoll_ORM.png.png",
+      "size": 204911,
+      "hash": {
+        "sha256": "2568221b158e008ee3329534ef36ff4037f998fac16be1c4890dc8defcb3e458"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_DeluxePackingTable_A01_Decal_Albedo.png.png",
+      "size": 80667,
+      "hash": {
+        "sha256": "6b2afee65e0058b7cebbfa714900d5ffd0fbc001a95a2b65e626c3ff479389d1"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_DeluxePackingTable_A01_Decal_Normal.png.png",
+      "size": 4984,
+      "hash": {
+        "sha256": "515a7e061f92cbe4e988010d327ededa5903cb10e0db2abab03db4da18b39e98"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_DeluxePackingTable_A01_Decal_ORM.png.png",
+      "size": 4983,
+      "hash": {
+        "sha256": "ab4e997fcfc9aaa0237fd22dac4f0591c1a635e628cc6b11d28bcc8e719f4b4f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_DeluxePackingTable_A01_PaperRoll_Albedo.png.png",
+      "size": 312113,
+      "hash": {
+        "sha256": "602de8228a43d74171640b899b0e6cbfd99ee851097be3285d7439b8bf9b791c"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_DeluxePackingTable_A01_PaperRoll_Normal.png.png",
+      "size": 308035,
+      "hash": {
+        "sha256": "55b0a23ec326f0506b58c6bba4a83b681cf304da1d362175d9f8d89ac3dc7cdd"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_DeluxePackingTable_A01_PaperRoll_ORM.png.png",
+      "size": 168615,
+      "hash": {
+        "sha256": "469e8c89583a1d53cd1ef8f96475b8f6f3f3028d26fa93ec928da23e1a5d7838"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_MetalPainted_White_Glossy_A_Normal.png.png",
+      "size": 202256,
+      "hash": {
+        "sha256": "1504f23ebec31ab504825f643de0d004c8289649fc557b792ec244daf07b0b6f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_MetalPainted_White_Glossy_A_ORM.png.png",
+      "size": 181470,
+      "hash": {
+        "sha256": "ab9e1c12f9282e8381a0b28e29a8b76605a2c52bf5bbe370d93cf473bae2db86"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Metal_Chrome_A_Albedo.png.png",
+      "size": 287728,
+      "hash": {
+        "sha256": "48610781c15d13b13c69854437806ffbb84d240f53ff7adf4738e972c37013e0"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Metal_Chrome_A_Normal.png.png",
+      "size": 151188,
+      "hash": {
+        "sha256": "5b4908375639fac1d8bf312345aa13d04919062a3231f484ea6c897c9a592bb3"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Metal_Chrome_A_ORM.png.png",
+      "size": 248814,
+      "hash": {
+        "sha256": "2a3297f2c44a08716a28e29f1f42c99ffcf38ebb0ea84bc1a93077c53e6ced8a"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Metal_Glossy_A_Albedo_1.png.png",
+      "size": 282597,
+      "hash": {
+        "sha256": "470d1a848ae8d1bd59935229c4a54b825f2c2409e85dea872f632597de59de74"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Metal_Glossy_A_Normal_1.png.png",
+      "size": 36314,
+      "hash": {
+        "sha256": "a5d66b8b7f66bbf4421b3b06ccea9aceda39d185aea4209de60beb6c7d582449"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Metal_Glossy_A_ORM_1.png.png",
+      "size": 205714,
+      "hash": {
+        "sha256": "02d2483653668bc08578d6a84bc8b7cc7f06ae6058eaec192a46693dd84cea78"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Metal_Rough_A_Albedo.png.png",
+      "size": 355094,
+      "hash": {
+        "sha256": "e1461d9eb09457c313a74fd6831c9c6171a7ff627816d7241e79fa1a07d51188"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Metal_Rough_A_Normal.png.png",
+      "size": 234771,
+      "hash": {
+        "sha256": "18779fe9de188bc09325f3c8d2c7ba4c17bedcae578a3f421d83a2f2aa123ac5"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Metal_Rough_A_ORM.png.png",
+      "size": 258876,
+      "hash": {
+        "sha256": "4335f38e6a4d8cd9f60b3e56c10bde8cc81eb40e86622a30628f1a020b9dadd0"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Plastic_Rough_Black_A_Albedo.png.png",
+      "size": 211003,
+      "hash": {
+        "sha256": "5f6a0c849a0c88f4393c3360732faccefd5063409ab2ebc10aa4ad350a2e2a65"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Plastic_Rough_Black_A_Normal.png.png",
+      "size": 208035,
+      "hash": {
+        "sha256": "b6f6983d2a533a0f5668168c5a6aac5ff25e3953330f7b7578438634f7df54fe"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Plastic_Rough_Black_A_ORM.png.png",
+      "size": 265925,
+      "hash": {
+        "sha256": "1205c4c1b16a34966d7eda537ee91c592602cf0db440b0977431c88213005164"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Rubber_Black_Glossy_A_Albedo_1.png.png",
+      "size": 305315,
+      "hash": {
+        "sha256": "df42e70ebf227735122ac77ca57867c476b08405a11ab1f627f7f5e46af703ca"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Rubber_Black_Glossy_A_Normal.png.png",
+      "size": 178390,
+      "hash": {
+        "sha256": "6e7618dc9aa475faa965fd61fc2edc4246066460b8b5fed2704121225c25ee77"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Rubber_Black_Glossy_A_ORM.png.png",
+      "size": 266823,
+      "hash": {
+        "sha256": "e6c8d038fa6fcbc1940444f119ed1795661fb2f65b67564df0d213771da887ff"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Wood_Laminate_Gray_A_Albedo.png.png",
+      "size": 4985,
+      "hash": {
+        "sha256": "9816bec8f19890fa427733bdf46f264e6c0cfe7c5b461f49bd624433c6fcbd2f"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Wood_Laminate_Gray_A_Normal.png.png",
+      "size": 404368,
+      "hash": {
+        "sha256": "022d97829867ceb09da6cadce8b5f16e07314d001f3a52b58d9be4925b11f081"
+      }
+    },
+    {
+      "relative_path": "simready_usd/source_assets/.thumbs/512x512/T_Wood_Laminate_Gray_A_ORM.png.png",
+      "size": 545023,
+      "hash": {
+        "sha256": "13b32042b80afb6b5fc0da84f7ea5d66196638bed16d14828d088c9c7cbd9ec1"
+      }
+    }
+  ]
+}

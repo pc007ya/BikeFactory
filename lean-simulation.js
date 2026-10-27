@@ -2,7 +2,7 @@ import {validateLogistics,transportPlan} from './operations.js';
 // Generic planning experiment inspired by public lean-manufacturing principles.
 // Not Giant's proprietary algorithm, operating data, or plant topology.
 export class LeanSimulation {
-  constructor(devices,{route,arrival=105,wipLimit=Infinity,bufferCapacity=Infinity,transportSeconds=0,logistics=null,orderId='DEMO',targetQuantity=Infinity}={}){
+  constructor(devices,{route,arrival=105,wipLimit=Infinity,bufferCapacity=Infinity,transportSeconds=0,logistics=null,orderId='DEMO',targetQuantity=Infinity,materialSource=null}={}){
     if(!Array.isArray(route)||!route.length||new Set(route).size!==route.length)throw Error('Route must contain unique stations');
     if(!Number.isInteger(arrival)||arrival<1)throw Error('Invalid arrival');
     for(const n of [wipLimit,bufferCapacity])if(n!==Infinity&&(!Number.isInteger(n)||n<1))throw Error('Limits must be positive integers');
@@ -10,7 +10,7 @@ export class LeanSimulation {
     this.time=0;this.remainder=0;this.completed=0;this.released=0;this.deferred=0;this.wipArea=0;this.leadSum=0;
     this.waiting=Object.fromEntries(route.map(t=>[t,[]]));this.queues=Object.fromEntries(route.map(t=>[t,0]));
     this.states=Object.fromEntries(devices.map(d=>[d.id,{busy:false,remaining:0,busySeconds:0,blockedSeconds:0,job:null}]));
-    this.events=[];this.finished=[];
+    this.events=[];this.finished=[];this.materialSource=materialSource;this.materialStarved=false;this.materialDeferred=0;
     if(devices.filter(d=>route.includes(d.type)).some(d=>!Number.isFinite(d.cycle)||d.cycle<1))throw Error('Invalid process cycle');
   }
   event(job,kind,device=null){const e={time:this.time,serial:job.serial,kind,device,source:'synthetic-planning'};job.history.push(e);this.events.push(e);}
@@ -20,8 +20,8 @@ export class LeanSimulation {
     if(!this.sequence.every(t=>this.devices.some(d=>d.type===t)))return;
     if(this.released<this.targetQuantity&&this.time%this.arrival===0){
       if(this.wip<this.wipLimit&&this.occupancy(this.sequence[0])<this.bufferCapacity){
-        const job={orderId:this.orderId,serial:this.orderId+'-'+String(++this.released).padStart(6,'0'),releasedAt:this.time,history:[],partsLot:'DEMO-LOT-001'};
-        this.waiting[this.sequence[0]].push(job);this.event(job,'release');
+        const serial=this.orderId+'-'+String(this.released+1).padStart(6,'0'),material=this.materialSource?this.materialSource({serial,orderId:this.orderId,time:this.time}):{supplySource:'purchased_frame',synthetic:true};
+        this.materialStarved=!material;if(material){this.released++;const job={orderId:this.orderId,serial,releasedAt:this.time,history:[],partsLot:'DEMO-LOT-001',frameMaterial:structuredClone(material)};this.waiting[this.sequence[0]].push(job);this.event(job,'release');}else{this.materialDeferred++;this.deferred++;}
       }else this.deferred++;
     }
     // All machines accrue service before transfers. Reverse-stage transfer gives

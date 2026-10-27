@@ -3,3 +3,7 @@ node_modules
 .DS_Store
 deliverables/
 artifacts/
+START.html
+dist-web/
+assets/simready/*.glb
+assets/simready/embedded.js

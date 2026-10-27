@@ -1,15 +1,21 @@
 {
   "name": "bicycle-assembly-line-model",
-  "version": "0.7.0",
+  "version": "0.9.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "python3 -m http.server 8000",
-    "test": "node --test tests/*.test.js",
+    "test": "node --test tests/*.test.js frame-factory/tests/*.test.js",
     "export-models": "node scripts/export-models.mjs",
     "compare-flow": "node scripts/compare-flow.mjs",
     "standalone": "node scripts/build-standalone.mjs",
-    "test:browser": "node scripts/browser-qa.mjs"
+    "build:web": "node scripts/build-web.mjs",
+    "pretest": "npm run prepare:assets && node scripts/build-standalone.mjs",
+    "test:browser": "node scripts/browser-qa.mjs",
+    "prepare:assets": "node scripts/prepare-source-assets.mjs",
+    "predev": "npm run prepare:assets",
+    "prestandalone": "npm run prepare:assets",
+    "prebuild:web": "npm run prepare:assets"
   },
   "dependencies": {
     "three": "0.162.0"

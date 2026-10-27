@@ -1,0 +1,412 @@
+{
+  "version": "aluminum-addon",
+  "createdUtc": "2026-10-27T12:32:00Z",
+  "source": "https://huggingface.co/datasets/nvidia/simready-assets",
+  "revision": "9eadae061bf3f6fcee629b3286d5593c05415b42",
+  "originalFiles": [
+    {
+      "path": "equipment_bench_vise_a01/.metadata/LICENSE.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/.metadata/LICENSE.txt"
+    },
+    {
+      "path": "equipment_bench_vise_a01/.metadata/com.nvidia.simready.conformance.Package-Candidate@1.0.0.json",
+      "bytes": 892,
+      "sha256": "b7865c6e6818b7acf1337823793538541aa060d4935cd1698eec8a02dafa1c84",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/.metadata/com.nvidia.simready.conformance.Package-Candidate@1.0.0.json"
+    },
+    {
+      "path": "equipment_bench_vise_a01/.metadata/com.nvidia.simready.conformance.Package@1.0.0.json",
+      "bytes": 763,
+      "sha256": "eb5fb9359f9ca78939e1df288bf6d055fc9973f65cd8d1a5f29d1beb47aa4262",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/.metadata/com.nvidia.simready.conformance.Package@1.0.0.json"
+    },
+    {
+      "path": "equipment_bench_vise_a01/.metadata/com.nvidia.simready.packaging.bom.json",
+      "bytes": 9826,
+      "sha256": "d29dafefbbe042355caf08c562a53d758e4b0326926883cf8280fcb093877738",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/.metadata/com.nvidia.simready.packaging.bom.json"
+    },
+    {
+      "path": "equipment_bench_vise_a01/.metadata/com.nvidia.simready.root_usds.json",
+      "bytes": 104,
+      "sha256": "9aa2429bbe4a4aeccca39fe42acd9bea7f751500f2c1f23e88542c285a909c01",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/.metadata/com.nvidia.simready.root_usds.json"
+    },
+    {
+      "path": "equipment_bench_vise_a01/com.nvidia.simready.packaging.json",
+      "bytes": 569,
+      "sha256": "4003bd9414c5dc752e15caa8fbd24970cd438f1b67b8e701b756acfb2f0c850d",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/com.nvidia.simready.packaging.json"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/.thumbs/256x256/sm_equipment_bench_vise_a01_01.usd.png",
+      "bytes": 1286345,
+      "sha256": "13d354a40aded0478264b23b774ec4217d970efd47b98296f606a2075703a04c",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/.thumbs/256x256/sm_equipment_bench_vise_a01_01.usd.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/.thumbs/256x256/sm_equipment_bench_vise_a01_01.usd_light.png",
+      "bytes": 893343,
+      "sha256": "82417c3add17ec5e8e3cd2be6ef54e1e6dc1ab46709a904b5768789f5b9faa06",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/.thumbs/256x256/sm_equipment_bench_vise_a01_01.usd_light.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/.thumbs/256x256/sm_equipment_bench_vise_a01_01.usd_transparent.png",
+      "bytes": 897318,
+      "sha256": "3fe698dc73b9c09003d6084dfd0be52968c57578d38b2e8dfb3cda3b91bf530e",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/.thumbs/256x256/sm_equipment_bench_vise_a01_01.usd_transparent.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/.thumbs/sm_equipment_bench_vise_a01_01_thumbnail.png",
+      "bytes": 757104,
+      "sha256": "2dec4e93f9de1940fe3c835d93d07e374d083074319555a883596007917550a3",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/.thumbs/sm_equipment_bench_vise_a01_01_thumbnail.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/Textures/.thumbs/256x256/t_benchVise_blue_a01_alb.png.png",
+      "bytes": 129661,
+      "sha256": "38160b605b73d6e5dc48a3734ae9260453ca60077c12eab8611141fd0b137baa",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/Textures/.thumbs/256x256/t_benchVise_blue_a01_alb.png.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/Textures/.thumbs/256x256/t_benchVise_blue_a01_nor.png.png",
+      "bytes": 79704,
+      "sha256": "19932b4d39900e25b3132113c5ba74dddcf7be9d5532fc1e4f0f9a2f9fa0b50c",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/Textures/.thumbs/256x256/t_benchVise_blue_a01_nor.png.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/Textures/.thumbs/256x256/t_benchVise_blue_a01_orm.png.png",
+      "bytes": 98799,
+      "sha256": "e6523ddbad3f6956345955ed0a52b94f0eb982e28691d65c8679fd69b2d6642d",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/Textures/.thumbs/256x256/t_benchVise_blue_a01_orm.png.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/Textures/.thumbs/512x512/t_benchVise_blue_a01_alb.png.png",
+      "bytes": 559452,
+      "sha256": "7429f5d69cd4336fd499ba409c2fd26040cb70f38d9c83a63a69dd2be29c2ad6",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/Textures/.thumbs/512x512/t_benchVise_blue_a01_alb.png.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/Textures/.thumbs/512x512/t_benchVise_blue_a01_nor.png.png",
+      "bytes": 344575,
+      "sha256": "8008f4fda731561737dcecc0c03b85ef4760b2e3889be09ad497426b715e39fe",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/Textures/.thumbs/512x512/t_benchVise_blue_a01_nor.png.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/Textures/.thumbs/512x512/t_benchVise_blue_a01_orm.png.png",
+      "bytes": 387036,
+      "sha256": "ef9106883705f1d2ca06227a7d127d80e54672e263bf06d24a421a1f25784b15",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/Textures/.thumbs/512x512/t_benchVise_blue_a01_orm.png.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/Textures/t_benchVise_blue_a01_alb.png",
+      "bytes": 19923975,
+      "sha256": "2b066f56e08b8eba0ce4a9806089095ddca40da0fec99bf0fef4f59634929a40",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/Textures/t_benchVise_blue_a01_alb.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/Textures/t_benchVise_blue_a01_nor.png",
+      "bytes": 18664087,
+      "sha256": "0a22b214c59b4717190e9408cc3095652fe61deb60a18c2351307d839e1dc6a2",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/Textures/t_benchVise_blue_a01_nor.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/Textures/t_benchVise_blue_a01_orm.png",
+      "bytes": 18853037,
+      "sha256": "5bc03ccb20d8516556dac3e1dc66f1fb6e3795193a53103a9708e51421543cc6",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/Textures/t_benchVise_blue_a01_orm.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/payloads/MuJoCo/disabled.usda",
+      "bytes": 6558,
+      "sha256": "5c172a24e8586b2ce1397e5a826b4548a11216aec9a4753560724229673ce578",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/payloads/MuJoCo/disabled.usda"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/payloads/MuJoCo/enabled.usda",
+      "bytes": 8896,
+      "sha256": "0581d375c8b201737cf186a68e2ca298a3d6e58c7d90f9d66a458dfe06f7c4fe",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/payloads/MuJoCo/enabled.usda"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/payloads/Newton/disabled.usda",
+      "bytes": 6558,
+      "sha256": "5c172a24e8586b2ce1397e5a826b4548a11216aec9a4753560724229673ce578",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/payloads/Newton/disabled.usda"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/payloads/Newton/enabled.usda",
+      "bytes": 8111,
+      "sha256": "99f73d9288bce082edf5fdf0864627a2eb6050dd77088972c71feb563feea984",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/payloads/Newton/enabled.usda"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/payloads/PhysX/disabled.usda",
+      "bytes": 6558,
+      "sha256": "5c172a24e8586b2ce1397e5a826b4548a11216aec9a4753560724229673ce578",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/payloads/PhysX/disabled.usda"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/payloads/PhysX/enabled.usda",
+      "bytes": 7563,
+      "sha256": "e46c1128d68a945c29f83d7f09dd849b58c4fe97a25e2de70df1f7d74e48a96e",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/payloads/PhysX/enabled.usda"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/payloads/Physics/physics.usda",
+      "bytes": 12487,
+      "sha256": "9b815e5874c77a3a00c7d0d21eff662905cb81501b3bddb654c8f48f11ccfaf2",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/payloads/Physics/physics.usda"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/payloads/base.usda",
+      "bytes": 19835,
+      "sha256": "330a17b4a65d4e9bf336d3731962b3714ac8b77fcd4a497ae66b9b0627f7fada",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/payloads/base.usda"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/payloads/geometries.usd",
+      "bytes": 4344242,
+      "sha256": "b46e61c59a2689b6207472ee05b2b0f0377c1e988e67e2c337ce0895a7f96e27",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/payloads/geometries.usd"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/payloads/instances.usda",
+      "bytes": 14603,
+      "sha256": "2e8fccdd083c9eed376057a82878d01e55735e86b35a711f0f37e05408dcc42d",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/payloads/instances.usda"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/payloads/instances_mujoco.usda",
+      "bytes": 15963,
+      "sha256": "adbd7bbdd7a0fded974dae06ed162f6c417ee3a756ec91111602bbaf0df225b8",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/payloads/instances_mujoco.usda"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/payloads/instances_newton.usda",
+      "bytes": 15218,
+      "sha256": "a1014ed12a9e644d2232ee96e8cddb203a0ef2e92b5fde2320f7aa67eed6279d",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/payloads/instances_newton.usda"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/payloads/instances_physx.usda",
+      "bytes": 15798,
+      "sha256": "4e4431fc8ad00eb2b0b86401346190dc7379f0161a54ca37f86c9042bdf547bc",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/payloads/instances_physx.usda"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/payloads/materials.usda",
+      "bytes": 19020,
+      "sha256": "3d32eeb8f74023cfa336bbc48b56e6c279304fcb3591ad97e6752c1ccfd9d351",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/payloads/materials.usda"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/sm_equipment_bench_vise_a01_01.usd",
+      "bytes": 21255,
+      "sha256": "030f5c0aa62c33cb8c2f6ae3b573eee3a19142aa276cb0629de7bc3af1eee7bd",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/sm_equipment_bench_vise_a01_01.usd"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/source_assets/.thumbs/256x256/t_benchVise_blue_a01_alb.png.png",
+      "bytes": 129661,
+      "sha256": "38160b605b73d6e5dc48a3734ae9260453ca60077c12eab8611141fd0b137baa",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/source_assets/.thumbs/256x256/t_benchVise_blue_a01_alb.png.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/source_assets/.thumbs/256x256/t_benchVise_blue_a01_nor.png.png",
+      "bytes": 79704,
+      "sha256": "19932b4d39900e25b3132113c5ba74dddcf7be9d5532fc1e4f0f9a2f9fa0b50c",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/source_assets/.thumbs/256x256/t_benchVise_blue_a01_nor.png.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/source_assets/.thumbs/256x256/t_benchVise_blue_a01_orm.png.png",
+      "bytes": 98799,
+      "sha256": "e6523ddbad3f6956345955ed0a52b94f0eb982e28691d65c8679fd69b2d6642d",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/source_assets/.thumbs/256x256/t_benchVise_blue_a01_orm.png.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/source_assets/.thumbs/512x512/t_benchVise_blue_a01_alb.png.png",
+      "bytes": 559452,
+      "sha256": "7429f5d69cd4336fd499ba409c2fd26040cb70f38d9c83a63a69dd2be29c2ad6",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/source_assets/.thumbs/512x512/t_benchVise_blue_a01_alb.png.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/source_assets/.thumbs/512x512/t_benchVise_blue_a01_nor.png.png",
+      "bytes": 344575,
+      "sha256": "8008f4fda731561737dcecc0c03b85ef4760b2e3889be09ad497426b715e39fe",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/source_assets/.thumbs/512x512/t_benchVise_blue_a01_nor.png.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/source_assets/.thumbs/512x512/t_benchVise_blue_a01_orm.png.png",
+      "bytes": 387036,
+      "sha256": "ef9106883705f1d2ca06227a7d127d80e54672e263bf06d24a421a1f25784b15",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/source_assets/.thumbs/512x512/t_benchVise_blue_a01_orm.png.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/source_assets/OmniPBR.mdl",
+      "bytes": 16010,
+      "sha256": "6e6b3acbccd236e21a6c29964a431d2a53e77251cc6b8b1bc975eb1c62da1781",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/source_assets/OmniPBR.mdl"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/source_assets/OmniPBRBase.mdl",
+      "bytes": 19369,
+      "sha256": "a8fd9fe174e91892e94d06da90ba453a124024c2ce2c033be9d82c9e2f76a3b7",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/source_assets/OmniPBRBase.mdl"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/source_assets/OmniPBR_ClearCoat.mdl",
+      "bytes": 29789,
+      "sha256": "d84c5ba482561c0eaea2e0c5b607358af549e36cd921773462f92dbc4f32cbc3",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/source_assets/OmniPBR_ClearCoat.mdl"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/source_assets/t_benchVise_blue_a01_alb.png",
+      "bytes": 19923975,
+      "sha256": "2b066f56e08b8eba0ce4a9806089095ddca40da0fec99bf0fef4f59634929a40",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/source_assets/t_benchVise_blue_a01_alb.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/source_assets/t_benchVise_blue_a01_nor.png",
+      "bytes": 18664087,
+      "sha256": "0a22b214c59b4717190e9408cc3095652fe61deb60a18c2351307d839e1dc6a2",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/source_assets/t_benchVise_blue_a01_nor.png"
+    },
+    {
+      "path": "equipment_bench_vise_a01/simready_usd/source_assets/t_benchVise_blue_a01_orm.png",
+      "bytes": 18853037,
+      "sha256": "5bc03ccb20d8516556dac3e1dc66f1fb6e3795193a53103a9708e51421543cc6",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/source_assets/t_benchVise_blue_a01_orm.png"
+    }
+  ],
+  "originalPackageTotals": {
+    "files": 46,
+    "bytes": 126533406
+  },
+  "conversionToolchain": {
+    "usd-core": "26.11",
+    "Blender": "4.3.2",
+    "textureResampling": "Pillow Lanczos max512px; preserve alpha when present",
+    "validation": "Khronos glTF Validator 2.0.0-dev.3.10"
+  },
+  "changes": [
+    "Composed genuine original USD meshes and visual materials; no proxy or substitute modeling.",
+    "Preserved all source geometry polygons, authored normal/UV data, subset-material bindings, material constants and texture transforms.",
+    "Converted Z-up to glTF Y-up; retained meter scale; centered horizontal extents and grounded minimum height to zero.",
+    "Triangulated polygons and generated tangent bases. No decimation; glTF triangle counts exactly match sum(source face vertex count - 2).",
+    "Merged static meshes and deduplicated identical materials for fewer draw calls without changing shape or face count.",
+    "Resized original PBR images to maximum512px and embedded all image data in GLB. Original geometry detail was not reduced.",
+    "Converted PreviewSurface to glTF metallic/roughness. For authored UsdUVTexture nodes with no file, applied source fallback (0,0,0,1), not a fabricated texture.",
+    "Generated deterministic gzip copies; decompression byte-for-byte verified against each source GLB.",
+    "Dropped USD physics/semantic/runtime representations from browser visual assets."
+  ],
+  "limitations": [
+    "Visual-only derivative. No USDPhysics/PhysX/MuJoCo/Newton schemas, functional clamping behavior, collision safety, mass/friction validation or telemetry is included.",
+    "This is a generic bench vise, NOT a bicycle frame welding fixture, alignment jig, metrology gauge or hydraulic straightening press.",
+    "Clamping force, jaw opening, aluminum tube suitability, fixture accuracy and process qualification are not verified.",
+    "Joined static geometry preserves visual shapes; animated screw/jaw articulation was not implemented.",
+    "The original NVIDIA package license and metadata are provenance, not independent certification of this conversion.",
+    "Original MDL source/runtime representations are not in GLB; conversion uses original PreviewSurface and PBR textures.",
+    "Preview lighting differs from NVIDIA thumbnail lighting."
+  ],
+  "assets": [
+    {
+      "asset": "equipment_bench_vise_a01",
+      "bytes": 4698972,
+      "gzipBytes": 3254391,
+      "sha256": "b30bbb4ad93d2ee3c5197fdf83282d8f28bcd53abc7a6c012ab40cc68b7924d5",
+      "triangles": 106162,
+      "materials": 2,
+      "meshes": 1,
+      "drawCalls": 2,
+      "dimensions": [
+        0.32438460592992535,
+        0.18026591189572494,
+        0.23277613520622253
+      ],
+      "file": "equipment_bench_vise_a01.glb",
+      "gzipFile": "equipment_bench_vise_a01.glb.gz",
+      "gzipIsLossless": true,
+      "creator": "NVIDIA",
+      "sourceRepository": "https://huggingface.co/datasets/nvidia/simready-assets",
+      "revision": "9eadae061bf3f6fcee629b3286d5593c05415b42",
+      "packageId": "simready.hf.nvidia.simready-assets.equipment_bench_vise_a01.2026.10.09_021419523581",
+      "packageMetadata": "https://huggingface.co/datasets/nvidia/simready-assets/blob/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/com.nvidia.simready.packaging.json",
+      "sourceUsd": "https://huggingface.co/datasets/nvidia/simready-assets/blob/9eadae061bf3f6fcee629b3286d5593c05415b42/equipment_bench_vise_a01/simready_usd/sm_equipment_bench_vise_a01_01.usd",
+      "license": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourcePackageBytes": 126533406,
+      "sourceMeshCount": 5,
+      "sourceTriangleCount": 106162,
+      "decimationApplied": false,
+      "unit": "meter",
+      "upAxis": "Y",
+      "origin": "horizontal center X/Z; bottom Y=0",
+      "loadScale": 1,
+      "extensionsUsed": [],
+      "sourceShaderFallbackNotes": [],
+      "dependencyValidation": {
+        "resolvedLayers": 15,
+        "resolvedAssets": 4,
+        "unresolved": []
+      },
+      "gltfValidation": {
+        "version": "2.0.0-dev.3.10",
+        "errors": 0,
+        "warnings": 0,
+        "infos": 0
+      },
+      "roundTripGLBRenderVerified": true,
+      "preview": "equipment_bench_vise_a01-preview.png",
+      "visualOnly": true,
+      "usdPhysicsOrSemanticSchemasPreserved": false,
+      "sourceTextures": {
+        "web/textures/equipment_bench_vise_a01/t_benchVise_blue_a01_alb.png": {
+          "source": "upstream/equipment_bench_vise_a01/simready_usd/Textures/t_benchVise_blue_a01_alb.png",
+          "originalSize": [
+            4096,
+            4096
+          ],
+          "webSize": [
+            512,
+            512
+          ],
+          "sourceSha256": "2b066f56e08b8eba0ce4a9806089095ddca40da0fec99bf0fef4f59634929a40"
+        },
+        "web/textures/equipment_bench_vise_a01/t_benchVise_blue_a01_orm.png": {
+          "source": "upstream/equipment_bench_vise_a01/simready_usd/Textures/t_benchVise_blue_a01_orm.png",
+          "originalSize": [
+            4096,
+            4096
+          ],
+          "webSize": [
+            512,
+            512
+          ],
+          "sourceSha256": "5bc03ccb20d8516556dac3e1dc66f1fb6e3795193a53103a9708e51421543cc6"
+        },
+        "web/textures/equipment_bench_vise_a01/t_benchVise_blue_a01_nor.png": {
+          "source": "upstream/equipment_bench_vise_a01/simready_usd/Textures/t_benchVise_blue_a01_nor.png",
+          "originalSize": [
+            4096,
+            4096
+          ],
+          "webSize": [
+            512,
+            512
+          ],
+          "sourceSha256": "0a22b214c59b4717190e9408cc3095652fe61deb60a18c2351307d839e1dc6a2"
+        }
+      }
+    }
+  ],
+  "intendedPlacement": {
+    "context": "Neighboring aluminum frame factory conceptual layout",
+    "role": "Generic workholding support on a tube-end/general workbench",
+    "parentWorkbenchAsset": "table_metal_stainless_a03",
+    "benchTopY_m": 0.8500053286552429,
+    "recommendedViseRootY_m": 0.8500053286552429
+  }
+}

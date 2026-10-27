@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "release": "frame-factory-core-v1",
+  "generatedAt": "2026-10-27T12:49:00Z",
+  "entry": "index.js",
+  "selfTests": {
+    "passed": 24,
+    "failed": 0
+  },
+  "independentTests": {
+    "passed": 16,
+    "failed": 0,
+    "report": "bicycle-v09/qa-independent/frame-module-results.json"
+  },
+  "scope": "pure logical demonstration; no app or scene edits",
+  "files": {
+    "README.md": "5db752dda796c05802e0b4c36c60345e0f14f0c1b955ebee842f6d8c17e0a85e",
+    "VALIDATION.txt": "710ef716e9b6e3a02874f675fd8dcd491c32279f2a0cb30b3740f02b45b3dfe4",
+    "default-config.js": "6881dfa0565b7d9a09712cf63b43111b20410869fb75241de81768154d30b49d",
+    "frame-config.js": "1a08e8980f55e4fb67b19cd302b98691036d6a0950a3def756b1ee023ed075ea",
+    "frame-logistics.js": "e6399e68ac1d6acfcc51c698354c0c8879920c97cbfe8378189c74e14cb7d0df",
+    "frame-simulation.js": "eff216f8970d5dfabc7101afc71b7677d3845ca86dbd469e79be3a3f35417c98",
+    "index.js": "c15b5ac340665f4bb6dc8270639b4f9520a8485962016c533aaef14807a25ba5",
+    "package.json": "67327008cd7f034c4f9b172515bbaa696ea5c432535104e9460ce2e969589a1b",
+    "tests/frame-factory.test.js": "cbabb99c1d11b92c9a930197be76b2d40cd0e81248b3a1c0fe30083e598dd517"
+  }
+}
