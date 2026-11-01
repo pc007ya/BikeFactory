@@ -1,4 +1,4 @@
-import {pathPose,walkLength} from './cart-path.js?v=fcf14d41d228';
+import {pathPose,walkLength} from './cart-path.js?v=a523bf62b7df';
 import * as THREE from './vendor/three.module.min.js';
 
 const Y = new THREE.Vector3(0, 1, 0);

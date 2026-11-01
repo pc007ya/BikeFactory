@@ -1,20 +1,20 @@
 {
   "schema": 1,
   "generatedBy": "BikeFactory line-planner static build",
-  "sourceCommit": "fcf14d41d22869044852accb7d232d19d5d882f8",
-  "generatedAt": "2026-11-01T14:02:35.569Z",
-  "buildId": "b0a52a2453f80d2a545f",
+  "sourceCommit": "a523bf62b7df026ef7ff57eb745a9ff876e3c4a1",
+  "generatedAt": "2026-11-01T15:06:47.170Z",
+  "buildId": "a3f8b1ec93d217ea2610",
   "entrypoint": "index.html",
   "files": [
     {
       "path": "app.js",
-      "bytes": 42847,
-      "sha256": "c4456271c3d70e63921f7fdfbfe47f02341674c47f1f8994f774d8e28a310413"
+      "bytes": 47521,
+      "sha256": "2ee6e8f3beb673eea5141ec1d5d334bfb691d7984d8ae2d17a191df1e1ddd9bb"
     },
     {
       "path": "asset-framing.js",
       "bytes": 893,
-      "sha256": "db9630ab24aa99609c93133efb498e257fe7a54be126d961bdc86a7be3816bbf"
+      "sha256": "d4dd2ced69f6b4c33beb95bc20599607258b9255070a128249007c3d5e148579"
     },
     {
       "path": "ASSET-SOURCES.md",
@@ -117,6 +117,41 @@
       "sha256": "962f762c90655546183693b2dc23fc9c231560f24f23e6dd685f28b4dbb7dc44"
     },
     {
+      "path": "assets/original/crane-v2/build-report.json",
+      "bytes": 733,
+      "sha256": "a1184f945742e3390d66faeba7194bcfe254d7f1aecc70d9d4f622eef3ef214e"
+    },
+    {
+      "path": "assets/original/crane-v2/controller.mjs",
+      "bytes": 1975,
+      "sha256": "16bb8a8d32220f628be72e4b89dcea96071b7e6591a8aba6b6b7cc087e63b657"
+    },
+    {
+      "path": "assets/original/crane-v2/integration-manifest-v2.json",
+      "bytes": 2541,
+      "sha256": "9f294b26564da1fbe18316178b22f8348feb7f8e221e6ab5abd60c2e97d2188a"
+    },
+    {
+      "path": "assets/original/crane-v2/motor-clearance-fix-v2.json",
+      "bytes": 567,
+      "sha256": "732c043d167b8596073afdbdd11b31e8fd8ba9d86be05f1c654f6118c1bfbc19"
+    },
+    {
+      "path": "assets/original/crane-v2/original-bridge-crane-v2.glb",
+      "bytes": 3715368,
+      "sha256": "ace3ef93465810d384f76214cb8366d87647069ad8f71d888babd4cccf442fa5"
+    },
+    {
+      "path": "assets/original/crane-v2/r187-validation-v2.json",
+      "bytes": 2622,
+      "sha256": "65bf782616766368affb5cf7fb9aabbb36949604ed069bc97a79285ffc7c96ee"
+    },
+    {
+      "path": "assets/original/crane-v2/README-v2.md",
+      "bytes": 4279,
+      "sha256": "12db65f5c59596f5a6f791a257490861ec60251289ae9482e4110fd8108e3aaa"
+    },
+    {
       "path": "cart-datums.js",
       "bytes": 334,
       "sha256": "592f4ec9b871d8b890aa275de7c706947e0332bec32cf4be8332d65a3fb9aedb"
@@ -124,12 +159,12 @@
     {
       "path": "cart-geometry.js",
       "bytes": 2863,
-      "sha256": "dd3770f59fff47e0dc42baa35722d2b25490bc4c2261a0790cb60956cfb77fad"
+      "sha256": "74f1c53d30e61f68c3a7fa1eee77a2c41320414c738bedb439423d7396ac7dca"
     },
     {
       "path": "cart-handling.js",
       "bytes": 8440,
-      "sha256": "a745e0bfebdb9d1d82106fa97805dd77a952bf40d7bf1f34362315da425fffbd"
+      "sha256": "526ca8dc39ef1c4b18eb340b7198d68522b97f3b98083c7c80085303a31ff933"
     },
     {
       "path": "cart-path.js",
@@ -139,17 +174,37 @@
     {
       "path": "cart-visual.js",
       "bytes": 5406,
-      "sha256": "21d29f11b5dcc53dc460c62b8e81cacf7596a2d54494ab405281ac25f8b7fd15"
+      "sha256": "b57fcc1857cf04befb3321029c914f268a902021c572154b916883778f4ffc36"
     },
     {
       "path": "conveyor-scene.js",
       "bytes": 7414,
-      "sha256": "f6b6501cf20d5071e272b776eac2ea8070971f48bdcdff52939fa8e1f0343987"
+      "sha256": "b27175b5c24cde7328ee96e9506fee7c2e12d5d33a1bc51f5b747b0e74d8668c"
     },
     {
       "path": "conveyor.js",
       "bytes": 7853,
-      "sha256": "64b9edf72ab7e7c1356b895d0aee29f1fc08213ec6881c019e9d33366079539c"
+      "sha256": "854a0b979d1691ac6ed558e4bbbce3400566b5ee05774542c8c51cb943c6d2e2"
+    },
+    {
+      "path": "crane-preview.html",
+      "bytes": 2017,
+      "sha256": "faee7f543df3e3d09a1295e419d7f874517ddd058d7bbc1b6e9f08db9e30ba1e"
+    },
+    {
+      "path": "crane-preview.js",
+      "bytes": 10131,
+      "sha256": "96c8f6df679edb916e483f43c533122770610b9e8afec0ad9feb6aea9273086f"
+    },
+    {
+      "path": "crane-scene.js",
+      "bytes": 5386,
+      "sha256": "3886426ed9baaf0767b638710f2194578a3c652a671e79d5dcd456904f20810e"
+    },
+    {
+      "path": "crane.js",
+      "bytes": 7303,
+      "sha256": "ebacf28e8d80f807dd9acac6f446d227c0e356a3578f92811c4543a900da77ae"
     },
     {
       "path": "ENGINE.md",
@@ -159,32 +214,32 @@
     {
       "path": "handling-motion.js",
       "bytes": 15407,
-      "sha256": "353bb521e81d371e54c8c543b6469942219943b8574aed965082ea4be54932d9"
+      "sha256": "7e80e5f0486acaedd5731f413776afd621072e5188bd4aedb85195e649dc068f"
     },
     {
       "path": "human-motion.js",
       "bytes": 19630,
-      "sha256": "3b23b0d59f997f1cc9c32c8f2abd9512f2f48dbee20629ef0bd1f9b7d93cee13"
+      "sha256": "939496a1e48be7c67c3547adb6df5cc46fe647fb2ad3008094207bed6a92e87e"
     },
     {
       "path": "index.html",
-      "bytes": 8687,
-      "sha256": "e81c0ec5b2cbd284a605296aa7e57654743dc87a445b77d356927f85d302a2e8"
+      "bytes": 10036,
+      "sha256": "842361bc73785232f501e65d7355fab12ec15c789c2366273f2f11c4097b55e6"
     },
     {
       "path": "industrial-assets.js",
       "bytes": 17090,
-      "sha256": "1e218721233450bb2f47a17b7bb745d5ecce2f9c6f6546bf498465d1dc7a85a1"
+      "sha256": "aebe6e37070e6e7f7d615e9f5c3c2e3a9075136ffd344f455142e274328e397f"
     },
     {
       "path": "logistics.js",
       "bytes": 14958,
-      "sha256": "707bddb6a4782f159362281a38f2f2e390573eaf54fc5d3382a0b0414ef41371"
+      "sha256": "2f1cf2b0bd081de64993a7a255e22397e8311035de22fad1ed91ea6e51d8620d"
     },
     {
       "path": "manual-cart.js",
       "bytes": 13768,
-      "sha256": "e70ed5ea88970393e270921a64c739a14c0cad5397585e4f28b72d26bdeb3cf8"
+      "sha256": "53e564dd2927d28fff000c454afc94decea119d5f43fcd5c4f6aae245bc47cbd"
     },
     {
       "path": "MIGRATION-R187.md",
@@ -194,7 +249,7 @@
     {
       "path": "nvidia-assets.js",
       "bytes": 27060,
-      "sha256": "ad91689735480038caf9740add6b22b2d231ca6d67963a00048a5ba137a035ac"
+      "sha256": "6bdf81050f0220e2beb20aebaf921a76488defa95a7a1fe892ed24b93e46630e"
     },
     {
       "path": "package.json",
@@ -204,12 +259,12 @@
     {
       "path": "plant-layout.js",
       "bytes": 3763,
-      "sha256": "16f0da4cf2b7c657f623b6ae448a7c53f96ff555ac5776690f36e405aa694ba6"
+      "sha256": "aa5f1e396a851e7365a1f3579fee2db8ea0548671c7279f3bc11c7b641e2b854"
     },
     {
       "path": "README.md",
-      "bytes": 20179,
-      "sha256": "16e4b4e4b91361a9f3e2b5b921a4e8a50acd701c03e81ef917778ae62c46e039"
+      "bytes": 21201,
+      "sha256": "004e758e8c753efaa5d6585fea4b0724c12de9cf84f800e075a5fef006caba46"
     },
     {
       "path": "scene-model.js",
@@ -218,13 +273,13 @@
     },
     {
       "path": "scene.js",
-      "bytes": 28400,
-      "sha256": "60cf3a522effbdcbf787ab98f7dba91352f0a3555dcd9ea939e945f9204dc20c"
+      "bytes": 30083,
+      "sha256": "0c6753b50175b051cb278e1f97600f3978572dbc8f9a081b06e0f471d9aa8eb1"
     },
     {
       "path": "simulation.js",
-      "bytes": 16173,
-      "sha256": "744de4ef6ca1ca4488521493eedd2dc727e6522b43d6023ea6f6d683a7657dfd"
+      "bytes": 16588,
+      "sha256": "d240e8d1219d2485d225df05f53f9f3c6deecd3c939cc7f835129adcc0333589"
     },
     {
       "path": "style.css",
@@ -239,7 +294,7 @@
     {
       "path": "transport-framing.js",
       "bytes": 858,
-      "sha256": "3516699a7f2ebc90ff88d819f587cada8c5541c62250afdb9f5a9bbc75aa0cb9"
+      "sha256": "8422bc025f2a383c27aaf6af63113d005a5613c05e6dbd504e58195c44a32c38"
     },
     {
       "path": "vendor/addons/loaders/GLTFLoader.js",

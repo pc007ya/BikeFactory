@@ -1,0 +1,25 @@
+{
+  "issue": "original hoist motor intersected rear guardrail",
+  "fix": "motor/fins/fan/grille rotated from+Y to+X, raised.08m, gearbox connection retained",
+  "rearGuardrailY": 1.26,
+  "newMotorAssemblyYRange": [
+    0.5,
+    0.86
+  ],
+  "minNominalLateralClearanceM": 0.375,
+  "changed": [
+    {
+      "mesh": "TrolleyTravel__Graphite",
+      "vertices": 64
+    },
+    {
+      "mesh": "TrolleyTravel__MotorBlue",
+      "vertices": 704
+    },
+    {
+      "mesh": "TrolleyTravel__Rubber",
+      "vertices": 289
+    }
+  ],
+  "limitsAndRopeControllerUnchanged": true
+}

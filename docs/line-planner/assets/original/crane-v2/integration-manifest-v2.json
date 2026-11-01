@@ -1,0 +1,101 @@
+{
+  "origin": "original procedural design, not NVIDIA; no downloaded crane geometry",
+  "file": "original-bridge-crane-v2.glb",
+  "bytes": 3715368,
+  "sha256": "ace3ef93465810d384f76214cb8366d87647069ad8f71d888babd4cccf442fa5",
+  "units": "metres",
+  "up": "Y",
+  "sourceToRuntime": "[x,y,z] -> [x,z,-y]",
+  "root": "Original_BridgeCrane",
+  "controlAdapter": "controller.mjs",
+  "axes": {
+    "BridgeTravel": [
+      0,
+      0,
+      -1
+    ],
+    "TrolleyTravel": [
+      1,
+      0,
+      0
+    ],
+    "HoistTravel": [
+      0,
+      1,
+      0
+    ],
+    "DrumRotation": [
+      0,
+      0,
+      -1
+    ]
+  },
+  "limitsMetres": {
+    "bridge": [
+      -4.3,
+      4.3
+    ],
+    "trolley": [
+      -3.1,
+      3.1
+    ],
+    "hook": [
+      0.6,
+      5.2
+    ]
+  },
+  "nominalPose": {
+    "bridge": 0,
+    "trolley": 0,
+    "hook": 2.5
+  },
+  "hookAttachment": {
+    "node": "HookAttachment",
+    "localYup": [
+      0.04,
+      -0.09,
+      0
+    ],
+    "meaning": "visual hook seat anchor; no payload collision/rigging dynamics"
+  },
+  "ropeInterface": {
+    "upperY": 6.85,
+    "lowerY": "hook+.65",
+    "radius": 0.01,
+    "reeving": 2,
+    "drumRadius": 0.22,
+    "notEngineering": "illustrative geometry only"
+  },
+  "energyChain": {
+    "links": 72,
+    "pathLength": 8,
+    "bendRadius": 0.16,
+    "followsTrolley": true,
+    "notCableDynamics": true
+  },
+  "contacts": {
+    "runwayRailTopY": 5.8,
+    "endTruckWheelRadius": 0.18,
+    "endTruckWheelCenterY": 5.98,
+    "trolleyRailTopY": 6.55,
+    "trolleyWheelRadius": 0.12,
+    "trolleyWheelCenterY": 6.67
+  },
+  "collisionProxyProposal": {
+    "implemented": false,
+    "fixed": "separate runway/column boxes, not global bounding box",
+    "moving": "compound bridge+trolley boxes; hook convex/torus-like approximation only after clearance testing",
+    "payload": "application-owned attach frame, no automatic safe load inference"
+  },
+  "limitsAreSafetyCertification": false,
+  "NVIDIASourceClaim": false,
+  "referenceAssetInGLB": false,
+  "publicReferenceURLs": [
+    "https://www.abuscranes.com/download/us/84/abus_overhead_cranes.pdf",
+    "https://abus.help/zlk/en/Documents/installingthetrolley.html"
+  ],
+  "version": "v2-motor-clearance",
+  "supersedes": "original-bridge-crane.glb review v1: known hoist-motor/guardrail intersection",
+  "clearanceFix": "motor axis changed to source+X, raised.08m; power conduit rerouted; measured nominal rear-rail gap.375m",
+  "wheelMotion": "wheel meshes visual only; no wheel rotation or tire/rail dynamics in this release"
+}

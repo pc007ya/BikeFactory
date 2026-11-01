@@ -1,5 +1,5 @@
 import * as THREE from './vendor/three.module.js';
-import {fitPerspectiveBounds} from './view-framing.js?v=fcf14d41d228';
+import {fitPerspectiveBounds} from './view-framing.js?v=a523bf62b7df';
 
 // Native prop wrappers preserve source pivots; the cart geometry is offset from
 // its wrapper origin. Fit all world-space geometry rather than that origin.

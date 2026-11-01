@@ -1,5 +1,5 @@
 import * as THREE from './vendor/three.module.js';
-export {CART_DECK_Y,CART_SOURCE_UNDERSIDE_Y} from './cart-datums.js?v=fcf14d41d228';
+export {CART_DECK_Y,CART_SOURCE_UNDERSIDE_Y} from './cart-datums.js?v=a523bf62b7df';
 export const CART_HALF_WIDTH=.467851,CART_HALF_LENGTH=.824057;
 export const CART_HANDLE={original:false,notice:'原NVIDIA板車無高把手；本應用原創可拆推把治具，非原廠配件／安全認證',height:1.10,z:-.85,gripHalfWidth:.25,pusherDistance:1.22};
 // Non-destructive split of original connected tire surfaces. Preserve every

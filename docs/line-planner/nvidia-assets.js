@@ -1,9 +1,9 @@
-import {createCartVisual} from './cart-visual.js?v=fcf14d41d228';
+import {createCartVisual} from './cart-visual.js?v=a523bf62b7df';
 import * as THREE from './vendor/three.module.min.js';
 import {GLTFLoader} from './vendor/addons/loaders/GLTFLoader.js';
 import {clone as cloneSkeleton} from './vendor/addons/utils/SkeletonUtils.js';
-import {createHumanMotion} from './human-motion.js?v=fcf14d41d228';
-import {compilePlantLayout} from './plant-layout.js?v=fcf14d41d228';
+import {createHumanMotion} from './human-motion.js?v=a523bf62b7df';
+import {compilePlantLayout} from './plant-layout.js?v=a523bf62b7df';
 
 export const NVIDIA_WORKER_RENDER_LIMIT = 40;
 

@@ -1,0 +1,40 @@
+{
+  "originalDesign": true,
+  "notNVIDIAAsset": true,
+  "sourceExternalGeometry": "none",
+  "triangles": 61440,
+  "meshObjects": 99,
+  "materials": 7,
+  "dimensionsAssumed": {
+    "runwayLength": 12,
+    "railSpan": 8,
+    "railTop": 5.8
+  },
+  "controlRoots": [
+    "BridgeTravel",
+    "TrolleyTravel",
+    "HoistTravel",
+    "DrumRotation"
+  ],
+  "limitsSourceZup": {
+    "bridgeY": [
+      -4.3,
+      4.3
+    ],
+    "trolleyX": [
+      -3.1,
+      3.1
+    ],
+    "hookZ": [
+      0.6,
+      5.2
+    ]
+  },
+  "payloadAttachmentLocalZup": [
+    0.04,
+    0,
+    -0.09
+  ],
+  "loadRating": "NONE: visual demonstration, not structural or load-bearing engineering",
+  "railWebAdded": "continuous rail web connects foot to rail head"
+}

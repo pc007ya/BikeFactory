@@ -1,6 +1,6 @@
-import {compilePlantLayout} from './plant-layout.js?v=fcf14d41d228';
-import {CART_DECK_Y,CART_HANDLE} from './cart-geometry.js?v=fcf14d41d228';
-import {pathActions,rotate,add,forward,shortest,gait} from './cart-path.js?v=fcf14d41d228';
+import {compilePlantLayout} from './plant-layout.js?v=a523bf62b7df';
+import {CART_DECK_Y,CART_HANDLE} from './cart-geometry.js?v=a523bf62b7df';
+import {pathActions,rotate,add,forward,shortest,gait} from './cart-path.js?v=a523bf62b7df';
 export const MANUAL_CART_ID='warehouse:cart';
 export function defaultManualCart(){return {enabled:false,speedMps:.5,walkMps:.7,turnRadPerSecond:.4,loadSeconds:30,unloadSeconds:40,gripSeconds:2,maxTrips:6,capacity:1,handleAttachment:true}}
 export function validateManualCart(c){if(c.manualCart===undefined)return [];const p={...defaultManualCart(),...c.manualCart},e=[];if(!c.manualCart||typeof c.manualCart!=='object'||Array.isArray(c.manualCart))return['manualCart 必須是物件'];for(const k of['enabled','handleAttachment'])if(typeof p[k]!=='boolean')e.push(`manualCart.${k}須為布林值`);for(const[k,min,max,int]of[['speedMps',.05,1,false],['walkMps',.1,1.2,false],['turnRadPerSecond',.1,.8,false],['loadSeconds',20,300,false],['unloadSeconds',30,300,false],['gripSeconds',1,10,false],['maxTrips',1,100,true],['capacity',1,1,true]])if(!Number.isFinite(p[k])||p[k]<min||p[k]>max||int&&!Number.isInteger(p[k]))e.push(`manualCart.${k}須為${min}–${max}${int?'整數':''}`);if(p.enabled){if(c.logistics?.enabled||c.conveyor?.enabled)e.push('人工板車／AMR／滾筒供料模式互斥');if(c.stations?.length!==3)e.push('人工板車切片限定三站');if(c.warehouse?.hidden?.includes('warehouse:cart'))e.push('人工搬運需要可見原生板車');if(!p.handleAttachment)e.push('原板車無高把手；人工推行需啟用明示的原創推把治具');if(p.maxTrips>c.run?.maxJobs)e.push('板車存貨不可超過最大投料量');if(c.stations?.some(s=>s.operations?.some(o=>o.id==='manual-cart')))e.push('工序ID manual-cart與保留搬運ID衝突');

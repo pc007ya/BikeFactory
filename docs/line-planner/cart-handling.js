@@ -1,7 +1,7 @@
-import {sampleManualCart} from './manual-cart.js?v=fcf14d41d228';
-import {CART_DECK_Y,CART_HANDLE} from './cart-geometry.js?v=fcf14d41d228';
-import {rotate,add,forward,pathPose,gait,walkLength} from './cart-path.js?v=fcf14d41d228';
-import {createHandlingPath,sampleHandlingPath,handlingLanding,handlingCarry,handlingContact} from './handling-motion.js?v=fcf14d41d228';
+import {sampleManualCart} from './manual-cart.js?v=a523bf62b7df';
+import {CART_DECK_Y,CART_HANDLE} from './cart-geometry.js?v=a523bf62b7df';
+import {rotate,add,forward,pathPose,gait,walkLength} from './cart-path.js?v=a523bf62b7df';
+import {createHandlingPath,sampleHandlingPath,handlingLanding,handlingCarry,handlingContact} from './handling-motion.js?v=a523bf62b7df';
 const PI=Math.PI,clamp=u=>Math.max(0,Math.min(1,u)),smooth=u=>{u=clamp(u);return u*u*(3-2*u)},progress=(u,a,b)=>smooth((u-a)/(b-a)),mix=(a,b,q)=>a.map((v,i)=>v+(b[i]-v)*q),neutral=(p,h)=>({position:[...p],heading:h,crouch:0,handBlend:0,grip:false}),cargo=(owner,p,h,id)=>({owner,position:p?[...p]:null,heading:h,materialId:id}),contact=(pose,payload,blend=1)=>handlingContact(pose,payload,{blend,grip:blend===1,contact:blend===1}).pose;
 const pusher=f=>add(f.position,rotate([0,0,-CART_HANDLE.pusherDistance],f.heading));
 const deck=f=>add(f.position,rotate([0,CART_DECK_Y,.43],f.heading));

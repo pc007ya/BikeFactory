@@ -1,4 +1,4 @@
-import {CART_DECK_Y} from './cart-datums.js?v=fcf14d41d228';
+import {CART_DECK_Y} from './cart-datums.js?v=a523bf62b7df';
 // Pure metre-based layout contract shared by planning and visual adapters.
 export function compilePlantLayout(config){
 let x=0;const stations=[],machines=[];

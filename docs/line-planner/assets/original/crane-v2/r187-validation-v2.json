@@ -1,0 +1,140 @@
+{
+  "revision": "187",
+  "meshCount": 99,
+  "triangles": 61440,
+  "tests": [
+    {
+      "requested": {
+        "bridge": 0,
+        "trolley": 0,
+        "hook": 2.5
+      },
+      "clamped": {
+        "bridge": 0,
+        "trolley": 0,
+        "hook": 2.5
+      },
+      "hookWorld": [
+        0.03999999910593033,
+        2.4100000858306885,
+        0
+      ],
+      "ropes": [
+        {
+          "length": 3.6999999999999997,
+          "lower": 3.1500000000000004,
+          "upper": 6.85
+        },
+        {
+          "length": 3.6999999999999997,
+          "lower": 3.1500000000000004,
+          "upper": 6.85
+        }
+      ]
+    },
+    {
+      "requested": {
+        "bridge": 3,
+        "trolley": -2.5,
+        "hook": 1
+      },
+      "clamped": {
+        "bridge": 3,
+        "trolley": -2.5,
+        "hook": 1
+      },
+      "hookWorld": [
+        -2.4600000008940697,
+        0.9100000858306885,
+        -3
+      ],
+      "ropes": [
+        {
+          "length": 5.199999999999999,
+          "lower": 1.6500000000000004,
+          "upper": 6.85
+        },
+        {
+          "length": 5.199999999999999,
+          "lower": 1.6500000000000004,
+          "upper": 6.85
+        }
+      ]
+    },
+    {
+      "requested": {
+        "bridge": -3,
+        "trolley": 2.5,
+        "hook": 4.8
+      },
+      "clamped": {
+        "bridge": -3,
+        "trolley": 2.5,
+        "hook": 4.8
+      },
+      "hookWorld": [
+        2.5399999991059303,
+        4.710000085830688,
+        3
+      ],
+      "ropes": [
+        {
+          "length": 1.3999999999999995,
+          "lower": 5.450000000000001,
+          "upper": 6.85
+        },
+        {
+          "length": 1.3999999999999995,
+          "lower": 5.450000000000001,
+          "upper": 6.85
+        }
+      ]
+    },
+    {
+      "requested": {
+        "bridge": 99,
+        "trolley": -99,
+        "hook": 99
+      },
+      "clamped": {
+        "bridge": 4.3,
+        "trolley": -3.1,
+        "hook": 5.2
+      },
+      "hookWorld": [
+        -3.0600000008940698,
+        5.110000085830689,
+        -4.3
+      ],
+      "ropes": [
+        {
+          "length": 0.9999999999999991,
+          "lower": 5.85,
+          "upper": 6.85
+        },
+        {
+          "length": 0.9999999999999991,
+          "lower": 5.85,
+          "upper": 6.85
+        }
+      ]
+    }
+  ],
+  "browserGPU": false,
+  "chainLinks": 72,
+  "limits": {
+    "bridge": [
+      -4.3,
+      4.3
+    ],
+    "trolley": [
+      -3.1,
+      3.1
+    ],
+    "hook": [
+      0.6,
+      5.2
+    ]
+  },
+  "status": "PASS visual controls/limit clamps/rope endpoints/finite world geometry; not physics"
+}
