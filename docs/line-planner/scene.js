@@ -1,8 +1,8 @@
 import * as THREE from './vendor/three.module.js';
-import {createSceneModel} from './scene-model.js?v=013e77639fa8';
-import {createNvidiaAssets} from './nvidia-assets.js?v=013e77639fa8';
-import {assetFocusView} from './asset-framing.js?v=013e77639fa8';
-import {fitPerspectiveBounds,projectedBounds,framingContentBounds} from './view-framing.js?v=013e77639fa8';
+import {createSceneModel} from './scene-model.js?v=483f1be62d5c';
+import {createNvidiaAssets} from './nvidia-assets.js?v=483f1be62d5c';
+import {assetFocusView,assetGeometryBounds} from './asset-framing.js?v=483f1be62d5c';
+import {fitPerspectiveBounds,projectedBounds,framingContentBounds} from './view-framing.js?v=483f1be62d5c';
 
 // Rendering is deliberately independent of scheduling: no fabricated machine motion.
 export function createPlannerScene(container, {onSelect = () => {},onAssetSelect=()=>{},onAssetsChange=()=>{}} = {}) {
@@ -88,7 +88,7 @@ export function createPlannerScene(container, {onSelect = () => {},onAssetSelect
     const width=Math.max(1,container.clientWidth),height=Math.max(1,container.clientHeight);
     if(width!==lastWidth||height!==lastHeight){renderer.setSize(width,height,false);lastWidth=width;lastHeight=height;camera.aspect=width/height;camera.updateProjectionMatrix();}
     updateCamera();canvas.dataset.camera=JSON.stringify({azimuth,elevation,distance,target:target.toArray()});canvas.dataset.threeRevision=THREE.REVISION;if(lastFullFit)canvas.dataset.fitProjection=JSON.stringify({margins:lastFullFit.margins,projection:projectedBounds(lastFullFit.bounds,camera,width,height)});renderer.render(scene,camera);placeLabels(width,height);updateTooltip();
-    const assetState=nvidia.snapshot(),rect=canvas.getBoundingClientRect();canvas.dataset.assetTargets=JSON.stringify([...assetState.workers,...assetState.props.filter(p=>!p.hidden)].map(item=>{let p=new THREE.Vector3(...item.position);if(item.workerId)p.y+=1;else{const object=nvidia.root.getObjectByName(item.id);if(object)p=new THREE.Box3().setFromObject(object).getCenter(new THREE.Vector3());}p.project(camera);return {id:item.workerId||item.id,kind:item.workerId?'worker':'warehouse',x:rect.left+(p.x*.5+.5)*width,y:rect.top+(-p.y*.5+.5)*height};}));
+    const assetState=nvidia.snapshot(),rect=canvas.getBoundingClientRect();canvas.dataset.assetTargets=JSON.stringify([...assetState.workers,...assetState.props.filter(p=>!p.hidden)].map(item=>{let p=new THREE.Vector3(...item.position);if(item.workerId)p.y+=1;else{const bounds=assetGeometryBounds(nvidia.root,item.id);if(bounds)p=bounds.getCenter(new THREE.Vector3());}p.project(camera);return {id:item.workerId||item.id,kind:item.workerId?'worker':'warehouse',x:rect.left+(p.x*.5+.5)*width,y:rect.top+(-p.y*.5+.5)*height};}));
     renderCount++;drawDurations.push(performance.now()-start);if(drawDurations.length>180)drawDurations.shift();
   }
   function stopTransition(){if(frame)cancelAnimationFrame(frame);frame=0;transition=null;}
@@ -185,7 +185,7 @@ export function createPlannerScene(container, {onSelect = () => {},onAssetSelect
     snapshot(){
       const rect=canvas.getBoundingClientRect(),gl=renderer.getContext();
       const assets=nvidia.snapshot();
-      for(const item of [...assets.workers,...assets.props]){let v=new THREE.Vector3(...item.position);if(item.workerId)v.y+=1;else{const object=nvidia.root.getObjectByName(item.id);if(object)v=new THREE.Box3().setFromObject(object).getCenter(new THREE.Vector3());}v.project(camera);item.screenPosition=[rect.left+(v.x*.5+.5)*rect.width,rect.top+(-v.y*.5+.5)*rect.height];}
+      for(const item of [...assets.workers,...assets.props]){let v=new THREE.Vector3(...item.position);if(item.workerId)v.y+=1;else{const bounds=assetGeometryBounds(nvidia.root,item.id);if(bounds)v=bounds.getCenter(new THREE.Vector3());}v.project(camera);item.screenPosition=[rect.left+(v.x*.5+.5)*rect.width,rect.top+(-v.y*.5+.5)*rect.height];}
       return {...model.snapshot(),nvidia:assets,replayTime,machines:inventory.machines.map(m=>{const p=new THREE.Vector3(...m.position).project(camera);return {...structuredClone(m),screen:{x:(p.x*.5+.5)*rect.width,y:(-p.y*.5+.5)*rect.height},screenPosition:[rect.left+(p.x*.5+.5)*rect.width,rect.top+(-p.y*.5+.5)*rect.height]};}),renderer:{revision:THREE.REVISION,type:'WebGLRenderer',userAgent:navigator.userAgent,windowViewport:[window.innerWidth,window.innerHeight],webglVersion:gl.getParameter(gl.VERSION),geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,programs:renderer.info.programs?.length,calls:renderer.info.render.calls,triangles:renderer.info.render.triangles,renderCount,lastSyncCpuMs,pixelRatio:renderer.getPixelRatio(),toneMapping:'ACESFilmic',exposure:renderer.toneMappingExposure,shadows:'PCFShadowMap 2048',environment:'owned procedural studio PMREM cube 256',performanceSample},camera:{azimuth,elevation,distance,target:target.toArray(),transitioning:!!transition,fullViewFit:lastFullFit?{margins:lastFullFit.margins,worldBounds:{min:lastFullFit.bounds.min.toArray(),max:lastFullFit.bounds.max.toArray()},projection:projectedBounds(lastFullFit.bounds,camera,rect.width,rect.height)}:null},canvas:{width:rect.width,height:rect.height,left:rect.left,top:rect.top},selected:selection?{...selection}:null};
     },
     dispose(){
