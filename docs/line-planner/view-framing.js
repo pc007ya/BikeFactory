@@ -19,10 +19,10 @@ export function boundsCorners(bounds) {
 
 // Solve all perspective-frustum inequalities in the actual camera basis.
 // An oblique scene's depth changes the denominator independently at each corner.
-export function fitPerspectiveBounds(bounds,{azimuth,elevation,fov=42,width,height,near=.1,minDistance=9}) {
+export function fitPerspectiveBounds(bounds,{azimuth,elevation,fov=42,width,height,near=.1,minDistance=9,target:targetHint=null}) {
   if(bounds.isEmpty())throw new Error('Cannot fit empty bounds');
   width=Math.max(1,width);height=Math.max(1,height);
-  const aspect=width/height,target=bounds.getCenter(new THREE.Vector3());
+  const aspect=width/height,target=targetHint?targetHint.clone():bounds.getCenter(new THREE.Vector3());
   const outward=new THREE.Vector3(Math.sin(azimuth)*Math.cos(elevation),Math.sin(elevation),Math.cos(azimuth)*Math.cos(elevation));
   const right=new THREE.Vector3(Math.cos(azimuth),0,-Math.sin(azimuth));
   const up=new THREE.Vector3().crossVectors(outward,right);

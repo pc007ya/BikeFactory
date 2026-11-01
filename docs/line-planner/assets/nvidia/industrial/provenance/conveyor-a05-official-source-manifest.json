@@ -1,0 +1,278 @@
+[
+  {
+    "file": "conveyor_belt_a05/.metadata/LICENSE.txt",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/.metadata/LICENSE.txt",
+    "bytes": 18657,
+    "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+  },
+  {
+    "file": "conveyor_belt_a05/.metadata/com.nvidia.simready.conformance.Package-Candidate@1.0.0.json",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/.metadata/com.nvidia.simready.conformance.Package-Candidate@1.0.0.json",
+    "bytes": 885,
+    "sha256": "3bb99037ef001fd0ccdff72b6ad5ae71cec3004a7a6ffa3514c6b18ed8c201c3"
+  },
+  {
+    "file": "conveyor_belt_a05/.metadata/com.nvidia.simready.conformance.Package@1.0.0.json",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/.metadata/com.nvidia.simready.conformance.Package@1.0.0.json",
+    "bytes": 763,
+    "sha256": "61ba33549106c28ae9e248bb19ffab9df20a37f3ca039543224488389cc8e094"
+  },
+  {
+    "file": "conveyor_belt_a05/.metadata/com.nvidia.simready.packaging.bom.json",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/.metadata/com.nvidia.simready.packaging.bom.json",
+    "bytes": 18875,
+    "sha256": "7e1591e64d1830668b1b499247247c86895f45e2554e986ad691b984c098becc"
+  },
+  {
+    "file": "conveyor_belt_a05/.metadata/com.nvidia.simready.root_usds.json",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/.metadata/com.nvidia.simready.root_usds.json",
+    "bytes": 97,
+    "sha256": "4364ebe8ff2772ca05f855109502418581e7e2b5afe0a3946834071eb0188860"
+  },
+  {
+    "file": "conveyor_belt_a05/com.nvidia.simready.packaging.json",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/com.nvidia.simready.packaging.json",
+    "bytes": 562,
+    "sha256": "941a00aaa464d02237a6bb42e5e0b738f624b6c0f237261f34d1fefc4c52948f"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_Aluminium_Brushed_A1_Albedo.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_Aluminium_Brushed_A1_Albedo.png",
+    "bytes": 3444684,
+    "sha256": "27f7cbc9e584a808e47bfc1fe8101f4f061f44da67de2d457e49ef83525d8892"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_Aluminium_Brushed_A1_Normal.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_Aluminium_Brushed_A1_Normal.png",
+    "bytes": 2273010,
+    "sha256": "c3f57cd1107cebd878ad0e374a2e59b4fc0ce4e7e981bc47a312dc2dd793adf7"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_Aluminium_Brushed_A1_ORM.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_Aluminium_Brushed_A1_ORM.png",
+    "bytes": 2074427,
+    "sha256": "66178e5699df07bf2a140dfa9b22335204d07496af39734d9c2cdd75e8adc405"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_ConveyorBelt_A01_Trim_Albedo.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_ConveyorBelt_A01_Trim_Albedo.png",
+    "bytes": 2885638,
+    "sha256": "20bd2d10cc6a7b489d962fe20458f0eff41f149d8c7045cebb143d6fe8594862"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_ConveyorBelt_A01_Trim_Normal.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_ConveyorBelt_A01_Trim_Normal.png",
+    "bytes": 1466380,
+    "sha256": "f00a65f7b753597d67bbc299392ed44cfb76e6a6688e2d5bef06b8782b458944"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_ConveyorBelt_A01_Trim_ORM.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_ConveyorBelt_A01_Trim_ORM.png",
+    "bytes": 2514877,
+    "sha256": "0e2c2c7cc8e3a8aa42d5726795555396a107f4a5ec20a87990472a9e5fd7e3aa"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_ConveyorsBelt_A01_Decal_Albedo.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_ConveyorsBelt_A01_Decal_Albedo.png",
+    "bytes": 1082819,
+    "sha256": "1627a4849ea7bd51585541c868f2d3b2d24bc4ca1b3872c9a87e03be611eb5cb"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_ConveyorsBelt_A01_Decal_ORM.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_ConveyorsBelt_A01_Decal_ORM.png",
+    "bytes": 1312350,
+    "sha256": "9c7f76f5f80c7d9cf64291ad125c3df7cb935c7984f7ee4921ab42993ce2dbf9"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_MetalPainted_White_Glossy_A_Normal.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_MetalPainted_White_Glossy_A_Normal.png",
+    "bytes": 2325135,
+    "sha256": "774d302d5deb1b7233bb01d9480d889bb41c3c75c6a8274da3db22c387c9a352"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_MetalPainted_White_Glossy_A_ORM.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_MetalPainted_White_Glossy_A_ORM.png",
+    "bytes": 1821970,
+    "sha256": "fa86de21fe705fa4a826e4785d4001c6e90d5418bdefbfa24e7eaca14e5cc5bf"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_Metal_Glossy_A_Albedo.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_Metal_Glossy_A_Albedo.png",
+    "bytes": 3314214,
+    "sha256": "1f2c43526c30270e07b6e0ea5ccba7be5b588db5a19e70cc909ed69f17dabd4e"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_Metal_Glossy_A_Normal.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_Metal_Glossy_A_Normal.png",
+    "bytes": 159602,
+    "sha256": "e3d8bdd35ff2bc77775b162b98d1723e0008b02cfbaf1a058d3160e90dc3fac6"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_Metal_Glossy_A_ORM.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_Metal_Glossy_A_ORM.png",
+    "bytes": 2707096,
+    "sha256": "a6474d52f77d44479366ad3da9d8b595bb3c90c2c1dd597226a477ccb1a3f4a6"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_Plastic_Orange_A_Albedo.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_Plastic_Orange_A_Albedo.png",
+    "bytes": 3264891,
+    "sha256": "45cb4bad44d311d8b946a0eff3e40d1c0d97024d19fc3f11dd1e201d6e149c58"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_Plastic_Orange_A_Normal.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_Plastic_Orange_A_Normal.png",
+    "bytes": 4570654,
+    "sha256": "9ea115a565a13fbd3d37299c8d8d0eeae85b978200a9659e2c7735b4aa92d4fa"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_Plastic_Orange_A_ORM.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_Plastic_Orange_A_ORM.png",
+    "bytes": 3227703,
+    "sha256": "619b74fe3c737612c7b5f7882f9302e3f675b09ec46ec0e42949cf909dea2159"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_Plastic_Rough_Black_A_Albedo.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_Plastic_Rough_Black_A_Albedo.png",
+    "bytes": 2772954,
+    "sha256": "7fefce8d8de3acadf6dd8da7431388fcf93da75dddd65cb6ad6672ac2bb3f7a4"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_Plastic_Rough_Black_A_Normal.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_Plastic_Rough_Black_A_Normal.png",
+    "bytes": 4718518,
+    "sha256": "e49906ff61dd7df0620844a8176d183780ae9a8aed4da72e1bac9fd0e2473e28"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_Plastic_Rough_Black_A_ORM.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_Plastic_Rough_Black_A_ORM.png",
+    "bytes": 3787929,
+    "sha256": "85afc75ff6a80c337aa9264406b6e09c87d30ce42416bc8cd2fbb696b6d039fe"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_Steel_A1_Albedo.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_Steel_A1_Albedo.png",
+    "bytes": 5557085,
+    "sha256": "e61898b1e1a7b64dba44ee6e3b8b0d66f873508c09e141394d5535d208d96b12"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_Steel_A1_Normal.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_Steel_A1_Normal.png",
+    "bytes": 2279404,
+    "sha256": "c6a0ba336a804cd04da8406859bd40323c3eee783ef879ee8cf1699de5d82f60"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/Textures/T_Steel_A1_ORM.png",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/Textures/T_Steel_A1_ORM.png",
+    "bytes": 3254657,
+    "sha256": "20fe51937828869ed01a3fdd330de761802d080dbe052250f2a26720d1f73335"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/payloads/MuJoCo/disabled.usda",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/payloads/MuJoCo/disabled.usda",
+    "bytes": 4094,
+    "sha256": "5709fbd4240fd3b326f4ce0bf1f0eb304567f5e1e6fb988121cc4348903c5faf"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/payloads/MuJoCo/enabled.usda",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/payloads/MuJoCo/enabled.usda",
+    "bytes": 16849,
+    "sha256": "33a1e6f80622b3c8de94652f5bf91a92a1b1cd6ffa086f19b5ff597036e89851"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/payloads/Newton/disabled.usda",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/payloads/Newton/disabled.usda",
+    "bytes": 4094,
+    "sha256": "5709fbd4240fd3b326f4ce0bf1f0eb304567f5e1e6fb988121cc4348903c5faf"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/payloads/Newton/enabled.usda",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/payloads/Newton/enabled.usda",
+    "bytes": 12173,
+    "sha256": "27d6424eadb257194ccea4b44028baddcfc7198d8bfb30802ad5b080b009241b"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/payloads/PhysX/disabled.usda",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/payloads/PhysX/disabled.usda",
+    "bytes": 4094,
+    "sha256": "5709fbd4240fd3b326f4ce0bf1f0eb304567f5e1e6fb988121cc4348903c5faf"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/payloads/PhysX/enabled.usda",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/payloads/PhysX/enabled.usda",
+    "bytes": 9906,
+    "sha256": "2eae135c1f5185d0719077f584b691d38d47dbce6b18b0c2fb29801b136a0397"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/payloads/Physics/physics.usda",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/payloads/Physics/physics.usda",
+    "bytes": 35112,
+    "sha256": "cf8aac033c4040bbb5e5730909df3ecfe6a14403325f8985770c3098e6b4ac45"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/payloads/base.usda",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/payloads/base.usda",
+    "bytes": 76789,
+    "sha256": "ecadf328f57e67d807d2fca37dd2f00b446d2dd1735349ae3e40c7da8bfe6f18"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/payloads/geometries.usd",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/payloads/geometries.usd",
+    "bytes": 11120175,
+    "sha256": "a09484e0654404528d621083ee9ded038e94a3265af6894efd17d9c2bacf9662"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/payloads/instances.usda",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/payloads/instances.usda",
+    "bytes": 39772,
+    "sha256": "b0498199cffa4778ac82895b48d2c95e6bc03c43158e7f177917c7799daec094"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/payloads/instances_mujoco.usda",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/payloads/instances_mujoco.usda",
+    "bytes": 47932,
+    "sha256": "c43345f41d93a5e3e8ae083fe627efcbc134aa564673dc27671c2e2a1c11db96"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/payloads/instances_newton.usda",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/payloads/instances_newton.usda",
+    "bytes": 43462,
+    "sha256": "f76ef27bdfece6e68fefe1a8cb60e6e65d17f74a572861cab48db3d7788b9141"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/payloads/instances_physx.usda",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/payloads/instances_physx.usda",
+    "bytes": 43972,
+    "sha256": "f2c8277296aad111778e2b7d4d41a0e5e85709600a6a0cdfb0ebc3717b7e0b2a"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/payloads/materials.usda",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/payloads/materials.usda",
+    "bytes": 52751,
+    "sha256": "e3451c7f9d7094be941a7fdc51dd8bccc7e13151a58514958d212ac4f6fa4b2a"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/sm_conveyor_belt_a05_01.usd",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/sm_conveyor_belt_a05_01.usd",
+    "bytes": 21325,
+    "sha256": "5bf1027cc0b5d79726466d77e80ff67db5a410256cecc18dafceeaef5a8881e4"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/source_assets/OmniPBR.mdl",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/source_assets/OmniPBR.mdl",
+    "bytes": 16010,
+    "sha256": "6e6b3acbccd236e21a6c29964a431d2a53e77251cc6b8b1bc975eb1c62da1781"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/source_assets/OmniPBRBase.mdl",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/source_assets/OmniPBRBase.mdl",
+    "bytes": 19369,
+    "sha256": "a8fd9fe174e91892e94d06da90ba453a124024c2ce2c033be9d82c9e2f76a3b7"
+  },
+  {
+    "file": "conveyor_belt_a05/simready_usd/source_assets/OmniPBR_ClearCoat.mdl",
+    "url": "https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/conveyor_belt_a05/simready_usd/source_assets/OmniPBR_ClearCoat.mdl",
+    "bytes": 29789,
+    "sha256": "d84c5ba482561c0eaea2e0c5b607358af549e36cd921773462f92dbc4f32cbc3"
+  }
+]

@@ -1,3 +1,11 @@
+## Optional single-AMR logistics slice — local checkpoint
+
+The optional logistics switch replaces external raw-job arrival with one real DES-controlled iw_hub supply loop. Material is delivered only after a first-station worker and buffer are available and unloading finishes. Finite stock, in-transfer material, production WIP and finished parts conserve unique material IDs. Disabling logistics preserves the preceding production baseline. Default loading/unloading is24/30seconds, including operator motion; these are demonstration assumptions, not measured factory capability.
+
+Native human walking and turns use original bone lengths, planted stance feet and measured palm offsets. The same task phase drives root movement, reach, grip, carry and release. Native AMR links use the supplied runtime axes, signed wheel distances and0–40mm lift. Four fitted payload pads are verified by36rays against actual lift triangles. A separate project-authored landing bench and corridor surface provide declared support geometry. Kinematic contacts are not a dynamics, ergonomics, load rating or safety certification.
+
+The straight/curved roller conveyor GLBs and their public interfaces are staged but not activated. No crane geometry is available, and no bridge crane is fabricated. No autonomous navigation, ROS, traction or dynamic collision solver is claimed. This checkpoint has automated tests; real browser acceptance and a separate deployment commit follow after visual review. Older stage records below are historical.
+
 ## NVIDIA event integration — 2026-11-01
 
 Current entry uses real NVIDIA Isaac Sim 5.1 worker and warehouse GLBs with local Three.js r187 core/addons. See [ASSET-SOURCES.md](ASSET-SOURCES.md) for exact sources, hashes, conversion changes and license context. Assets are not labeled CC BY. Publication was explicitly requested for this noncommercial project; no new agreement was clicked or accepted by the agent, and no unrestricted redistribution grant is claimed.

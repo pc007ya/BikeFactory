@@ -1,25 +1,95 @@
 {
   "schema": 1,
   "generatedBy": "BikeFactory line-planner static build",
-  "sourceCommit": "483f1be62d5cf8e9e0c40c6809fad21c25562b90",
-  "generatedAt": "2026-11-01T10:18:10.767Z",
-  "buildId": "73c1a2cd113742edef94",
+  "sourceCommit": "38e637d86a0ade5ed982f81df0724358cdebf11b",
+  "generatedAt": "2026-11-01T11:39:20.804Z",
+  "buildId": "d6c3f7142556ca365f5a",
   "entrypoint": "index.html",
   "files": [
     {
       "path": "app.js",
-      "bytes": 24028,
-      "sha256": "d33cce26d2f9f9d003ff51d4008f1e3ce46474372d4af97de6d21dccc93e4021"
+      "bytes": 31164,
+      "sha256": "0d518479b0503c92a969bf9aa21b77c73582260640f29b209a6930474599cef1"
     },
     {
       "path": "asset-framing.js",
-      "bytes": 833,
-      "sha256": "c741ccb5baf6258870b654e1d83bb2635ab9c22b56223a3b23da61bc590491bb"
+      "bytes": 893,
+      "sha256": "f292f693bf101abf64d42ea3754a8ceef823fca432a2e11b6ac6af85c69156ec"
     },
     {
       "path": "ASSET-SOURCES.md",
-      "bytes": 4148,
-      "sha256": "03ee88cf825a940a5990e8e0021fbf4f71eddb4685eff05fcbee6af93db50e3d"
+      "bytes": 5393,
+      "sha256": "dbe395d96dbc3881d6a337b8c650257dc24a903673f1268abd7a84f01544d889"
+    },
+    {
+      "path": "assets/nvidia/industrial/interfaces/cart-measured-interface.json",
+      "bytes": 4815,
+      "sha256": "50017d760dae702bd33f54e15127bdf2e3f94119d0ed3b0d2883cc1b0c6f7b99"
+    },
+    {
+      "path": "assets/nvidia/industrial/interfaces/conveyor-controls.mjs",
+      "bytes": 1333,
+      "sha256": "f1e6c457f030d34d7df5ab1c5966f1deb0aab60d6aaae4669c60f1069d28b58b"
+    },
+    {
+      "path": "assets/nvidia/industrial/interfaces/iwhub-controls.mjs",
+      "bytes": 1264,
+      "sha256": "0ffdb2066cb25509a5c2a3e26597e7397ba3f60f449ecf3c7a659da5bf734722"
+    },
+    {
+      "path": "assets/nvidia/industrial/interfaces/iwhub-interface.json",
+      "bytes": 1232,
+      "sha256": "7352c362b542cb2bb7d333649911339bbb326d59e3e3f9ca07407c613ad76bbf"
+    },
+    {
+      "path": "assets/nvidia/industrial/interfaces/iwhub-measured-interfaces.json",
+      "bytes": 6351,
+      "sha256": "602732b73b6c090f5fa27b9ca60620f1ff4753c0467bf5481fa4af0fa1294068"
+    },
+    {
+      "path": "assets/nvidia/industrial/interfaces/runtime-hashes.json",
+      "bytes": 653,
+      "sha256": "43e28e36ff8bea660e6b285c0208b2b195437ad013f663b67c96d0f2017c02c3"
+    },
+    {
+      "path": "assets/nvidia/industrial/nvidia-conveyor-a02-lod.glb",
+      "bytes": 17323720,
+      "sha256": "a838f5db1ee946cec44bee38502ba0d6c319f1d6eedb93ce24532b95df7f8409"
+    },
+    {
+      "path": "assets/nvidia/industrial/nvidia-conveyor-a05-lod.glb",
+      "bytes": 19942864,
+      "sha256": "9e50c36374bbdd664274e3ea5dfdb5a9d239106d9c6316a1f07880ba7eff8437"
+    },
+    {
+      "path": "assets/nvidia/industrial/nvidia-iwhub-runtime.glb",
+      "bytes": 37701148,
+      "sha256": "7880e27a2d95d05c7527fd53a7d05fb7289bc3094d9cd51c6ca357bcd359bb1a"
+    },
+    {
+      "path": "assets/nvidia/industrial/provenance/conveyor-a02-LICENSE.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "assets/nvidia/industrial/provenance/conveyor-a02-official-source-manifest.json",
+      "bytes": 14559,
+      "sha256": "ee478f17f31006acba06bfb670d2a82d2c31aabdbb961b9c8894d1e79c837fe6"
+    },
+    {
+      "path": "assets/nvidia/industrial/provenance/conveyor-a05-LICENSE.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "assets/nvidia/industrial/provenance/conveyor-a05-official-source-manifest.json",
+      "bytes": 15599,
+      "sha256": "530794d38716f7609b2bcd885cebcec6d33f7b3ff6e8f8a5a70e6036a7402c00"
+    },
+    {
+      "path": "assets/nvidia/industrial/provenance/iwhub-official-source-manifest.json",
+      "bytes": 8938,
+      "sha256": "d06ade922bdbe5b7f37d07a5353ff5ec2742b296208591ec006c4c7800d8fbb2"
     },
     {
       "path": "assets/nvidia/nvidia-warehouse-bay.glb",
@@ -42,9 +112,29 @@
       "sha256": "22e7ded60e8e5e9697a99cfc2fb2df3a1ccef85e6f22f664489280bde3b246eb"
     },
     {
+      "path": "handling-motion.js",
+      "bytes": 15162,
+      "sha256": "4a6f2e8fbc1b54f1b2fb44d1aa22ac5eb948819505038772c86bf77be56b6871"
+    },
+    {
+      "path": "human-motion.js",
+      "bytes": 19123,
+      "sha256": "37a2b022911349b97c1271a95bd4872ba57272f38917390cbebae90402208bab"
+    },
+    {
       "path": "index.html",
-      "bytes": 4697,
-      "sha256": "6ed7ab3dd3ecf30d4bafe042228caddec5c897408a467429883c921da8a82444"
+      "bytes": 5909,
+      "sha256": "89d9a47a36d6e893b18e4ea01451a0ab7d44742b58afa67b5ddad7ca50dc2682"
+    },
+    {
+      "path": "industrial-assets.js",
+      "bytes": 17090,
+      "sha256": "b8c7337a562dcb3df25d3235140083acb68d0fc079b9d274b4cb9719ef9106b8"
+    },
+    {
+      "path": "logistics.js",
+      "bytes": 14902,
+      "sha256": "97fb5eea8b270a528434d60dcf0137619b71cb870fb6f3d7ec388a4805f6d697"
     },
     {
       "path": "MIGRATION-R187.md",
@@ -53,8 +143,8 @@
     },
     {
       "path": "nvidia-assets.js",
-      "bytes": 23497,
-      "sha256": "63a86b21c8d1b9480c079c6384dace1bb130bdd1660450790f3e8e7c6b14ad83"
+      "bytes": 25747,
+      "sha256": "d180791743b0788c64451346f1ebe35a6d181dbe5528c072d0d80ad787c3875d"
     },
     {
       "path": "package.json",
@@ -62,9 +152,14 @@
       "sha256": "53426a6407e3eef298095976f0056c88f450787eac14b95e00571e032d814a52"
     },
     {
+      "path": "plant-layout.js",
+      "bytes": 3707,
+      "sha256": "51e90433661e2f46974a1a2b51841a1a852f6b2a936c63983873a9d6382f03c8"
+    },
+    {
       "path": "README.md",
-      "bytes": 12013,
-      "sha256": "a69868e807155db4e204261aea734a7b195e5f0da770ba49722c52aed5bc6126"
+      "bytes": 13541,
+      "sha256": "80ecc86f52a7d0327b4afafd7231b325aea7f2dfe1cf257d0e7c688f50cf3d91"
     },
     {
       "path": "scene-model.js",
@@ -73,18 +168,28 @@
     },
     {
       "path": "scene.js",
-      "bytes": 19719,
-      "sha256": "13b8736517e446ea46531bb5ff95be7c1db02211b41244a123eca8b1b0cd0857"
+      "bytes": 24866,
+      "sha256": "34a3031acaa605b4a974bdc9e0aef821ffcc6834e3285caf0c168926f805c0ad"
     },
     {
       "path": "simulation.js",
-      "bytes": 12130,
-      "sha256": "eb000372fd3309e20cb3cb53e8242701d0f6330fe4b8f916ddad117b5f06a6e7"
+      "bytes": 13738,
+      "sha256": "631635d6984f15b3e8ef26e1c163679a064e948be7c0856b5337b638e6bc2ef2"
     },
     {
       "path": "style.css",
-      "bytes": 5098,
-      "sha256": "2c54a3729ca8afda93e5e298c0725aa694e0f0c4166f6c089d2ab24a68a944d3"
+      "bytes": 6110,
+      "sha256": "96ca13993cb322263c1d173ae69f06af1b419f20b5373a411087cd3bd85cb08d"
+    },
+    {
+      "path": "transport-floor.js",
+      "bytes": 4028,
+      "sha256": "2a1e76e3f347397d3540a32cda47334e37d23e7ccffeafa67631aeb3d434f426"
+    },
+    {
+      "path": "transport-framing.js",
+      "bytes": 858,
+      "sha256": "395713bcb217a52009bd9400cee4e3b43d78c5eb0f4c9853a3c2792568218899"
     },
     {
       "path": "vendor/addons/loaders/GLTFLoader.js",
@@ -133,8 +238,8 @@
     },
     {
       "path": "view-framing.js",
-      "bytes": 2944,
-      "sha256": "b69c65503b10c042938add8bcef1b389ad181ea6d426d046e22131f7081f83e5"
+      "bytes": 2997,
+      "sha256": "ac58fb4e776774830b70d60dd8f323c59176db29361da08bb03500c331f7880f"
     },
     {
       "path": ".nojekyll",

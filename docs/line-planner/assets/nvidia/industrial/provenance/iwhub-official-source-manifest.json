@@ -1,0 +1,164 @@
+[
+  {
+    "path": "iw_hub.usd",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/iw_hub.usd",
+    "bytes": 21262,
+    "sha256": "f2ae9e2677cd71c9001bd29f3ed50bd83a29ba8bad757c9fd22ecaa7c2abb8fb"
+  },
+  {
+    "path": "HighResProps/Inner_Right_Wheel.usd",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Inner_Right_Wheel.usd",
+    "bytes": 22379,
+    "sha256": "0033f6379a37e5e5e54de0a9af7bc55563a2d8f4b6005da438ed02d6d338296e"
+  },
+  {
+    "path": "HighResProps/materials.usd",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/materials.usd",
+    "bytes": 4456,
+    "sha256": "db12fd7f13f661573e6e7a031571136715d807557d527b7cbbdb50ca6310f702"
+  },
+  {
+    "path": "HighResProps/Left_Wheel.usd",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Left_Wheel.usd",
+    "bytes": 1471559,
+    "sha256": "3466cc2cfc1426bfc39116d4d1ad9c4b9968cdd2c0e1e04808aa894a65edb1f0"
+  },
+  {
+    "path": "HighResProps/Inner_Left_Wheel.usd",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Inner_Left_Wheel.usd",
+    "bytes": 22426,
+    "sha256": "704ea62d9e8a4ccdc76e71d87db81b3daee721c4474c31ed74eaea9bd62b72b5"
+  },
+  {
+    "path": "HighResProps/Right_Swivel.usd",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Right_Swivel.usd",
+    "bytes": 5376,
+    "sha256": "a79e228916f12bdf4e7148fb3efa564c423a97a701593f852515a4d5159ab9c3"
+  },
+  {
+    "path": "HighResProps/Right_Wheel.usd",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Right_Wheel.usd",
+    "bytes": 1472009,
+    "sha256": "10ae74a3d8dd0a018afb44f9e55498969a6a5028fad74d0fec6b9a8db98466a5"
+  },
+  {
+    "path": "HighResProps/Body_v2.usd",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Body_v2.usd",
+    "bytes": 25643700,
+    "sha256": "761f5a96323900f954f20f8e9a51a26d584a2955eeb8a5998aa44e7475fc5ce4"
+  },
+  {
+    "path": "HighResProps/Lift_v2.usd",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Lift_v2.usd",
+    "bytes": 7226543,
+    "sha256": "fcd5339190b3f86dbc47d3f32c8a2df20c71d4b4f1446f3fdc5e84e7985cfb8e"
+  },
+  {
+    "path": "HighResProps/Left_Swivel.usd",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Left_Swivel.usd",
+    "bytes": 6256,
+    "sha256": "b213840fa126df4b1bd74b7cba9e76d8cc3ccaed229ffcde122fd5280b4fb20c"
+  },
+  {
+    "path": "configuration/iw_hub_robot_schema.usd",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/configuration/iw_hub_robot_schema.usd",
+    "bytes": 2530,
+    "sha256": "e70d4acbea239749eb7889dedfb5840f5210ee749d1130f54dfa9e3e23f775fb"
+  },
+  {
+    "path": "HighResProps/Textures/STL_Robot_albedo.1003.png",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Textures/STL_Robot_albedo.1003.png",
+    "bytes": 15942317,
+    "sha256": "d79a246f53b70f183107b304d2c96896f41d9e1b22356af8c9b60ce4d9e3521e"
+  },
+  {
+    "path": "HighResProps/Textures/STL_Robot_normal.1001.png",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Textures/STL_Robot_normal.1001.png",
+    "bytes": 3578747,
+    "sha256": "b3e53fb8f1e2fe64b0491ad49a4ac692273eabd71651fc7470de3be8bd99413f"
+  },
+  {
+    "path": "HighResProps/Textures/STL_Robot_orm.1002.png",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Textures/STL_Robot_orm.1002.png",
+    "bytes": 14529546,
+    "sha256": "05113ce7625da298e33536135885bab225cf00ccddf3d899de8f0b728abe33ff"
+  },
+  {
+    "path": "HighResProps/Textures/STL_Robot_orm.1004.png",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Textures/STL_Robot_orm.1004.png",
+    "bytes": 14209190,
+    "sha256": "e8fdc8640fd1e03445744c369af41fd55276ea3e1ac45700cf07e55c5f5e445c"
+  },
+  {
+    "path": "HighResProps/Textures/STL_Robot_orm.1003.png",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Textures/STL_Robot_orm.1003.png",
+    "bytes": 12703184,
+    "sha256": "932a3dc78e9f995d2b48dbcd753a4b71ec773ea9901efd8b8412749f16d6273b"
+  },
+  {
+    "path": "HighResProps/Textures/STL_Robot_emissive.1003.png",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Textures/STL_Robot_emissive.1003.png",
+    "bytes": 49073,
+    "sha256": "33d54003abdb2519fdd2eea1f0a7ba02ae34abc76d66dccae9965ad87b3024d9"
+  },
+  {
+    "path": "HighResProps/Textures/STL_Robot_normal.1002.png",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Textures/STL_Robot_normal.1002.png",
+    "bytes": 1172391,
+    "sha256": "5ee6418cd52a50b87a31dc484c4d192e4c6b6562161d665fe1c8dd1d22f29960"
+  },
+  {
+    "path": "HighResProps/Textures/STL_Robot_emissive.1001.png",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Textures/STL_Robot_emissive.1001.png",
+    "bytes": 76131,
+    "sha256": "f109170bd78783b4c038040c1ac9f802d1683de858bc769ce92edf0cbda1163c"
+  },
+  {
+    "path": "HighResProps/Textures/STL_Robot_emissive.1004.png",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Textures/STL_Robot_emissive.1004.png",
+    "bytes": 49073,
+    "sha256": "33d54003abdb2519fdd2eea1f0a7ba02ae34abc76d66dccae9965ad87b3024d9"
+  },
+  {
+    "path": "HighResProps/Textures/STL_Robot_normal.1004.png",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Textures/STL_Robot_normal.1004.png",
+    "bytes": 304386,
+    "sha256": "4492a470ecedd8671f4627329961dc98cdd55f51bc19df338b63e78ff7484bef"
+  },
+  {
+    "path": "HighResProps/Textures/STL_Robot_albedo.1002.png",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Textures/STL_Robot_albedo.1002.png",
+    "bytes": 10896274,
+    "sha256": "be95f89b5fb43a6aabd4a989b1efbf8acdeeaeadce85dc084667c434268453b9"
+  },
+  {
+    "path": "HighResProps/Textures/STL_Robot_orm.1001.png",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Textures/STL_Robot_orm.1001.png",
+    "bytes": 16534238,
+    "sha256": "65cc6965b33815547d1002cd60b55c20cfe2fa88e187d2de1e426f6889168b35"
+  },
+  {
+    "path": "HighResProps/Textures/STL_Robot_albedo.1004.png",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Textures/STL_Robot_albedo.1004.png",
+    "bytes": 11668580,
+    "sha256": "c04263457e9e26e69445c1d348e4ea321aca2d6fe91005ed34cb78cb878dd61e"
+  },
+  {
+    "path": "HighResProps/Textures/STL_Robot_albedo.1001.png",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Textures/STL_Robot_albedo.1001.png",
+    "bytes": 10655695,
+    "sha256": "aa87d61c6afc1ae0d360ac76cd7024d312ad77193cb6c501ce46a811f880cfc6"
+  },
+  {
+    "path": "HighResProps/Textures/STL_Robot_normal.1003.png",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Textures/STL_Robot_normal.1003.png",
+    "bytes": 1061532,
+    "sha256": "15871a93bc4dcf50c7e9442693ca7fe9ea622afab3be1310ffb1bab8c318fbcf"
+  },
+  {
+    "path": "HighResProps/Textures/STL_Robot_emissive.1002.png",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/HighResProps/Textures/STL_Robot_emissive.1002.png",
+    "bytes": 49073,
+    "sha256": "33d54003abdb2519fdd2eea1f0a7ba02ae34abc76d66dccae9965ad87b3024d9"
+  }
+]

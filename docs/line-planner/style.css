@@ -6,3 +6,14 @@ select{background:#0d1928;border:1px solid #34516c;color:#edf5ff;border-radius:5
 textarea{display:block;width:100%;box-sizing:border-box;background:#0d1925;color:#dceaf3;border:1px solid #3a5268;border-radius:5px;padding:8px;font:12px ui-monospace,monospace;}
 /* Keep every control reachable when the sticky sidebar exceeds the viewport. */
 @media(min-width:1001px){aside{max-height:calc(100dvh - 32px);overflow-y:auto;scrollbar-gutter:stable}}
+/* Grid tracks must be allowed to shrink below a selected asset's long node ID.
+   Keep wide result tables scrollable inside .result-box, not on the whole page. */
+main{grid-template-columns:260px minmax(0,1fr)}
+main>aside,main>article{min-width:0}
+#asset-inspector{overflow-wrap:anywhere}
+#status,#scene-selection,.station>small{overflow-wrap:anywhere}
+@media(max-width:1000px){main{grid-template-columns:minmax(0,1fr)}}
+
+.logistics-toggle{flex-direction:row;align-items:center;margin:12px 0}.logistics-toggle input[type=checkbox]{width:16px;height:16px;padding:0;accent-color:#65dfc2}
+#scene-section{overflow-anchor:none}#transport-debug,#asset-debug{height:260px;max-height:260px;overflow:auto;font-size:11px;white-space:pre-wrap;overflow-wrap:anywhere}#asset-inspector{white-space:pre-wrap;max-height:180px;overflow:auto}
+#scene-replay-toggle{position:absolute;z-index:3;right:10px;top:10px;background:#142b3de8;font-size:12px}.replay-toolbar{margin:12px 0;align-items:center}#transport-results{min-width:0}

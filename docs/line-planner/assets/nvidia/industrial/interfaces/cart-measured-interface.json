@@ -1,0 +1,170 @@
+{
+  "asset": "SM_PushcartA_02",
+  "originalGLBUnchanged": true,
+  "glbSha256": "105722e921c2591249f76f6b490fe99663efd3e832a1112dafd478230bb0c733",
+  "glbBytes": 8438304,
+  "coordinateMapping": "[x,y,z] -> [x,z,-y]",
+  "sourceBounds": {
+    "min": [
+      -0.46785014060474595,
+      -0.8240565306531664,
+      3.814697180359872e-08
+    ],
+    "max": [
+      0.46785014060474595,
+      0.8240565306531664,
+      0.3774050437493983
+    ]
+  },
+  "deckContact": {
+    "sourcePlaneZ": 0.297060997998841,
+    "runtimePlaneY": 0.297060997998841,
+    "sourcePolygon": [
+      [
+        0.4352605340944109,
+        -0.7431785417382741,
+        0.297060997998841
+      ],
+      [
+        -0.4352605340944109,
+        -0.7431785417382741,
+        0.297060997998841
+      ],
+      [
+        0.4352605340944109,
+        0.7431785417382741,
+        0.297060997998841
+      ],
+      [
+        -0.4352605340944109,
+        0.7431785417382741,
+        0.297060997998841
+      ]
+    ],
+    "method": "largest actual horizontal face; NOT highest overall bbox",
+    "totalCoplanarTriangleAreaM2": 1.2939051560180266,
+    "rootGroundOffsetM": 0,
+    "maxBBoxIsRimNotDeck": true
+  },
+  "wheelAxisCandidates": [
+    {
+      "sourceCenterZup": [
+        -0.36026154666554433,
+        -0.5728060975788658,
+        0.10438646083206393
+      ],
+      "runtimeCenterYup": [
+        -0.36026154666554433,
+        0.10438646083206393,
+        0.5728060975788658
+      ],
+      "sourceAxis": [
+        1,
+        0,
+        0
+      ],
+      "runtimeAxis": [
+        1,
+        0,
+        0
+      ],
+      "radiusM": 0.10438642268509213,
+      "widthM": 0.05616741054875973,
+      "method": "bounds of original connected cylindrical tire surface; 34 authored vertices",
+      "mechanicalLimit": "nominal geometry estimate; no joint or physics authored"
+    },
+    {
+      "sourceCenterZup": [
+        -0.36026154666554433,
+        0.5728060975788658,
+        0.10438646083206393
+      ],
+      "runtimeCenterYup": [
+        -0.36026154666554433,
+        0.10438646083206393,
+        -0.5728060975788658
+      ],
+      "sourceAxis": [
+        1,
+        0,
+        0
+      ],
+      "runtimeAxis": [
+        1,
+        0,
+        0
+      ],
+      "radiusM": 0.10438642268509213,
+      "widthM": 0.05616741054875973,
+      "method": "bounds of original connected cylindrical tire surface; 34 authored vertices",
+      "mechanicalLimit": "nominal geometry estimate; no joint or physics authored"
+    },
+    {
+      "sourceCenterZup": [
+        0.36026154666554433,
+        -0.5728060975788658,
+        0.10438646083206393
+      ],
+      "runtimeCenterYup": [
+        0.36026154666554433,
+        0.10438646083206393,
+        0.5728060975788658
+      ],
+      "sourceAxis": [
+        1,
+        0,
+        0
+      ],
+      "runtimeAxis": [
+        1,
+        0,
+        0
+      ],
+      "radiusM": 0.10438642268509213,
+      "widthM": 0.05616741054875973,
+      "method": "bounds of original connected cylindrical tire surface; 34 authored vertices",
+      "mechanicalLimit": "nominal geometry estimate; no joint or physics authored"
+    },
+    {
+      "sourceCenterZup": [
+        0.36026154666554433,
+        0.5728060975788658,
+        0.10438646083206393
+      ],
+      "runtimeCenterYup": [
+        0.36026154666554433,
+        0.10438646083206393,
+        -0.5728060975788658
+      ],
+      "sourceAxis": [
+        1,
+        0,
+        0
+      ],
+      "runtimeAxis": [
+        1,
+        0,
+        0
+      ],
+      "radiusM": 0.10438642268509213,
+      "widthM": 0.05616741054875973,
+      "method": "bounds of original connected cylindrical tire surface; 34 authored vertices",
+      "mechanicalLimit": "nominal geometry estimate; no joint or physics authored"
+    }
+  ],
+  "controlInterface": {
+    "root": "worldPose(positionXYZmetres,yawRadians)",
+    "payload": "attach payload bottom to deck frame, not bboxMax; preserve payload geometric bottom offset",
+    "wheelSpin": "NOT currently implemented. Source wheels/body share one mesh. Coordinates supplied for future non-destructive component split; do not rotate entire mesh per wheel.",
+    "casterSteer": "No source joint hierarchy, steering pivot not verified; do not infer from tire center",
+    "handContact": "No tall handle present. Do not reuse standing G3 handle contact."
+  },
+  "collisionProxyProposal": {
+    "implemented": false,
+    "deck": "thin box using actual deck footprint and thickness measured in source, not full .377m height",
+    "wheels": "4 cylinders at nominal centers/radius; axisX",
+    "rim": "separate low side/end boxes if collision precision needed",
+    "massFrictionCapacity": "unspecified; must be calibrated, not inferred from geometry"
+  },
+  "simulationClaim": "visual/interface preparation only, no navigation/dynamics/validated load capacity"
+}

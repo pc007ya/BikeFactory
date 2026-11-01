@@ -25,3 +25,9 @@ Exact original source URLs, byte counts and SHA256 values are in [source-provena
 ## Renderer and project geometry
 
 Three.js core, GLTFLoader, SkeletonUtils and BufferGeometryUtils are pinned to the same `three@0.187.0` distribution; local import paths are adapted. Three.js is MIT licensed; retain `vendor/THREE-LICENSE.txt`. Machine models, selection rings, storage floor pads and procedural studio environment are project-authored geometry. They are not measured factory equipment.
+
+## Logistics slice additions
+
+The original NVIDIA Idealworks iw_hub comes from `Assets/Isaac/5.1/Isaac/Robots/Idealworks/iwhub/iw_hub.usd`. It is not asserted CC BY. Runtime37,701,148bytes, SHA256`7880e27a2d95d05c7527fd53a7d05fb7289bc3094d9cd51c6ca357bcd359bb1a`; source763,084triangles reduced per rigid link to97,187triangles,8links/7joints retained. Four UDIM tiles are preserved at2048resolution; sixteen embedded textures, DirectX-to-OpenGL normal green conversion. Original ground frame+0.081065843m retained. The embedded smoke animation is not played; application state controls wheels/casters/lift. Exact public source hashes and measured interfaces are under`assets/nvidia/industrial/`.
+
+The A02 curved and A05 straight roller conveyors come from the separately licensed NVIDIA SimReady packages. Their supplied CC BY4.0 license files, attribution and source hashes are retained in the industrial asset directory. LOD conversion and material baking are changes, not original NVIDIA authoring. They remain staged and are not represented as operating transport. Their axes are runtime local−Z; they are rollers, not rubber belts. Full private handoff metadata and original backup identifiers are excluded from the runtime deployment.

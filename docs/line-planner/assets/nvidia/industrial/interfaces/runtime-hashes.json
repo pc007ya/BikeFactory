@@ -1,0 +1,23 @@
+{
+  "version": "2026-11-01-interface-v2",
+  "assets": [
+    {
+      "asset": "iwhub",
+      "fileName": "nvidia-iwhub-runtime.glb",
+      "bytes": 37701148,
+      "sha256": "7880e27a2d95d05c7527fd53a7d05fb7289bc3094d9cd51c6ca357bcd359bb1a"
+    },
+    {
+      "asset": "conveyor-a02",
+      "fileName": "nvidia-conveyor-a02-lod.glb",
+      "bytes": 17323720,
+      "sha256": "a838f5db1ee946cec44bee38502ba0d6c319f1d6eedb93ce24532b95df7f8409"
+    },
+    {
+      "asset": "conveyor-a05",
+      "fileName": "nvidia-conveyor-a05-lod.glb",
+      "bytes": 19942864,
+      "sha256": "9e50c36374bbdd664274e3ea5dfdb5a9d239106d9c6316a1f07880ba7eff8437"
+    }
+  ]
+}

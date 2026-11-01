@@ -1,13 +1,13 @@
 import * as THREE from './vendor/three.module.js';
-import {fitPerspectiveBounds} from './view-framing.js?v=483f1be62d5c';
+import {fitPerspectiveBounds} from './view-framing.js?v=38e637d86a0a';
 
 // Native prop wrappers preserve source pivots; the cart geometry is offset from
 // its wrapper origin. Fit all world-space geometry rather than that origin.
-export function assetGeometryBounds(root,id){
+export function assetGeometryBounds(root,id,{precise=true}={}){
   const object=root.getObjectByName(id);if(!object)return null;
   root.updateMatrixWorld(true);
   const bounds=new THREE.Box3();
-  object.traverse(child=>{if(child.isMesh&&!child.userData.selectionMarker)bounds.expandByObject(child,true);});
+  object.traverse(child=>{if(child.isMesh&&!child.userData.selectionMarker&&!child.userData.excludeGeometryBounds)bounds.expandByObject(child,precise);});
   if(bounds.isEmpty())return null;
   return bounds;
 }

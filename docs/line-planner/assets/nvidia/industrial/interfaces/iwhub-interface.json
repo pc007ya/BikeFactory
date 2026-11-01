@@ -1,0 +1,59 @@
+{
+  "asset": "NVIDIA Isaac Idealworks iw_hub",
+  "file": "nvidia-iwhub-runtime.glb",
+  "bytes": 37701148,
+  "sha256": "7880e27a2d95d05c7527fd53a7d05fb7289bc3094d9cd51c6ca357bcd359bb1a",
+  "units": "metres",
+  "upAxis": "Y",
+  "sourceToRuntime": "[x,y,z] -> [x,z,-y]",
+  "groundFrame": "iw_hub_ground_root",
+  "preservedSourceFrame": "iw_hub_original_source_frame",
+  "groundOffsetY": 0.0810658433379545,
+  "sourceJointsAndLimits": "conversion-report.json",
+  "contactSurfaceCandidates": "measured-interfaces.json",
+  "controlAdapter": "../interfaces/iwhub-controls.mjs",
+  "runtimeAxes": {
+    "control_left_wheel_joint": [
+      0,
+      0,
+      -1
+    ],
+    "control_right_wheel_joint": [
+      0,
+      0,
+      -1
+    ],
+    "control_left_swivel_joint": [
+      0,
+      1,
+      0
+    ],
+    "control_right_swivel_joint": [
+      0,
+      1,
+      0
+    ],
+    "control_left_caster_joint": [
+      0,
+      0,
+      -1
+    ],
+    "control_right_caster_joint": [
+      0,
+      0,
+      -1
+    ],
+    "control_lift_joint": [
+      0,
+      1,
+      0
+    ]
+  },
+  "claims": {
+    "rigidJointVisualControl": true,
+    "navigation": false,
+    "dynamics": false,
+    "payloadStability": false,
+    "collisionSolver": false
+  }
+}
