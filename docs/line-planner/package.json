@@ -1,0 +1,1 @@
+{"name":"bikefactory-line-planner-local","version":"0.2.0-r187","private":true,"type":"module","scripts":{"test":"node --test tests/*.test.js","dev":"python3 -m http.server 8876 --bind 127.0.0.1"}}

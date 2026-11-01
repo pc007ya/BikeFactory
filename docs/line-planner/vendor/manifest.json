@@ -1,0 +1,22 @@
+{
+  "package": "three",
+  "version": "0.187.0",
+  "revision": "187",
+  "source": "https://registry.npmjs.org/three/-/three-0.187.0.tgz",
+  "tarballSha1": "face29ee2de9bcc31a1b573a76f224e35e0b2894",
+  "addons": [
+    "GLTFLoader",
+    "SkeletonUtils",
+    "BufferGeometryUtils"
+  ],
+  "files": {
+    "three.module.js": "104f56145899722094556490d787aae0617cc2fc3382f31df02d724ea1aee341",
+    "three.core.js": "613e370f76638fdef83926642bf256dc9615684922de1ce1f63a8583e5d78578",
+    "three.module.min.js": "bcfe62cea28724c2e7b3fe99a3029316be2cb0c0e1886639a6281b71c6b3d7ba",
+    "THREE-LICENSE.txt": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+    "addons/loaders/GLTFLoader.js": "eedeafc3e90a360570045e72005333a2abde65f96bc332be1b05a19d0241460d",
+    "addons/utils/BufferGeometryUtils.js": "dba1b5dccc418f494eae6f1e731ec82734b2eaf3321b1db04c4321b16c1ea549",
+    "addons/utils/SkeletonUtils.js": "28017bf37d0ecb0c4be6048db759ff14df729a562464830b064d4cc239c5af17"
+  },
+  "localAdaptation": "Addon imports rewritten to the local r187 core; no CDN dependency."
+}

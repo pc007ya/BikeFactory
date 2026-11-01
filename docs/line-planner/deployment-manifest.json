@@ -1,0 +1,145 @@
+{
+  "schema": 1,
+  "generatedBy": "BikeFactory line-planner static build",
+  "sourceCommit": "911747060b8d47224988f11aa1d0693e3577a6eb",
+  "generatedAt": "2026-11-01T10:06:04.849Z",
+  "buildId": "70c559044159a626ea4f",
+  "entrypoint": "index.html",
+  "files": [
+    {
+      "path": "app.js",
+      "bytes": 23998,
+      "sha256": "d7eded042d5c55850a9f05bb5b9e0999b39241975cd2b564baa48dc4a49d3f62"
+    },
+    {
+      "path": "asset-framing.js",
+      "bytes": 685,
+      "sha256": "0bd3e096fa867cfbd7f9cfb9c644e6d9e12e82b8eeaa4ed6dfe7ca892b1cd8dd"
+    },
+    {
+      "path": "ASSET-SOURCES.md",
+      "bytes": 4148,
+      "sha256": "03ee88cf825a940a5990e8e0021fbf4f71eddb4685eff05fcbee6af93db50e3d"
+    },
+    {
+      "path": "assets/nvidia/nvidia-warehouse-bay.glb",
+      "bytes": 35056484,
+      "sha256": "2cf266f385d472cd971677ae9c8d4c57c6e8e88f3c4ac925ce1d27688781d98e"
+    },
+    {
+      "path": "assets/nvidia/nvidia-worker-threejs.glb",
+      "bytes": 31513792,
+      "sha256": "1af1e4e18d184d30623659aebce2ee81ed771e1fd656e3cb0af9ef4ed758c4d5"
+    },
+    {
+      "path": "assets/nvidia/source-provenance.json",
+      "bytes": 15388,
+      "sha256": "962f762c90655546183693b2dc23fc9c231560f24f23e6dd685f28b4dbb7dc44"
+    },
+    {
+      "path": "ENGINE.md",
+      "bytes": 3578,
+      "sha256": "22e7ded60e8e5e9697a99cfc2fb2df3a1ccef85e6f22f664489280bde3b246eb"
+    },
+    {
+      "path": "index.html",
+      "bytes": 4667,
+      "sha256": "9138e7e6756fe1119648c8e449ded4b383524c0bf3db5cc2b603bd86e9a43344"
+    },
+    {
+      "path": "MIGRATION-R187.md",
+      "bytes": 6479,
+      "sha256": "c0c2d5c381da23bfe02fd8552b4512b04a7fd754907afc86df554206ded9818c"
+    },
+    {
+      "path": "nvidia-assets.js",
+      "bytes": 23497,
+      "sha256": "63a86b21c8d1b9480c079c6384dace1bb130bdd1660450790f3e8e7c6b14ad83"
+    },
+    {
+      "path": "package.json",
+      "bytes": 198,
+      "sha256": "53426a6407e3eef298095976f0056c88f450787eac14b95e00571e032d814a52"
+    },
+    {
+      "path": "README.md",
+      "bytes": 12013,
+      "sha256": "a69868e807155db4e204261aea734a7b195e5f0da770ba49722c52aed5bc6126"
+    },
+    {
+      "path": "scene-model.js",
+      "bytes": 19628,
+      "sha256": "6c4e045d455ad2045902933dedd7de24b15a6a98e8e091792633d8c22a97650b"
+    },
+    {
+      "path": "scene.js",
+      "bytes": 19695,
+      "sha256": "29b243cdef8c9645490926bcf239427aac25dbc9facb20dcc68606e76d402862"
+    },
+    {
+      "path": "simulation.js",
+      "bytes": 12130,
+      "sha256": "eb000372fd3309e20cb3cb53e8242701d0f6330fe4b8f916ddad117b5f06a6e7"
+    },
+    {
+      "path": "style.css",
+      "bytes": 4913,
+      "sha256": "3af9481f363c36db69a7250f0f63ac95c176a3f4bf8373fe553dcedaf8afbfdb"
+    },
+    {
+      "path": "vendor/addons/loaders/GLTFLoader.js",
+      "bytes": 119877,
+      "sha256": "eedeafc3e90a360570045e72005333a2abde65f96bc332be1b05a19d0241460d"
+    },
+    {
+      "path": "vendor/addons/utils/BufferGeometryUtils.js",
+      "bytes": 39169,
+      "sha256": "dba1b5dccc418f494eae6f1e731ec82734b2eaf3321b1db04c4321b16c1ea549"
+    },
+    {
+      "path": "vendor/addons/utils/SkeletonUtils.js",
+      "bytes": 11551,
+      "sha256": "28017bf37d0ecb0c4be6048db759ff14df729a562464830b064d4cc239c5af17"
+    },
+    {
+      "path": "vendor/manifest.json",
+      "bytes": 1079,
+      "sha256": "a5de24eebc468a0e53b229d143c49e43b624e5b2623d3389fc31bc9ac9807d6c"
+    },
+    {
+      "path": "vendor/README.txt",
+      "bytes": 907,
+      "sha256": "44b8ca64df48451cc73b7eb07254eac53843da7c4460649314a8f00e347a4742"
+    },
+    {
+      "path": "vendor/THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "vendor/three.core.js",
+      "bytes": 1474799,
+      "sha256": "613e370f76638fdef83926642bf256dc9615684922de1ce1f63a8583e5d78578"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "bytes": 658900,
+      "sha256": "104f56145899722094556490d787aae0617cc2fc3382f31df02d724ea1aee341"
+    },
+    {
+      "path": "vendor/three.module.min.js",
+      "bytes": 122,
+      "sha256": "bcfe62cea28724c2e7b3fe99a3029316be2cb0c0e1886639a6281b71c6b3d7ba"
+    },
+    {
+      "path": "view-framing.js",
+      "bytes": 2944,
+      "sha256": "b69c65503b10c042938add8bcef1b389ad181ea6d426d046e22131f7081f83e5"
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}
