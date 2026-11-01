@@ -1,5 +1,5 @@
 import * as THREE from './vendor/three.module.js';
-import {fitPerspectiveBounds} from './view-framing.js?v=38e637d86a0a';
+import {fitPerspectiveBounds} from './view-framing.js?v=ba4c9d3625ce';
 
 export function fitTransportView({amrBounds,handlerBounds=[],payloadBounds=null,pathPoints=[],view}){
   const bounds=amrBounds?.clone()||new THREE.Box3();

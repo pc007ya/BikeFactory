@@ -17,3 +17,4 @@ main>aside,main>article{min-width:0}
 .logistics-toggle{flex-direction:row;align-items:center;margin:12px 0}.logistics-toggle input[type=checkbox]{width:16px;height:16px;padding:0;accent-color:#65dfc2}
 #scene-section{overflow-anchor:none}#transport-debug,#asset-debug{height:260px;max-height:260px;overflow:auto;font-size:11px;white-space:pre-wrap;overflow-wrap:anywhere}#asset-inspector{white-space:pre-wrap;max-height:180px;overflow:auto}
 #scene-replay-toggle{position:absolute;z-index:3;right:10px;top:10px;background:#142b3de8;font-size:12px}.replay-toolbar{margin:12px 0;align-items:center}#transport-results{min-width:0}
+#export-download[hidden]{display:none}#export-download{text-decoration:none;overflow-wrap:anywhere}

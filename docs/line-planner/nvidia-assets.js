@@ -1,8 +1,8 @@
 import * as THREE from './vendor/three.module.min.js';
 import {GLTFLoader} from './vendor/addons/loaders/GLTFLoader.js';
 import {clone as cloneSkeleton} from './vendor/addons/utils/SkeletonUtils.js';
-import {createHumanMotion} from './human-motion.js?v=38e637d86a0a';
-import {compilePlantLayout} from './plant-layout.js?v=38e637d86a0a';
+import {createHumanMotion} from './human-motion.js?v=ba4c9d3625ce';
+import {compilePlantLayout} from './plant-layout.js?v=ba4c9d3625ce';
 
 export const NVIDIA_WORKER_RENDER_LIMIT = 40;
 

@@ -1,4 +1,4 @@
-import {compilePlantLayout,headingBetween,shortestAngle} from './plant-layout.js?v=38e637d86a0a';
+import {compilePlantLayout,headingBetween,shortestAngle} from './plant-layout.js?v=ba4c9d3625ce';
 export const AMR_ID='amr:iwhub:1',WAREHOUSE_WORKER_ID='worker:warehouse:1';
 export const LOGISTICS_GEOMETRY=Object.freeze({track:.579259974,wheelRadius:.0810708,cartDeckY:.297060997998841,supportRestY:.228786,liftMax:.04,amrSweptRadius:1.09});
 export function defaultLogistics(){return {enabled:false,speedMps:.8,turnRadPerSecond:.8,loadSeconds:24,unloadSeconds:30,liftSeconds:1.5,maxTrips:12,warehouseWorkers:1}}
