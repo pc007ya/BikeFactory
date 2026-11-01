@@ -1,8 +1,8 @@
 import * as THREE from './vendor/three.module.js';
-import {createSceneModel} from './scene-model.js';
-import {createNvidiaAssets} from './nvidia-assets.js';
-import {assetFocusView} from './asset-framing.js';
-import {fitPerspectiveBounds,projectedBounds,framingContentBounds} from './view-framing.js';
+import {createSceneModel} from './scene-model.js?v=013e77639fa8';
+import {createNvidiaAssets} from './nvidia-assets.js?v=013e77639fa8';
+import {assetFocusView} from './asset-framing.js?v=013e77639fa8';
+import {fitPerspectiveBounds,projectedBounds,framingContentBounds} from './view-framing.js?v=013e77639fa8';
 
 // Rendering is deliberately independent of scheduling: no fabricated machine motion.
 export function createPlannerScene(container, {onSelect = () => {},onAssetSelect=()=>{},onAssetsChange=()=>{}} = {}) {

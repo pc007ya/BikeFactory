@@ -1,20 +1,20 @@
 {
   "schema": 1,
   "generatedBy": "BikeFactory line-planner static build",
-  "sourceCommit": "001e9699428189004c660264d567b7d1496b06be",
-  "generatedAt": "2026-11-01T10:11:19.321Z",
-  "buildId": "7fdd74b1896157016697",
+  "sourceCommit": "013e77639fa89fcc29e0eddd79797bcd6c0824e9",
+  "generatedAt": "2026-11-01T10:14:18.614Z",
+  "buildId": "0abfc877cb94a77fd6fb",
   "entrypoint": "index.html",
   "files": [
     {
       "path": "app.js",
-      "bytes": 23998,
-      "sha256": "d7eded042d5c55850a9f05bb5b9e0999b39241975cd2b564baa48dc4a49d3f62"
+      "bytes": 24028,
+      "sha256": "173f4eb33dbc6abcba459a00fd864259411ae17b2bd161bebf1e1dce6940d394"
     },
     {
       "path": "asset-framing.js",
-      "bytes": 685,
-      "sha256": "0bd3e096fa867cfbd7f9cfb9c644e6d9e12e82b8eeaa4ed6dfe7ca892b1cd8dd"
+      "bytes": 700,
+      "sha256": "4debefcd55135c0acfa7d217e322816a68bf0979a0ae6b3aa55ac80c5d19d658"
     },
     {
       "path": "ASSET-SOURCES.md",
@@ -43,8 +43,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 4667,
-      "sha256": "0e618416d4ba00e4b5478ea997b466e59e4253fa2c3fa99216fd48b72ec13427"
+      "bytes": 4697,
+      "sha256": "7e324086c71659d3f5fc472dc5af6297591653134c1a12a943300b9b188cf491"
     },
     {
       "path": "MIGRATION-R187.md",
@@ -73,8 +73,8 @@
     },
     {
       "path": "scene.js",
-      "bytes": 19695,
-      "sha256": "29b243cdef8c9645490926bcf239427aac25dbc9facb20dcc68606e76d402862"
+      "bytes": 19755,
+      "sha256": "f3d5784f94e45fade8bbec4848f97f7d573f856485e62dd93347786a87990898"
     },
     {
       "path": "simulation.js",
