@@ -1,0 +1,14 @@
+{
+  "schema":1,
+  "source":"unchanged nvidia-warehouse-bay.glb / Cart_SM_PushcartA_02_SM_PushcartA_02",
+  "sourceGLBSha256":"2cf266f385d472cd971677ae9c8d4c57c6e8e88f3c4ac925ce1d27688781d98e",
+  "originalCartTriangles":1484,
+  "originalTireTrianglesEach":60,
+  "units":"Y-up metres",
+  "loadSurface":{"upperDeckY":0.3505135774612427,"upperHorizontalFaceAreaM2":1.2813409711372543,"sourceUndersideDatumY":0.297060997998841,"undersideHorizontalFaceAreaM2":1.2939051647552446,"decorativeRimMaxY":0.3774050437493983,"correction":"The supplied v2 standalone interface selected the largest horizontal face (.297061m), which is the underside. Actual downward rays from above the warehouse GLB payload footprint hit the upper deck .350514m. Keep original manifest, use actual upper deck for manual cart and AMR source kit contact; do not use bbox rim max."},
+  "payload":{"size":[0.7,0.24,0.54],"nativeBottomOrigin":[0,0.3505135774612427,0.43],"fit":"inside native deck X±.4352605/Z±.7431785"},
+  "tires":{"method":"geometric-weld connected native triangle surfaces, compact original vertex/normal/UV subsets; no replacement mesh, no triangle loss/duplication","count":4,"nativeAxis":[1,0,0],"nominalRadius":0.1043864227,"centresXZ":[[-0.36026155,-0.5728061],[-0.36026155,0.5728061],[0.36026155,-0.5728061],[0.36026155,0.5728061]],"odometry":"angle=(signedCartDistance-yaw*localWheelX)/radius; geometric rolling projection only; caster steering/lateral scrub/forces not validated"},
+  "handle":{"projectOriginal":true,"sourceHasTallHandle":false,"description":"original removable planning pushbar attachment, not OEM asset or safe-design certification","barCentre":[0,1.1,-0.85],"barRadius":0.018,"gripsNative":{"L":[0.25,1.1,-0.868],"R":[-0.25,1.1,-0.868]},"pusherRootOffset":[0,0,-1.22]},
+  "semantics":"one actual first-station roster worker reserved for entire source approach/load/grip/push/unload/empty return/home cycle; do not dispatch while single physical receiving position occupied; finite one-item cart, receiver1. Empty return is backward pull along reverse route, explicitly labelled. Three supply modes mutually exclusive.",
+  "notValidated":["push forces","ergonomics","caster steering","lateral tyre slip","OEM PLC","load capacity","full skin/environment collision"]
+}

@@ -33,3 +33,5 @@ The original NVIDIA Idealworks iw_hub comes from `Assets/Isaac/5.1/Isaac/Robots/
 The A02 curved and A05 straight roller conveyors come from the separately licensed NVIDIA SimReady packages. Their supplied CC BY4.0 license files, attribution and source hashes are retained in the industrial asset directory. LOD conversion and material baking are changes, not original NVIDIA authoring. They remain staged and are not represented as operating transport. Their axes are runtime local−Z; they are rollers, not rubber belts. Full private handoff metadata and original backup identifiers are excluded from the runtime deployment.
 
 滾筒應用轉接量測：`industrial/interfaces/conveyor-application-interface.json`。原 a02/a05 GLB、v2 controller 與來源 license 不改；應用依實際圓柱長軸修正 a05 的自轉軸（X，而非 v2 evaluation 使用的 Z）。原生幾何軸端點固定回歸、載面射線與資料守恆是應用驗證，未改寫為 NVIDIA 官方物理認證。
+
+人工板車：仍使用同一 NVIDIA warehouse GLB，原生1484三角車身／四輪以非破壞連通面拆軸，源GLB未改。推把治具、備料／收料台、箱件及通道路徑為專案原創，非NVIDIA原廠部件。實際上載面0.350513577m及舊底側datum0.297060998m分開記錄於 `cart-application-interface.json`，不是以bbox最高護邊推定承載。未宣稱安全、額定負載或腳輪轉向驗證。

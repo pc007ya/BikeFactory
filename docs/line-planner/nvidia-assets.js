@@ -1,8 +1,9 @@
+import {createCartVisual} from './cart-visual.js?v=fcf14d41d228';
 import * as THREE from './vendor/three.module.min.js';
 import {GLTFLoader} from './vendor/addons/loaders/GLTFLoader.js';
 import {clone as cloneSkeleton} from './vendor/addons/utils/SkeletonUtils.js';
-import {createHumanMotion} from './human-motion.js?v=ba4c9d3625ce';
-import {compilePlantLayout} from './plant-layout.js?v=ba4c9d3625ce';
+import {createHumanMotion} from './human-motion.js?v=fcf14d41d228';
+import {compilePlantLayout} from './plant-layout.js?v=fcf14d41d228';
 
 export const NVIDIA_WORKER_RENDER_LIMIT = 40;
 
@@ -28,7 +29,9 @@ export function replayWorkerStates(config,events,time,{truncated=false}={}){
     if(event.time>time)break;
     for(const workerId of event.workerIds||[]){
       const worker=workers.get(workerId);if(!worker||worker.stationId!==event.station)continue;
-      if(event.kind==='logistics-unload-start')Object.assign(worker,{state:'unload',machineId:event.machineId,operationId:event.operationId,jobId:event.materialId??null,since:event.time});
+      if(event.kind==='cart-worker-start')Object.assign(worker,{state:'cart-task',machineId:event.machineId,operationId:event.operationId,jobId:event.materialId??null,since:event.time});
+      else if(event.kind==='cart-worker-end')Object.assign(worker,{state:'idle',machineId:null,operationId:null,jobId:null,since:event.time});
+      else if(event.kind==='logistics-unload-start')Object.assign(worker,{state:'unload',machineId:event.machineId,operationId:event.operationId,jobId:event.materialId??null,since:event.time});
       else if(event.kind==='logistics-unload-end')Object.assign(worker,{state:'idle',machineId:null,operationId:null,jobId:null,since:event.time});
       else if(event.kind==='start'||event.kind==='operation')Object.assign(worker,{state:'operation',machineId:event.machineId,operationId:event.operationId,jobId:event.job??null,since:event.time});
       else if(event.kind==='failure'&&worker.machineId===event.machineId)Object.assign(worker,{state:'fault',since:event.time});
@@ -48,11 +51,11 @@ export function replayWorkerStates(config,events,time,{truncated=false}={}){
 export function createNvidiaAssets({onChange=()=>{},workerURL=NVIDIA_ASSET_INFO.worker.url,warehouseURL=NVIDIA_ASSET_INFO.warehouse.url,loader=new GLTFLoader()}={}){
   const root=new THREE.Group();root.name='nvidia-project-assets';root.userData={kind:'nvidia-assets',redistributionGrantVerified:false};
   let ready=false,loading=false,error=null,disposed=false,loadPromise=null,workerTemplate=null,warehouseTemplate=null;
-  let config={stations:[],run:{shifts:[]}},inventory={stations:[],machines:[]},time=0,result=null,selected=null;
+  let config={stations:[],run:{shifts:[]}},inventory={stations:[],machines:[]},time=0,result=null,lastHandling=null,selected=null;
   const workers=new Map(),props=new Map(),sharedResources=new Set(),sourceImages=new Set();
   const stats={loads:0,workerClonesCreated:0,workerClonesRemoved:0,boneTexturesDisposed:0,sharedResourcesDisposed:0};
   const warnings=[];let pads=null,lastConfigSignature='';let workerAnatomy={bones:0,skinnedMeshes:0,sourceTriangles:0};
-  let rearBoundary=-3,rearAnchor=[0,0,-6];
+  let rearBoundary=-3,rearAnchor=[0,0,-6],cartVisual=null;
   const emit=()=>{if(!disposed)onChange(snapshot());};
   const own=resource=>{sharedResources.add(resource);return resource;};
   const markerGeometry=own(new THREE.RingGeometry(.27,.29,40));
@@ -119,10 +122,11 @@ export function createNvidiaAssets({onChange=()=>{},workerURL=NVIDIA_ASSET_INFO.
     sourceProp('warehouse:rack','rack','NVIDIA 貨架（2 框架／3 層板）',nodes.filter(node=>/^(Frame|Shelf)/.test(node.name)));
     sourceProp('warehouse:pallet','pallet','NVIDIA 原生棧板',nodes.filter(node=>/^Pallet/.test(node.name)));
     sourceProp('warehouse:cart','cart','NVIDIA 原生推車（靜態）',nodes.filter(node=>/^Cart/.test(node.name)));
+    cartVisual=createCartVisual({root,prop:props.get('warehouse:cart'),own});
     if(props.get('warehouse:rack').wrapper.children.length!==14)throw Error('NVIDIA warehouse nodes differ from expected 13 rack meshes plus marker');
   }
   function sync(nextConfig,nextInventory){
-    if(nextConfig){const signature=JSON.stringify({stations:nextConfig.stations,run:nextConfig.run,logistics:nextConfig.logistics,warehouse:nextConfig.warehouse});if(signature!==lastConfigSignature){result=null;lastConfigSignature=signature;}config=nextConfig;}if(nextInventory)inventory=nextInventory;
+    if(nextConfig){const signature=JSON.stringify({stations:nextConfig.stations,run:nextConfig.run,logistics:nextConfig.logistics,manualCart:nextConfig.manualCart,warehouse:nextConfig.warehouse});if(signature!==lastConfigSignature){result=null;lastHandling=null;lastConfigSignature=signature;}config=nextConfig;}if(nextInventory)inventory=nextInventory;
     if(!ready)return snapshot();
     const wanted=new Set();
     if(config.logistics?.enabled){const layout=compilePlantLayout(config);for(let i=0;i<(config.logistics.warehouseWorkers||1)&&wanted.size<NVIDIA_WORKER_RENDER_LIMIT;i++){const workerId=`worker:warehouse:${i+1}`;wanted.add(workerId);const worker=workers.get(workerId)||createWorker(workerId,'warehouse');worker.role='warehouse-handler';worker.homePosition=[layout.warehouseHandlerHome[0]+i*.8,0,layout.warehouseHandlerHome[2]+(i?1:0)];worker.homeHeading=Math.PI;worker.wrapper.position.fromArray(worker.homePosition);worker.wrapper.rotation.y=worker.homeHeading;}}
@@ -146,6 +150,9 @@ export function createNvidiaAssets({onChange=()=>{},workerURL=NVIDIA_ASSET_INFO.
     const minX=Math.min(0,...(inventory.stations||[]).map(s=>s.position[0]-s.width/2));
     const maxX=Math.max(4,...(inventory.stations||[]).map(s=>s.position[0]+s.width/2));
     rearAnchor=[(minX+maxX)/2,0,rearBoundary-2.8];
+    // Parking validation must inspect the configured source pose, never the
+    // previous moving yaw/cargo transform. Restore valid event pose afterwards.
+    cartVisual?.apply(config,null);
     for(const prop of props.values()){
       const offset=config.warehouse?.offsets?.[prop.id]||[0,0];
       prop.wrapper.position.set(rearAnchor[0]+(Number(offset[0])||0),0,rearAnchor[2]+(Number(offset[1])||0));
@@ -162,17 +169,17 @@ export function createNvidiaAssets({onChange=()=>{},workerURL=NVIDIA_ASSET_INFO.
     const supportCenterZ=pallet.wrapper.position.z-rack.wrapper.position.z-.0014365613460540771;
     pallet.supportHiddenReason=pallet.layoutInvalid?null:!rack.wrapper.visible?(rack.layoutInvalid?'rack-layout-invalid':'rack-hidden'):Math.abs(supportCenterX)>1.24||Math.abs(supportCenterZ)>.06?'outside-rack-deck':null;
     pallet.supportHidden=!!pallet.supportHiddenReason;if(pallet.supportHidden)pallet.wrapper.visible=false;
-    updatePads();root.updateMatrixWorld(true);setTime(time,result);select(selected);return snapshot();
+    updatePads();root.updateMatrixWorld(true);setTime(time,result,lastHandling);select(selected);return snapshot();
   }
   function setTime(seconds,nextResult,handling=null){
-    time=Math.max(0,Number(seconds)||0);result=nextResult||null;
+    time=Math.max(0,Number(seconds)||0);result=nextResult||null;handling=result?handling:null;lastHandling=handling;cartVisual?.apply(config,handling);
     const states=result?replayWorkerStates(config,result.events||[],time,{truncated:!!result.eventsTruncated}):[];
     for(const worker of workers.values()){
       const state=states.find(s=>s.workerId===worker.workerId)||{state:'pending',machineId:null,operationId:null,since:0};
       const task=handling?.handlers?.find(h=>h.workerId===worker.workerId);
       const changed=worker.state!==state.state;
       Object.assign(worker,{machineId:state.machineId,operationId:state.operationId,state:task?.phase||state.state,since:state.since,jobId:state.jobId??null,materialId:task?.materialId||(task&&task.phase!=='warehouse-idle'?handling?.materialId:null)||null});
-      if(task){worker.motion.apply(task.pose);worker.motionActive=true;}else{if(worker.motionActive){worker.motion.reset();worker.motionActive=false;}worker.wrapper.position.fromArray(worker.homePosition);worker.wrapper.rotation.y=worker.homeHeading;}
+      if(task){worker.motion.apply(task.pose);worker.motionActive=true;worker.taskRole=task.role;}else{if(worker.motionActive){worker.motion.reset();worker.motionActive=false;worker.taskRole=null;}worker.wrapper.position.fromArray(worker.homePosition);worker.wrapper.rotation.y=worker.homeHeading;}
       metadata(worker.actor,{kind:'worker',workerId:worker.workerId,stationId:worker.stationId,machineId:worker.machineId,operationId:worker.operationId,state:worker.state});
       worker.wrapper.userData={...worker.wrapper.userData,machineId:worker.machineId,operationId:worker.operationId,state:worker.state};
       if(!task&&(state.state==='operation'||changed||!worker.poseApplied)){pose(worker,state.state);worker.poseApplied=true;}
@@ -181,7 +188,7 @@ export function createNvidiaAssets({onChange=()=>{},workerURL=NVIDIA_ASSET_INFO.
   }
   function select(entity){selected=entity?{...entity}:null;for(const worker of workers.values()){worker.ring.visible=selected?.workerId===worker.workerId;worker.wrapper.userData.selected=worker.ring.visible;}for(const prop of props.values()){prop.ring.visible=selected?.propId===prop.id||selected?.id===prop.id;prop.wrapper.userData.selected=prop.ring.visible;}return snapshot();}
   function boxOf(prop,dx=0,dz=0){
-    const box=new THREE.Box3();for(const node of prop.wrapper.children)if(!node.userData.selectionMarker)box.expandByObject(node,true);
+    const box=new THREE.Box3();for(const node of prop.wrapper.children)if(!node.userData.selectionMarker&&!node.userData.excludeGeometryBounds)box.expandByObject(node,true);
     box.translate(new THREE.Vector3(dx,0,dz));return box;
   }
   function layoutReason(box){
@@ -193,7 +200,7 @@ export function createNvidiaAssets({onChange=()=>{},workerURL=NVIDIA_ASSET_INFO.
     return null;
   }
   function moveProp(id,dx,dz){
-    if(!ready)throw Error('NVIDIA 素材尚未載入');const prop=props.get(id);if(!prop)throw Error(`未知倉儲物件 ${id}`);
+    if(!ready)throw Error('NVIDIA 素材尚未載入');if(config.manualCart?.enabled&&id==='warehouse:cart')throw Error('人工板車模式使用固定來源位；請先關閉此模式再調整來源位置');const prop=props.get(id);if(!prop)throw Error(`未知倉儲物件 ${id}`);
     if(!Number.isFinite(dx)||!Number.isFinite(dz))throw Error('移動量必須為有限數值');
     root.updateMatrixWorld(true);const proposed=boxOf(prop,dx,dz);
     const invalidReason=layoutReason(proposed);if(invalidReason)throw Error(`移動被拒：${invalidReason}`);
@@ -215,9 +222,9 @@ export function createNvidiaAssets({onChange=()=>{},workerURL=NVIDIA_ASSET_INFO.
     const warehouse=structuredClone(config.warehouse||{});warehouse.offsets={...warehouse.offsets};warehouse.hidden=warehouse.hidden||[];const old=warehouse.offsets[id]||[0,0];warehouse.offsets[id]=[old[0]+dx,old[1]+dz];return warehouse;
   }
   function snapshot(){
-    const actorList=[...workers.values()].map(worker=>({workerId:worker.workerId,stationId:worker.stationId,machineId:worker.machineId,homeMachineId:worker.homeMachineId,operationId:worker.operationId,state:worker.state,jobId:worker.jobId,since:worker.since,position:worker.wrapper.position.toArray(),homePosition:[...worker.homePosition],role:worker.role,motion:worker.motionActive?worker.motion.snapshot():null,materialId:worker.materialId||null,bones:worker.bones.size,skinnedMeshes:workerAnatomy.skinnedMeshes,sourceTriangles:workerAnatomy.sourceTriangles,clipPlayed:false,selected:!!worker.wrapper.userData.selected}));
+    const actorList=[...workers.values()].map(worker=>({workerId:worker.workerId,stationId:worker.stationId,machineId:worker.machineId,homeMachineId:worker.homeMachineId,operationId:worker.operationId,state:worker.state,jobId:worker.jobId,since:worker.since,position:worker.wrapper.position.toArray(),homePosition:[...worker.homePosition],role:worker.taskRole||worker.role,motion:worker.motionActive?worker.motion.snapshot():null,materialId:worker.materialId||null,bones:worker.bones.size,skinnedMeshes:workerAnatomy.skinnedMeshes,sourceTriangles:workerAnatomy.sourceTriangles,clipPlayed:false,selected:!!worker.wrapper.userData.selected}));
     const requestedWorkers=(config.stations||[]).reduce((sum,station)=>sum+(Number.isInteger(station.workers)&&station.workers>0?station.workers:0),0)+(config.logistics?.enabled?(config.logistics.warehouseWorkers||1):0);
-    return {ready,loading,error,redistributionGrantVerified:false,time,requestedWorkers,renderedWorkers:workers.size,workerRenderLimit:NVIDIA_WORKER_RENDER_LIMIT,workers:actorList,props:[...props.values()].map(prop=>({id:prop.id,kind:prop.kind,name:prop.name,position:prop.wrapper.position.toArray(),hidden:!prop.wrapper.visible,layoutInvalid:!!prop.layoutInvalid,layoutInvalidReason:prop.layoutInvalidReason||null,supportHidden:!!prop.supportHidden,supportHiddenReason:prop.supportHiddenReason||null,sourceMeshNodes:prop.wrapper.children.filter(c=>!c.userData.selectionMarker).map(c=>c.name),selected:!!prop.wrapper.userData.selected})),stats:{...stats,workers:workers.size,requestedWorkers,workerRenderLimit:NVIDIA_WORKER_RENDER_LIMIT,props:props.size,sharedResources:sharedResources.size,bonesPerWorker:workerAnatomy.bones,skinnedMeshesPerWorker:workerAnatomy.skinnedMeshes,trianglesPerWorker:workerAnatomy.sourceTriangles,animationClipPlayed:false},warehouse:{rearBoundary,rearAnchor:[...rearAnchor],floorPads:pads?Object.entries(pads).map(([kind,pad])=>({kind,position:pad.position.toArray(),scale:pad.scale.toArray(),topY:pad.position.y+pad.scale.y/2,visible:pad.visible})):[],deck:{sourceY:NVIDIA_ASSET_INFO.warehouse.rackDeckY,palletSourceTranslationY:NVIDIA_ASSET_INFO.warehouse.palletSourceTranslationY,palletLocalBottomY:NVIDIA_ASSET_INFO.warehouse.palletSourceLocalBottomY,sourceBottomSum:NVIDIA_ASSET_INFO.warehouse.palletSourceTranslationY+NVIDIA_ASSET_INFO.warehouse.palletSourceLocalBottomY}},warnings:[...warnings,...[...props.values()].filter(prop=>prop.layoutInvalid).map(prop=>`${prop.name} 配置不安全已暫隱：${prop.layoutInvalidReason}；請重設位移`),...(props.get('warehouse:pallet')?.supportHidden?['貨架隱藏或棧板離開 deck 支承區：為避免無支承懸浮，棧板同步暫隱；恢復有效支承即依原配置恢復棧板']:[]),...(requestedWorkers>NVIDIA_WORKER_RENDER_LIMIT?[`原生人物顯示 ${workers.size}/${requestedWorkers} 位（渲染上限 ${NVIDIA_WORKER_RENDER_LIMIT}）；引擎人員配置與事件未縮減`]:[]),...(result?.eventsTruncated&&time>(result.events?.at(-1)?.time??0)?['事件紀錄已截斷，此時間的人員狀態標為未知']:[])],notice:NVIDIA_ASSET_INFO.notice};
+    return {ready,loading,error,manualCart:cartVisual?.snapshot()??null,redistributionGrantVerified:false,time,requestedWorkers,renderedWorkers:workers.size,workerRenderLimit:NVIDIA_WORKER_RENDER_LIMIT,workers:actorList,props:[...props.values()].map(prop=>({id:prop.id,kind:prop.kind,name:prop.id==='warehouse:cart'&&config.manualCart?.enabled?'NVIDIA 板車＋原創推把（事件控制）':prop.name,position:prop.wrapper.position.toArray(),hidden:!prop.wrapper.visible,layoutInvalid:!!prop.layoutInvalid,layoutInvalidReason:prop.layoutInvalidReason||null,supportHidden:!!prop.supportHidden,supportHiddenReason:prop.supportHiddenReason||null,sourceMeshNodes:prop.wrapper.children.filter(c=>!c.userData.selectionMarker).map(c=>c.name),selected:!!prop.wrapper.userData.selected})),stats:{...stats,workers:workers.size,requestedWorkers,workerRenderLimit:NVIDIA_WORKER_RENDER_LIMIT,props:props.size,sharedResources:sharedResources.size,bonesPerWorker:workerAnatomy.bones,skinnedMeshesPerWorker:workerAnatomy.skinnedMeshes,trianglesPerWorker:workerAnatomy.sourceTriangles,animationClipPlayed:false},warehouse:{rearBoundary,rearAnchor:[...rearAnchor],floorPads:pads?Object.entries(pads).map(([kind,pad])=>({kind,position:pad.position.toArray(),scale:pad.scale.toArray(),topY:pad.position.y+pad.scale.y/2,visible:pad.visible})):[],deck:{sourceY:NVIDIA_ASSET_INFO.warehouse.rackDeckY,palletSourceTranslationY:NVIDIA_ASSET_INFO.warehouse.palletSourceTranslationY,palletLocalBottomY:NVIDIA_ASSET_INFO.warehouse.palletSourceLocalBottomY,sourceBottomSum:NVIDIA_ASSET_INFO.warehouse.palletSourceTranslationY+NVIDIA_ASSET_INFO.warehouse.palletSourceLocalBottomY}},warnings:[...warnings,...[...props.values()].filter(prop=>prop.layoutInvalid).map(prop=>`${prop.name} 配置不安全已暫隱：${prop.layoutInvalidReason}；請重設位移`),...(props.get('warehouse:pallet')?.supportHidden?['貨架隱藏或棧板離開 deck 支承區：為避免無支承懸浮，棧板同步暫隱；恢復有效支承即依原配置恢復棧板']:[]),...(requestedWorkers>NVIDIA_WORKER_RENDER_LIMIT?[`原生人物顯示 ${workers.size}/${requestedWorkers} 位（渲染上限 ${NVIDIA_WORKER_RENDER_LIMIT}）；引擎人員配置與事件未縮減`]:[]),...(result?.eventsTruncated&&time>(result.events?.at(-1)?.time??0)?['事件紀錄已截斷，此時間的人員狀態標為未知']:[])],notice:NVIDIA_ASSET_INFO.notice};
   }
   function load(){
     if(loadPromise)return loadPromise;
@@ -236,6 +243,6 @@ export function createNvidiaAssets({onChange=()=>{},workerURL=NVIDIA_ASSET_INFO.
     return loadPromise;
   }
   function releaseShared(){for(const resource of sharedResources){resource.dispose();stats.sharedResourcesDisposed++;}for(const image of sourceImages)image.close();sharedResources.clear();sourceImages.clear();}
-  function dispose(){if(disposed)return;disposed=true;for(const worker of [...workers.values()])removeWorker(worker);for(const prop of props.values())root.remove(prop.wrapper);props.clear();releaseShared();root.clear();ready=false;}
+  function dispose(){if(disposed)return;disposed=true;lastHandling=null;cartVisual?.dispose();cartVisual=null;for(const worker of [...workers.values()])removeWorker(worker);for(const prop of props.values())root.remove(prop.wrapper);props.clear();releaseShared();root.clear();ready=false;}
   return {root,load,sync,setTime,select,moveProp,snapshot,dispose};
 }

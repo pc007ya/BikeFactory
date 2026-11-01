@@ -1,5 +1,5 @@
-import {sampleLogistics,LOGISTICS_GEOMETRY,WAREHOUSE_WORKER_ID} from './logistics.js?v=ba4c9d3625ce';
-import {compilePlantLayout,shortestAngle} from './plant-layout.js?v=ba4c9d3625ce';
+import {sampleLogistics,LOGISTICS_GEOMETRY,WAREHOUSE_WORKER_ID} from './logistics.js?v=fcf14d41d228';
+import {compilePlantLayout,shortestAngle} from './plant-layout.js?v=fcf14d41d228';
 const PI=Math.PI, clamp=x=>Math.max(0,Math.min(1,x)), smooth=x=>{x=clamp(x);return x*x*(3-2*x)}, lerp=(a,b,u)=>a+(b-a)*u, mix=(a,b,u)=>a.map((v,i)=>lerp(v,b[i],u));
 const distance=(a,b)=>Math.hypot(b[0]-a[0],b[2]-a[2]), forward=h=>[Math.sin(h),0,Math.cos(h)];
 const offset=(p,v,amount=1)=>p.map((x,i)=>x+v[i]*amount);
@@ -19,7 +19,7 @@ const delta=shortestAngle(toHeading-heading);if(Math.abs(delta)>1e-9){actions.pu
 return {actions,weight:actions.reduce((a,x)=>a+x.weight,0),points:points.map(p=>[...p]),fromHeading,endHeading:heading,start:[...points[0]],end:position};}
 function samplePath(route,u){let w=clamp(u)*route.weight;for(let i=0;i<route.actions.length;i++){const a=route.actions[i];if(w<=a.weight||i===route.actions.length-1){const q=clamp(w/a.weight);if(a.kind==='turn')return {...neutral(a.position,lerp(a.fromHeading,a.toHeading,q)),turn:{fromHeading:a.fromHeading,toHeading:a.toHeading,u:q}};
 // Match native human-motion's final trailing-foot phase exactly.
-const steps=Math.max(1,Math.ceil(a.distance/.3)),rootU=Math.min(1,q*(steps+1)/steps);return {...neutral(mix(a.from,a.to,rootU),a.heading),walk:{from:[...a.from],to:[...a.to],u:q}}}w-=a.weight}return neutral(route.end,route.endHeading)}
+const steps=Math.max(1,Math.ceil(a.distance/.3-1e-9)),rootU=Math.min(1,q*(steps+1)/steps);return {...neutral(mix(a.from,a.to,rootU),a.heading),walk:{from:[...a.from],to:[...a.to],u:q}}}w-=a.weight}return neutral(route.end,route.endHeading)}
 function landing(layout,workerId){const home=layout.stationHomes[workerId];if(!home)throw Error(`Handling: actual reserved worker ${workerId} has no station home`);
 for(const heading of [-PI/2,PI/2,0,PI]){const center=offset(home,forward(heading),.55),boxHeading=heading-PI,halfX=Math.abs(Math.cos(boxHeading))*.35+Math.abs(Math.sin(boxHeading))*.27,halfZ=Math.abs(Math.sin(boxHeading))*.35+Math.abs(Math.cos(boxHeading))*.27;
 // Actual schematic machine bodies fit .82 x .60 half-extents in XZ; exclude floor selection rings.
@@ -81,3 +81,6 @@ return {handlers,payload,stationPayloads,abstractStoredCount:Math.max(0,stationP
 }
 
 export function plannedLandingPoints(logistics){if(!logistics?.enabled)return [];const ids=[...new Set((logistics.trips||[]).map(t=>t.unloadWorkerId).filter(Boolean))];return ids.map(id=>landing(logistics.layout,id));}
+
+// Shared native-rig handling primitives; cart and AMR retain independent task clocks.
+export {path as createHandlingPath,samplePath as sampleHandlingPath,landing as handlingLanding,carrying as handlingCarry,withHands as handlingContact};

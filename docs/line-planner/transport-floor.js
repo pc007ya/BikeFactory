@@ -19,14 +19,14 @@ export function createTransportFloor(){
   let signature='',geometries=[],motionBounds=null,cells=[],benches=[];
   function clear(){for(const geometry of geometries)geometry.dispose();geometries=[];root.clear();}
   return {root,
-    sync(config,plan,landings=[]){const key=JSON.stringify(config.logistics?.enabled?[plan?.layout,landings]:null);if(key===signature)return;signature=key;clear();root.visible=!!config.logistics?.enabled;motionBounds=null;cells=[];benches=[];if(!root.visible||!plan?.layout)return;
-      const l=plan.layout,paths=[l.route,l.warehouseLoadPath,...Object.values(l.unloadPaths||{})].filter(Boolean);cells=corridorCells(paths,l.stations);
+    sync(config,plan,landings=[]){const key=JSON.stringify((config.logistics?.enabled||config.manualCart?.enabled)?[plan?.layout,landings]:null);if(key===signature)return;signature=key;clear();root.visible=!!(config.logistics?.enabled||config.manualCart?.enabled);motionBounds=null;cells=[];benches=[];if(!root.visible||!plan?.layout)return;
+      const l=plan.layout,paths=[l.route,l.warehouseLoadPath,...Object.values(l.unloadPaths||{}),...(l.extraPaths||[])].filter(Boolean);cells=corridorCells(paths,l.stations,config.manualCart?.enabled?3.2:1.2);
       const positions=[],normals=[];
       for(const r of cells){positions.push(r.x0,0,r.z0,r.x1,0,r.z1,r.x1,0,r.z0,r.x0,0,r.z0,r.x0,0,r.z1,r.x1,0,r.z1);for(let i=0;i<6;i++)normals.push(0,1,0);}
       const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));geometry.setAttribute('normal',new THREE.Float32BufferAttribute(normals,3));geometries.push(geometry);const mesh=new THREE.Mesh(geometry,material);mesh.receiveShadow=true;mesh.userData.kind='floor';root.add(mesh);
       const lineGeometry=new THREE.BufferGeometry().setFromPoints(l.route.map(p=>new THREE.Vector3(p[0],.012,p[2])));geometries.push(lineGeometry);const line=new THREE.Line(lineGeometry,lineMaterial);line.userData.kind='route';root.add(line);
       for(const landing of landings){const group=new THREE.Group();group.name=`landing:${landing.workerId}`;group.position.fromArray(landing.position);group.rotation.y=landing.heading;group.userData={kind:'landing-bench',workerId:landing.workerId,projectOriginal:true};const part=(size,position)=>{const g=new THREE.BoxGeometry(...size);geometries.push(g);const mesh=new THREE.Mesh(g,benchMaterial);mesh.position.set(...position);mesh.castShadow=true;mesh.receiveShadow=true;group.add(mesh);};part([.82,.05,.66],[0,-.025,0]);for(const x of [-.34,.34])for(const z of [-.25,.25])part([.045,.8,.045],[x,-.45,z]);root.add(group);benches.push({workerId:landing.workerId,position:[...landing.position],heading:landing.heading,deckY:landing.deckY});}
-      const points=paths.flat(),xs=points.map(p=>p[0]),zs=points.map(p=>p[2]);motionBounds={min:[Math.min(...xs)-1.1,0,Math.min(...zs)-1.1],max:[Math.max(...xs)+1.1,2,Math.max(...zs)+1.1]};
+      const points=paths.flat(),xs=points.map(p=>p[0]),zs=points.map(p=>p[2]);motionBounds={min:[Math.min(...xs)-(config.manualCart?.enabled?1.7:1.1),0,Math.min(...zs)-(config.manualCart?.enabled?1.7:1.1)],max:[Math.max(...xs)+(config.manualCart?.enabled?1.7:1.1),2,Math.max(...zs)+(config.manualCart?.enabled?1.7:1.1)]};
     },snapshot(){return {motionBounds,cells:cells.length,benches:structuredClone(benches),groundY:0,meaning:'規劃通道平面；不代表動態碰撞或自主導航'};},dispose(){clear();material.dispose();lineMaterial.dispose();benchMaterial.dispose();motionBounds=null;}
   };
 }

@@ -17,3 +17,5 @@ availability（uptime）= 班內未故障秒／排班秒；utilization = 班內�
 安全工作預算：最多 30 站、60 子工序、200 機台、100000 投料，單次最多 100000 個事件或 5000000 機台×事件；超出直接拒絕／拋錯，請縮小情境。原始事件只保留前 3000 筆，KPI 積分仍計全程。
 
 滾筒供料：可選 `conveyor.enabled`，與 AMR 互斥。外部有限存貨依 inletSeconds 入空首區；每區單件，以 length/speed 曆時運行、班外暫停，運行完成但無下區空位或首站緩衝時保留原件並計 blocked。區域完成／下游釋位同刻由引擎 settle 下游優先交接。出輸送末區才建立生產 job，因此 production conservation 不含輸送件；獨立 conveyor ledger 包含 source/conveyor/productionWIP/finished。觀察期輸送 WIP 與區域狀態積分只覆蓋 (warmup,horizon]，期末件不強制清空。`visible` 僅影響渲染，不能改事件與產出。未設輸送故障、滑移、載荷力學、PLC 或任意路由；首站內部轉運是抽象交接。
+
+人工板車 `manualCart.enabled`：同時只能選 AMR／滾筒／板車之一；單車容量1、實體收料口1，工站既有邏輯buffer未改。實際首站 roster 人員從接任到回到原站位整趟保留（含抓放、推行、倒退牽回及班外暫停）；加工配置不得再次分配此 ID。來源有限，裝車才從來源提交車載，卸料完成才投產；收料口非空不派新趟以免單人自等待死鎖。跨班保存動作phaseU與料件，人員仍保留，恢復後續做。WIP積分及用工秒只覆蓋觀察窗，總推行／等候秒另標0–horizon。車上 WIP不混入原生產WIP；若已卸料但尚未加工，實體料台顯示同一件而非車上複製。

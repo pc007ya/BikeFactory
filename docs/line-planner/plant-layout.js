@@ -1,3 +1,4 @@
+import {CART_DECK_Y} from './cart-datums.js?v=fcf14d41d228';
 // Pure metre-based layout contract shared by planning and visual adapters.
 export function compilePlantLayout(config){
 let x=0;const stations=[],machines=[];
@@ -19,7 +20,7 @@ const warehouseBounds=Object.entries(nativeBounds).map(([id,b])=>{const off=conf
 const rearAisle=-maxDepth/2-.75,leftCorridor=minX-2.2,frontAisle=maxDepth/2+2.2;
 const pickupHeading=0,dropHeading=Math.PI/2;
 const standAt=(origin,heading)=>[origin[0]-.225*Math.cos(heading)+.55*Math.sin(heading),0,origin[2]+.225*Math.sin(heading)+.55*Math.cos(heading)];
-const pickupStand=standAt(pickupOrigin,pickupHeading),dropStand=standAt(dock,dropHeading),cartStand=[cartCenter[0],0,cartCenter[2]+1.03],warehouseKitPosition=[cartCenter[0],.297060997998841,cartCenter[2]+.43],warehouseLoadPath=[cartStand,[pickupStand[0],0,cartStand[2]],pickupStand],stationHomes={},unloadPaths={};
+const pickupStand=standAt(pickupOrigin,pickupHeading),dropStand=standAt(dock,dropHeading),cartStand=[cartCenter[0],0,cartCenter[2]+1.03],warehouseKitPosition=[cartCenter[0],CART_DECK_Y,cartCenter[2]+.43],warehouseLoadPath=[cartStand,[pickupStand[0],0,cartStand[2]],pickupStand],stationHomes={},unloadPaths={};
 for(const station of stations){const source=config.stations.find(s=>s.id===station.stationId),columns=Math.max(1,Math.floor((station.width-.5)/.75));for(let i=0;i<source.workers;i++){const row=Math.floor(i/columns),rowCount=Math.min(columns,source.workers-row*columns),home=[station.position[0]+(i%columns-(rowCount-1)/2)*.75,0,station.depth/2-.65+row*.9],id=`worker:${station.stationId}:${i+1}`;stationHomes[id]=home;if(station.index===0)unloadPaths[id]=[home,[home[0],0,station.depth/2+.6],[dropStand[0],0,station.depth/2+.6],dropStand]}}
 const route=[pickupOrigin,[pickupOrigin[0],0,rearAisle],[leftCorridor,0,rearAisle],[leftCorridor,0,frontAisle],[dock[0],0,frontAisle],dock];
 return {stations,machines,minX,maxX,maxDepth,rearBoundary,warehouseAnchor,cartCenter,pickupOrigin,dock,rearAisle,leftCorridor,frontAisle,route,warehouseBounds,pickupHeading,dropHeading,pickupStand,dropStand,dropOrigin:dock,stationHomes,unloadPaths,cartStand,warehouseHandlerHome:cartStand,warehouseKitPosition,warehouseLoadPath};

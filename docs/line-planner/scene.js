@@ -1,14 +1,16 @@
-import {createConveyorScene} from './conveyor-scene.js?v=ba4c9d3625ce';
+import {sampleCartHandling} from './cart-handling.js?v=fcf14d41d228';
+import {compileManualCart} from './manual-cart.js?v=fcf14d41d228';
+import {createConveyorScene} from './conveyor-scene.js?v=fcf14d41d228';
 import * as THREE from './vendor/three.module.js';
-import {createSceneModel} from './scene-model.js?v=ba4c9d3625ce';
-import {createNvidiaAssets} from './nvidia-assets.js?v=ba4c9d3625ce';
-import {createIndustrialAssets} from './industrial-assets.js?v=ba4c9d3625ce';
-import {compileLogistics,sampleLogistics} from './logistics.js?v=ba4c9d3625ce';
-import {sampleHandling,plannedLandingPoints} from './handling-motion.js?v=ba4c9d3625ce';
-import {createTransportFloor} from './transport-floor.js?v=ba4c9d3625ce';
-import {fitTransportView} from './transport-framing.js?v=ba4c9d3625ce';
-import {assetFocusView,assetGeometryBounds} from './asset-framing.js?v=ba4c9d3625ce';
-import {fitPerspectiveBounds,projectedBounds,framingContentBounds} from './view-framing.js?v=ba4c9d3625ce';
+import {createSceneModel} from './scene-model.js?v=fcf14d41d228';
+import {createNvidiaAssets} from './nvidia-assets.js?v=fcf14d41d228';
+import {createIndustrialAssets} from './industrial-assets.js?v=fcf14d41d228';
+import {compileLogistics,sampleLogistics} from './logistics.js?v=fcf14d41d228';
+import {sampleHandling,plannedLandingPoints} from './handling-motion.js?v=fcf14d41d228';
+import {createTransportFloor} from './transport-floor.js?v=fcf14d41d228';
+import {fitTransportView} from './transport-framing.js?v=fcf14d41d228';
+import {assetFocusView,assetGeometryBounds} from './asset-framing.js?v=fcf14d41d228';
+import {fitPerspectiveBounds,projectedBounds,framingContentBounds} from './view-framing.js?v=fcf14d41d228';
 
 // Rendering is deliberately independent of scheduling: no fabricated machine motion.
 export function createPlannerScene(container, {onSelect = () => {},onAssetSelect=()=>{},onAssetsChange=()=>{}} = {}) {
@@ -61,12 +63,12 @@ export function createPlannerScene(container, {onSelect = () => {},onAssetSelect
   const conveyors=createConveyorScene({onChange:()=>{if(!disposed&&currentConfig){applyTransportTime();updateLights();if(!selection)fit(false);else draw();onAssetsChange(nvidia.snapshot());}}});scene.add(conveyors.root);
   const routeFloor=createTransportFloor();scene.add(routeFloor.root);
   const industrial=createIndustrialAssets({onChange:()=>{if(!disposed&&currentConfig){if(currentConfig.logistics?.enabled){industrial.sync(currentConfig,inventory);applyTransportTime();updateLights();if(!selection)fit(false);else draw();}onAssetsChange(nvidia.snapshot());}},sampleTransport:(seconds,result)=>{const base=sampleLogistics(result?.logistics,seconds);if(!base)return null;const handling=sampleHandling(currentConfig,inventory,result,seconds);return {...base,payloadOwner:handling.payload?.owner??base.payloadOwner,payloadPosition:handling.payload?.position??base.payloadPosition,payloadHeading:handling.payload?.heading??base.heading,payloadMaterialId:handling.payload?.materialId??null,stationPayloads:handling.stationPayloads||[],abstractStoredCount:handling.abstractStoredCount||0,handlingWarnings:handling.warnings||[]};}});scene.add(industrial.root);industrial.root.visible=false;
-  function applyTransportTime(){conveyors.setTime(replayTime,lastResult);const handling=sampleHandling(currentConfig,inventory,lastResult,replayTime);lastHandling=handling;industrial.setTime(replayTime,lastResult);nvidia.setTime(replayTime,lastResult,handling);return handling;}
+  function applyTransportTime(){conveyors.setTime(replayTime,lastResult);const handling=currentConfig?.manualCart?.enabled?sampleCartHandling(currentConfig,lastResult,replayTime):sampleHandling(currentConfig,inventory,lastResult,replayTime);lastHandling=handling;industrial.setTime(replayTime,lastResult);nvidia.setTime(replayTime,lastResult,handling);return handling;}
 
   const target=new THREE.Vector3();
   let azimuth=.35,elevation=.75,distance=18,inventory=model.snapshot(),selection=null,labels=[];
   let disposed=false,hasFit=false,transition=null,frame=0,renderCount=0,performanceSample=null;
-  let lastWidth=0,lastHeight=0,lastResult=null,drag=null,probeFrame=0,probeResolve=null,lastSyncCpuMs=0,lastFullFit=null,lastTransportBounds=null;
+  let lastWidth=0,lastHeight=0,lastResult=null,drag=null,probeFrame=0,probeResolve=null,lastSyncCpuMs=0,lastFullFit=null,lastTransportBounds=null,lastCartBounds=null;
   const drawDurations=[],raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
   const reducedMotion=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 
@@ -79,6 +81,7 @@ export function createPlannerScene(container, {onSelect = () => {},onAssetSelect
     if(m){tooltip.textContent=`${m.stationName} / ${m.name} · ${m.type} · ${m.seconds} 秒/件\n${m.machineId}${m.result?` · uptime ${(m.result.availability*100).toFixed(1)}% · 利用率 ${(m.result.utilization*100).toFixed(1)}%`:' · 待重新模擬，無有效結果'}`;return;}
     if(selection?.conveyorId){tooltip.textContent=`${selection.conveyorId} · 滾筒有限區域物流\n同事件時鐘／物料ID · 非承載物理驗證`;return;}
     if(selection?.assetId){const a=industrial.snapshot();tooltip.textContent=`NVIDIA iw_hub · ${a.state?.phase||'待重算'} · ${a.assetId}\n真事件取樣／預定路徑 · 非自主導航或承載驗證`;return;}
+    if(selection?.propId==='warehouse:cart'&&currentConfig?.manualCart?.enabled){const a=nvidia.snapshot().manualCart;tooltip.textContent=`人工板車 · ${a?.state?.phase||'待重算'} · ${a?.state?.workerId||'未保留人員'}\n原生車身／四輪＋原創推把 · 事件派工／單件車載，非承載物理驗證`;return;}
     if(selection?.workerId||selection?.propId){const a=nvidia.snapshot(),item=selection.workerId?a.workers.find(w=>w.workerId===selection.workerId):a.props.find(p=>p.id===selection.propId);if(item){tooltip.textContent=selection.workerId?`${item.workerId} · ${item.state} · ${item.materialId||item.machineId||'未分配機台'}\n${item.motion?'事件步態／解析接點 · 非動力學或人體工學驗證':'生產原位姿態 · 示範模型'}`:`${item.name} · ${item.id}\n原生米制模型 · 倉儲配置不影響產能`;return;}}
     const station=inventory.stations.find(s=>s.stationId===selection?.stationId);
     tooltip.textContent=station?`${station.index+1}. ${station.name} · 工站近看 · 機台造型為規劃假設`:'拖曳旋轉 · 滾輪縮放 · 點機台選回表單 · 彙總視圖，無假加工動畫';
@@ -100,7 +103,7 @@ export function createPlannerScene(container, {onSelect = () => {},onAssetSelect
     if(disposed)return;const start=performance.now();
     const width=Math.max(1,container.clientWidth),height=Math.max(1,container.clientHeight);
     if(width!==lastWidth||height!==lastHeight){renderer.setSize(width,height,false);lastWidth=width;lastHeight=height;camera.aspect=width/height;camera.updateProjectionMatrix();}
-    updateCamera();canvas.dataset.camera=JSON.stringify({azimuth,elevation,distance,target:target.toArray()});canvas.dataset.threeRevision=THREE.REVISION;if(lastFullFit)canvas.dataset.fitProjection=JSON.stringify({margins:lastFullFit.margins,projection:projectedBounds(lastFullFit.bounds,camera,width,height)});renderer.render(scene,camera);placeLabels(width,height);updateTooltip();if(lastTransportBounds&&selection?.assetId)canvas.dataset.transportProjection=JSON.stringify(projectedBounds(lastTransportBounds,camera,width,height));
+    updateCamera();canvas.dataset.camera=JSON.stringify({azimuth,elevation,distance,target:target.toArray()});canvas.dataset.threeRevision=THREE.REVISION;if(lastFullFit)canvas.dataset.fitProjection=JSON.stringify({margins:lastFullFit.margins,projection:projectedBounds(lastFullFit.bounds,camera,width,height)});renderer.render(scene,camera);placeLabels(width,height);updateTooltip();if(lastCartBounds&&selection?.propId==='warehouse:cart')canvas.dataset.cartProjection=JSON.stringify(projectedBounds(lastCartBounds,camera,width,height));if(lastTransportBounds&&selection?.assetId)canvas.dataset.transportProjection=JSON.stringify(projectedBounds(lastTransportBounds,camera,width,height));
     const assetState=nvidia.snapshot(),rect=canvas.getBoundingClientRect();canvas.dataset.assetTargets=JSON.stringify([...assetState.workers,...assetState.props.filter(p=>!p.hidden)].map(item=>{let p=new THREE.Vector3(...item.position);if(item.workerId)p.y+=1;else{const bounds=assetGeometryBounds(nvidia.root,item.id);if(bounds)p=bounds.getCenter(new THREE.Vector3());}p.project(camera);return {id:item.workerId||item.id,kind:item.workerId?'worker':'warehouse',x:rect.left+(p.x*.5+.5)*width,y:rect.top+(-p.y*.5+.5)*height};}));
     renderCount++;drawDurations.push(performance.now()-start);if(drawDurations.length>180)drawDurations.shift();
   }
@@ -121,8 +124,10 @@ export function createPlannerScene(container, {onSelect = () => {},onAssetSelect
     const l=lastResult?.logistics?.layout;let pathPoints=[];if(l&&lastHandling?.enginePhase==='load')pathPoints=l.warehouseLoadPath;else if(l&&lastHandling?.enginePhase==='unload'){const id=active.find(h=>h.role==='station-unloader')?.workerId;pathPoints=l.unloadPaths[id]||[];}
     const fitted=fitTransportView({amrBounds,handlerBounds,payloadBounds,pathPoints,view:{azimuth,elevation,fov:camera.fov,width:container.clientWidth,height:container.clientHeight,near:camera.near}});lastTransportBounds=fitted?.bounds||null;return fitted;
   }
+  function cartView(){const cartBounds=assetGeometryBounds(nvidia.root,'warehouse:cart',{precise:false}),handlers=(lastHandling?.handlers||[]).filter(h=>h.workerId),handlerBounds=handlers.map(h=>assetGeometryBounds(nvidia.root,h.workerId,{precise:false})),payload=lastHandling?.payload?.owner!=='none'?assetGeometryBounds(nvidia.root,'manual-cart:payload:1',{precise:false}):null;const fitted=fitTransportView({amrBounds:cartBounds,handlerBounds,payloadBounds:payload,pathPoints:handlers.map(h=>h.pose.position),view:{azimuth,elevation,fov:camera.fov,width:container.clientWidth,height:container.clientHeight,near:camera.near}});lastCartBounds=fitted?.bounds||null;return fitted;}
   function fullView(){
     const bounds=framingContentBounds(model.root,labels.map(label=>label.position));
+    if(currentConfig?.manualCart?.enabled&&routeFloor.snapshot().motionBounds){const b=routeFloor.snapshot().motionBounds;bounds.union(new THREE.Box3(new THREE.Vector3(...b.min),new THREE.Vector3(...b.max)));}
     if(conveyors.root.visible&&conveyors.root.children.length)bounds.union(new THREE.Box3().setFromObject(conveyors.root));
     if(nvidia.root.children.length)bounds.union(framingContentBounds(nvidia.root));
     if(industrial.root.visible){const assetBounds=assetGeometryBounds(industrial.root,'amr:iwhub:1');if(assetBounds)bounds.union(assetBounds);const envelope=routeFloor.snapshot().motionBounds;if(envelope)bounds.union(new THREE.Box3(new THREE.Vector3(...envelope.min),new THREE.Vector3(...envelope.max)));}
@@ -157,7 +162,7 @@ export function createPlannerScene(container, {onSelect = () => {},onAssetSelect
   }
   function select(value,focus=true){
     selection=value?{...value}:null;model.select(selection);nvidia.select(selection);industrial.select(selection);conveyors.select(selection);makeLabels();
-    if(focus&&(selection?.workerId||selection?.propId||selection?.assetId||selection?.conveyorId)){const view=selection.conveyorId?assetFocusView(conveyors.root,selection.conveyorId,{azimuth,elevation,fov:camera.fov,width:container.clientWidth,height:container.clientHeight,near:camera.near}):selection.assetId?transportView():assetFocusView(nvidia.root,selection.workerId||selection.propId,{azimuth,elevation,fov:camera.fov,width:container.clientWidth,height:container.clientHeight,near:camera.near});if(view){camera.far=view.far;camera.updateProjectionMatrix();moveCamera(view);return;}}
+    if(focus&&(selection?.workerId||selection?.propId||selection?.assetId||selection?.conveyorId)){const view=currentConfig?.manualCart?.enabled&&selection.propId==='warehouse:cart'?cartView():selection.conveyorId?assetFocusView(conveyors.root,selection.conveyorId,{azimuth,elevation,fov:camera.fov,width:container.clientWidth,height:container.clientHeight,near:camera.near}):selection.assetId?transportView():assetFocusView(nvidia.root,selection.workerId||selection.propId,{azimuth,elevation,fov:camera.fov,width:container.clientWidth,height:container.clientHeight,near:camera.near});if(view){camera.far=view.far;camera.updateProjectionMatrix();moveCamera(view);return;}}
     if(focus&&!selection)fit();
     else if(focus&&selection){
       const machine=selection.operationId&&inventory.machines.find(m=>m.stationId===selection.stationId&&m.operationId===selection.operationId&&(!selection.machineId||m.machineId===selection.machineId));
@@ -188,12 +193,12 @@ export function createPlannerScene(container, {onSelect = () => {},onAssetSelect
     sync(config,result=null){
       const syncStart=performance.now();
       const order=inventory.stations.map(s=>s.stationId).join('|'),count=inventory.machines.length;
-      performanceSample=null;lastResult=result;currentConfig=config;replayTime=0;inventory=model.sync(config,result);conveyors.sync(config);if(config.conveyor?.enabled)conveyors.load().catch(()=>{});nvidia.sync(config,inventory);industrial.root.visible=!!config.logistics?.enabled;routeFloor.sync(config,config.logistics?.enabled?(result?.logistics||compileLogistics(config)):null,plannedLandingPoints(result?.logistics));industrial.sync(config,inventory);if(config.logistics?.enabled)industrial.load().catch(()=>{});applyTransportTime();selection=inventory.selected;makeLabels();updateLights();
+      performanceSample=null;lastResult=result;currentConfig=config;replayTime=0;inventory=model.sync(config,result);conveyors.sync(config);if(config.conveyor?.enabled)conveyors.load().catch(()=>{});nvidia.sync(config,inventory);industrial.root.visible=!!config.logistics?.enabled;routeFloor.sync(config,config.manualCart?.enabled?(result?.manualCart||compileManualCart(config)):config.logistics?.enabled?(result?.logistics||compileLogistics(config)):null,plannedLandingPoints(result?.manualCart||result?.logistics));industrial.sync(config,inventory);if(config.logistics?.enabled)industrial.load().catch(()=>{});applyTransportTime();selection=inventory.selected;makeLabels();updateLights();
       if(!hasFit||!selection||order!==inventory.stations.map(s=>s.stationId).join('|')||count!==inventory.machines.length)fit(false);else draw();
       lastSyncCpuMs=performance.now()-syncStart;return this.snapshot();
     },
     select,
-    setReplayTime(seconds){replayTime=seconds;applyTransportTime();if(selection?.assetId&&industrial.snapshot().state){stopTransition();const desired=transportView();if(desired){const nextTarget=target.clone().lerp(desired.target,.2),safe=fitPerspectiveBounds(desired.bounds,{azimuth,elevation,fov:camera.fov,width:container.clientWidth,height:container.clientHeight,near:camera.near,minDistance:4.8,target:nextTarget});target.copy(nextTarget);distance=Math.max(safe.distance,THREE.MathUtils.lerp(distance,safe.distance,.2));camera.far=safe.far;camera.updateProjectionMatrix();canvas.dataset.transportCoverage=JSON.stringify({phase:lastHandling?.enginePhase,bounds:{min:desired.bounds.min.toArray(),max:desired.bounds.max.toArray()}});}}else if(selection?.workerId){const w=nvidia.snapshot().workers.find(w=>w.workerId===selection.workerId);if(w)target.set(w.position[0],w.position[1]+.9-(w.motion?.crouch||0)*.5,w.position[2]);}keyLight.shadow.needsUpdate=true;renderer.shadowMap.needsUpdate=true;draw();return nvidia.snapshot();},
+    setReplayTime(seconds){replayTime=seconds;applyTransportTime();if(selection?.assetId&&industrial.snapshot().state){stopTransition();const desired=transportView();if(desired){const nextTarget=target.clone().lerp(desired.target,.2),safe=fitPerspectiveBounds(desired.bounds,{azimuth,elevation,fov:camera.fov,width:container.clientWidth,height:container.clientHeight,near:camera.near,minDistance:4.8,target:nextTarget});target.copy(nextTarget);distance=Math.max(safe.distance,THREE.MathUtils.lerp(distance,safe.distance,.2));camera.far=safe.far;camera.updateProjectionMatrix();canvas.dataset.transportCoverage=JSON.stringify({phase:lastHandling?.enginePhase,bounds:{min:desired.bounds.min.toArray(),max:desired.bounds.max.toArray()}});}}else if(currentConfig?.manualCart?.enabled&&selection?.propId==='warehouse:cart'){stopTransition();const desired=cartView();if(desired){const nextTarget=target.clone().lerp(desired.target,.2),safe=fitPerspectiveBounds(desired.bounds,{azimuth,elevation,fov:camera.fov,width:container.clientWidth,height:container.clientHeight,near:camera.near,minDistance:4.8,target:nextTarget});target.copy(nextTarget);distance=Math.max(safe.distance,THREE.MathUtils.lerp(distance,safe.distance,.2));camera.far=safe.far;camera.updateProjectionMatrix();}}else if(selection?.workerId){const w=nvidia.snapshot().workers.find(w=>w.workerId===selection.workerId);if(w)target.set(w.position[0],w.position[1]+.9-(w.motion?.crouch||0)*.5,w.position[2]);}keyLight.shadow.needsUpdate=true;renderer.shadowMap.needsUpdate=true;draw();return nvidia.snapshot();},
     moveProp(id,dx,dz){return nvidia.moveProp(id,dx,dz);},
     fit(){fit();},
     async samplePerformance(duration=2000){

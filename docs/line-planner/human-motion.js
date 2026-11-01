@@ -1,3 +1,4 @@
+import {pathPose,walkLength} from './cart-path.js?v=fcf14d41d228';
 import * as THREE from './vendor/three.module.min.js';
 
 const Y = new THREE.Vector3(0, 1, 0);
@@ -113,10 +114,10 @@ export function createHumanMotion({ actor, wrapper }) {
     const actual = worldPosition(end);
     return { target: xyz(requested), achieved: xyz(actual), residual: actual.distanceTo(requested), reachClamped: Math.abs(distance - requestedDistance) > 1e-6, requestedDistance, reachableDistance: distance };
   }
-  function orientHand(side, heading) {
+  function orientHand(side, heading, customNormal=null) {
     const palm = palms[side], hand = bone(`${side}_Hand`);
     const desiredFinger = new THREE.Vector3(0, -1, 0);
-    const desiredNormal = new THREE.Vector3(side === 'L' ? -1 : 1, 0, 0).applyQuaternion(heading);
+    const desiredNormal = (customNormal?V(customNormal):new THREE.Vector3(side === 'L' ? -1 : 1, 0, 0)).applyQuaternion(heading);
     const basis = (finger, normal) => new THREE.Matrix4().makeBasis(finger, normal, finger.clone().cross(normal).normalize());
     const localNormal = palm.normal.clone().addScaledVector(palm.finger, -palm.normal.dot(palm.finger)).normalize();
     const desired = basis(desiredFinger, desiredNormal).multiply(basis(palm.finger, localNormal).invert());
@@ -126,12 +127,12 @@ export function createHumanMotion({ actor, wrapper }) {
   }
   function walkTargets(walk, heading) {
     const from = V(walk.from), to = V(walk.to), delta = to.clone().sub(from), u = clamp01(walk.u);
-    const distance = delta.length();
+    const distance = walkLength(walk);
     if (distance < 1e-8) return {
       position: from, feet: Object.fromEntries(['L', 'R'].map(side => [side, { target: from.clone().add(restFeet[side].offset.clone().applyQuaternion(heading)), stance: true, swingPhase: null, groundY: from.y }])),
       u, phase: 0, phases: 0, steps: 0, rootU: 1, distance: 0, dip: 0, horizontal: true
     };
-    const count = Math.max(1, Math.ceil(distance / .3)), phases = count + 1;
+    const count = Math.max(1, Math.ceil(distance / .3-1e-9)), phases = count + 1;
     const phase = Math.min(count, Math.floor(u * phases)), p = u === 1 ? 1 : u * phases - phase;
     const progress = { L: 0, R: 0 };
     for (let i = 0; i < phase; i++) progress[i % 2 ? 'R' : 'L'] = Math.min(1, (i + 1) / count);
@@ -139,12 +140,13 @@ export function createHumanMotion({ actor, wrapper }) {
     progress[swing] = start + (destination - start) * smooth(p);
     if (u === 1) progress.L = progress.R = 1;
     const rootU = Math.min(1, u * phases / count);
-    const position = from.clone().addScaledVector(delta, rootU), feet = {};
+    const position = walk.arc?V(pathPose(walk,rootU).position):from.clone().addScaledVector(delta, rootU), feet = {};
     for (const side of ['L', 'R']) {
-      const target = from.clone().addScaledVector(delta, progress[side]).add(restFeet[side].offset.clone().applyQuaternion(heading));
+      const footPose=walk.arc?pathPose(walk,progress[side]):null,footYaw=footPose?new THREE.Quaternion().setFromAxisAngle(Y,footPose.heading):heading;
+      const target = (footPose?V(footPose.position):from.clone().addScaledVector(delta, progress[side])).add(restFeet[side].offset.clone().applyQuaternion(footYaw));
       const stance = u === 0 || u === 1 || side !== swing;
       if (!stance) target.y += Math.sin(Math.PI * p) * .085;
-      feet[side] = { target, stance, swingPhase: side === swing ? p : null, groundY: from.y + delta.y * progress[side] };
+      feet[side] = { target, stance, quaternion:footYaw.clone().multiply(restFeet[side].quaternion), swingPhase: side === swing ? p : null, groundY: from.y + delta.y * progress[side] };
     }
     return { position, feet, u, phase, phases, steps: count, rootU, distance, dip: .07 * Math.min(1, u * phases * 3, (1 - u) * phases * 3), horizontal: Math.abs(delta.y) < 1e-7 };
   }
@@ -171,7 +173,7 @@ export function createHumanMotion({ actor, wrapper }) {
     return { feet, u, delta, bodyHeading, phase: u < .5 ? 'left-foot' : 'right-foot', fromHeading: turn.fromHeading, toHeading: turn.toHeading, dip: Math.abs(delta) < 1e-8 ? 0 : .04 * Math.sin(Math.PI * u) };
   }
 
-  function apply({ position = [0, 0, 0], heading = 0, walk = null, turn = null, crouch = 0, handTargets = null, handBlend = 1, grip = false } = {}) {
+  function apply({ position = [0, 0, 0], heading = 0, walk = null, turn = null, crouch = 0, handTargets = null, handBlend = 1, grip = false, handNormals=null } = {}) {
     for (const [name, value] of [['position', position], ...(walk ? [['walk.from', walk.from], ['walk.to', walk.to]] : []), ...Object.entries(handTargets || {}).map(([side, value]) => [`handTargets.${side}`, value])]) if (!Array.isArray(value) || value.length !== 3 || !value.every(Number.isFinite)) throw new Error(`${name} must contain three finite world coordinates`);
     if (walk && turn) throw new Error('walking and turning are separate motion phases');
     if (turn && ![turn.fromHeading, turn.toHeading, turn.u].every(Number.isFinite)) throw new Error('turn headings and turn.u must be finite');
@@ -205,7 +207,7 @@ export function createHumanMotion({ actor, wrapper }) {
       const target = turning?.feet[side].target || walking?.feet[side].target || root.clone().add(restFeet[side].offset.clone().applyQuaternion(yaw));
       const pole = worldPosition(bone(`${side}_Thigh`)).add(new THREE.Vector3(0, -.1, .8).applyQuaternion(yaw));
       const solveResult = solve(chains[`${side}Leg`], target, pole);
-      const footQuaternion = turning?.feet[side].quaternion || yaw.clone().multiply(restFeet[side].quaternion);
+      const footQuaternion = turning?.feet[side].quaternion || walking?.feet[side].quaternion || yaw.clone().multiply(restFeet[side].quaternion);
       setWorldQuaternion(bone(`${side}_Foot`), footQuaternion);
       feet[side] = { ...solveResult, ankle: xyz(worldPosition(bone(`${side}_Foot`))), stance: turning?.feet[side].stance ?? walking?.feet[side].stance ?? true, quaternion: bone(`${side}_Foot`).getWorldQuaternion(new THREE.Quaternion()).toArray(), targetQuaternion: footQuaternion.toArray(), soleMinY: null, groundY: turning?.feet[side].groundY ?? walking?.feet[side].groundY ?? root.y };
       if (solveResult.reachClamped) warnings.push(`${side} leg target outside native reach; residual reported, no stretch.`);
@@ -224,12 +226,12 @@ export function createHumanMotion({ actor, wrapper }) {
     if (contactTargets) {
       for (const side of ['L', 'R']) {
         if (!contactTargets[side]) continue;
-        const target = V(contactTargets[side]), orientation = orientHand(side, yaw);
+        const target = V(contactTargets[side]), orientation = orientHand(side, yaw, handNormals?.[side]);
         const wristTarget = target.clone().sub(palms[side].offset.clone().applyQuaternion(orientation.quaternion));
         const shoulder = worldPosition(bone(`${side}_Upperarm`));
         const pole = shoulder.clone().add(new THREE.Vector3(side === 'L' ? .7 : -.7, -.25, .1).applyQuaternion(yaw));
         const solveResult = solve(chains[`${side}Arm`], wristTarget, pole);
-        orientHand(side, yaw);
+        orientHand(side, yaw, handNormals?.[side]);
         const hand = bone(`${side}_Hand`), palm = hand.localToWorld(palms[side].offset.clone());
         hands[side] = { ...solveResult, contactRequested: !!handTargets?.[side], contactExpected: !!handTargets?.[side] && blend === 1, handBlend: handTargets?.[side] ? blend : 0, neutralTarget: [...neutralTargets[side]], requestedTarget: handTargets?.[side] ? [...handTargets[side]] : null, target: xyz(target), achieved: xyz(palm), wristResidual: solveResult.residual, wristTarget: xyz(wristTarget), wrist: xyz(worldPosition(hand)), palm: xyz(palm), residual: palm.distanceTo(target), contactResidual: handTargets?.[side] ? palm.distanceTo(V(handTargets[side])) : null, palmNormal: xyz(palms[side].normal.clone().applyQuaternion(hand.getWorldQuaternion(new THREE.Quaternion()))), fingerDirection: xyz(palms[side].finger.clone().applyQuaternion(hand.getWorldQuaternion(new THREE.Quaternion()))) };
         if (solveResult.reachClamped) warnings.push(`${side} palm target outside native arm reach; residual reported, no stretch.`);

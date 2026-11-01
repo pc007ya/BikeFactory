@@ -1,7 +1,7 @@
 import * as THREE from './vendor/three.module.min.js';
 import {GLTFLoader} from './vendor/addons/loaders/GLTFLoader.js';
-import {sampleLogistics} from './logistics.js?v=ba4c9d3625ce';
-import {createIwHubControls} from './assets/nvidia/industrial/interfaces/iwhub-controls.mjs?v=ba4c9d3625ce';
+import {sampleLogistics} from './logistics.js?v=fcf14d41d228';
+import {createIwHubControls} from './assets/nvidia/industrial/interfaces/iwhub-controls.mjs?v=fcf14d41d228';
 
 export const INDUSTRIAL_ASSET_INFO=Object.freeze({
   assetId:'amr:iwhub:1',payloadId:'payload:kit:1',url:'./assets/nvidia/industrial/nvidia-iwhub-runtime.glb',
