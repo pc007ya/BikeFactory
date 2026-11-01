@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "generatedBy": "BikeFactory line-planner static build",
-  "sourceCommit": "911747060b8d47224988f11aa1d0693e3577a6eb",
-  "generatedAt": "2026-11-01T10:06:04.849Z",
-  "buildId": "70c559044159a626ea4f",
+  "sourceCommit": "001e9699428189004c660264d567b7d1496b06be",
+  "generatedAt": "2026-11-01T10:11:19.321Z",
+  "buildId": "7fdd74b1896157016697",
   "entrypoint": "index.html",
   "files": [
     {
@@ -44,7 +44,7 @@
     {
       "path": "index.html",
       "bytes": 4667,
-      "sha256": "9138e7e6756fe1119648c8e449ded4b383524c0bf3db5cc2b603bd86e9a43344"
+      "sha256": "0e618416d4ba00e4b5478ea997b466e59e4253fa2c3fa99216fd48b72ec13427"
     },
     {
       "path": "MIGRATION-R187.md",
@@ -83,8 +83,8 @@
     },
     {
       "path": "style.css",
-      "bytes": 4913,
-      "sha256": "3af9481f363c36db69a7250f0f63ac95c176a3f4bf8373fe553dcedaf8afbfdb"
+      "bytes": 5098,
+      "sha256": "2c54a3729ca8afda93e5e298c0725aa694e0f0c4166f6c089d2ab24a68a944d3"
     },
     {
       "path": "vendor/addons/loaders/GLTFLoader.js",
