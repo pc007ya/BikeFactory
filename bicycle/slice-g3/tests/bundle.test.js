@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import vm from 'node:vm';
+const html=fs.readFileSync(new URL('../dist/START.html',import.meta.url),'utf8');
+test('actual offline HTML inline JS parses and contains no unresolved template token',()=>{assert(!html.includes('<!--BUNDLE-->'));assert(!html.includes('<!--DASHBOARD_CSS-->'));const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];assert.equal(scripts.length,1);assert.doesNotThrow(()=>new vm.Script(scripts[0][1]));});
+test('offline entry has no external scripts, styles, image tags or module imports',()=>{assert(!/<script[^>]+src=/i.test(html));assert(!/<link[^>]+href=/i.test(html));assert(!/<img[^>]+src=/i.test(html));assert(!/import\s*\(\s*['"]https?:/.test(html));assert(html.includes('THIRD PARTY LICENSES'));assert(html.includes('尚未實畫面驗收'));});

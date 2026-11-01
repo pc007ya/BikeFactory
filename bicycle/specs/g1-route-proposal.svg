@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1050" viewBox="0 0 1400 1050"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8Z" fill="#25afbb"/></marker></defs><rect width="1400" height="1050" fill="#f4f7fa"/><style>text{font-family:"Noto Sans CJK TC","Noto Sans CJK SC",sans-serif;fill:#203347} .title{font-size:27px;font-weight:700}.sub{font-size:15px}.label{font-size:16px;font-weight:600}.tiny{font-size:13px}.human{stroke:#4679c8;stroke-width:7;fill:none}.vehicle{stroke:#25afbb;stroke-width:9;fill:none}.node{fill:white;stroke:#203347;stroke-width:2}</style><text x="40" y="48" class="title">G1 最小切片｜備料 → 裝配 → 檢查</text><text x="40" y="78" class="sub">提案假設・非比例施工圖・未實作／未驗收・座標單位 m（示意區域 18 × 12）</text>
+<path class="human" d="M100,325 L925,325"/>
+<path class="human" d="M100,325 L100,235"/>
+<circle cx="100" cy="325" r="7" class="node"/>
+<text x="40" y="356" class="tiny">H0 出入口(0,9)</text>
+<circle cx="100" cy="235" r="7" class="node"/>
+<text x="40" y="219" class="tiny">HB 休息(0,11)</text>
+<text x="42" y="168" class="tiny">H0 / HB：各2人離線停靠位</text>
+<path class="human" d="M265,325 L265,392.5"/>
+<path class="human" d="M265,325 L265,280"/>
+<circle cx="265" cy="325" r="7" class="node"/>
+<text x="277" y="313" class="tiny">HP (3,9)</text>
+<rect x="205" y="246" width="120" height="31" rx="10" fill="#e4edff" stroke="#4679c8"/>
+<text x="212" y="267" class="tiny">PW 等候灣×2</text>
+<circle cx="265" cy="392.5" r="7" class="node"/>
+<text x="277" y="387.5" class="tiny">P操作側</text>
+<rect x="162" y="415" width="206" height="102" rx="10" fill="#ffffff" stroke="#7f97a9"/>
+<text x="176" y="443" class="label">P｜備料</text>
+<text x="176" y="467" class="tiny">工作夾具×1；有人上/卸料8s</text>
+<text x="176" y="490" class="tiny">備料45s；套件輸出×2</text>
+<path class="vehicle" d="M265,640 L265,527.5"/>
+<circle cx="265" cy="640" r="7" class="node"/>
+<text x="277" y="666" class="tiny">V-P (3,2)</text>
+<circle cx="265" cy="527.5" r="7" class="node"/>
+<text x="170" y="555.5" class="tiny">P物流端口 (3,4.5)</text>
+<rect x="249" y="512.5" width="32" height="15" fill="#f2ac4e"/>
+<path class="human" d="M595,325 L595,392.5"/>
+<path class="human" d="M595,325 L595,280"/>
+<circle cx="595" cy="325" r="7" class="node"/>
+<text x="607" y="313" class="tiny">HA (9,9)</text>
+<rect x="535" y="246" width="120" height="31" rx="10" fill="#e4edff" stroke="#4679c8"/>
+<text x="542" y="267" class="tiny">AW 等候灣×2</text>
+<circle cx="595" cy="392.5" r="7" class="node"/>
+<text x="607" y="387.5" class="tiny">A操作側</text>
+<rect x="492" y="415" width="206" height="102" rx="10" fill="#ffffff" stroke="#7f97a9"/>
+<text x="506" y="443" class="label">A｜裝配</text>
+<text x="506" y="467" class="tiny">工作夾具×1；有人上/卸料8s</text>
+<text x="506" y="490" class="tiny">裝配90s；輸入×2 / 輸出×1</text>
+<path class="vehicle" d="M595,640 L595,527.5"/>
+<circle cx="595" cy="640" r="7" class="node"/>
+<text x="607" y="666" class="tiny">V-A (9,2)</text>
+<circle cx="595" cy="527.5" r="7" class="node"/>
+<text x="500" y="555.5" class="tiny">A物流端口 (9,4.5)</text>
+<rect x="579" y="512.5" width="32" height="15" fill="#f2ac4e"/>
+<path class="human" d="M925,325 L925,392.5"/>
+<path class="human" d="M925,325 L925,280"/>
+<circle cx="925" cy="325" r="7" class="node"/>
+<text x="937" y="313" class="tiny">HQ (15,9)</text>
+<rect x="865" y="246" width="120" height="31" rx="10" fill="#e4edff" stroke="#4679c8"/>
+<text x="872" y="267" class="tiny">QW 等候灣×2</text>
+<circle cx="925" cy="392.5" r="7" class="node"/>
+<text x="937" y="387.5" class="tiny">Q操作側</text>
+<rect x="822" y="415" width="206" height="102" rx="10" fill="#ffffff" stroke="#7f97a9"/>
+<text x="836" y="443" class="label">Q｜檢查</text>
+<text x="836" y="467" class="tiny">工作夾具×1；有人上/卸料8s</text>
+<text x="836" y="490" class="tiny">檢查30s；返工40s＋再檢30s</text>
+<path class="vehicle" d="M925,640 L925,527.5"/>
+<circle cx="925" cy="640" r="7" class="node"/>
+<text x="937" y="666" class="tiny">V-Q (15,2)</text>
+<circle cx="925" cy="527.5" r="7" class="node"/>
+<text x="935" y="612" class="tiny">Q物流端口 (15,4.5)</text>
+<rect x="909" y="512.5" width="32" height="15" fill="#f2ac4e"/>
+<path class="vehicle" d="M100,640 L1090,640"/>
+<path class="vehicle" d="M1090,640 L1090,527.5"/>
+<path class="vehicle" d="M1090,640 L1090,707.5"/>
+<circle cx="100" cy="640" r="7" class="node"/>
+<text x="40" y="667" class="tiny">V-HOME (0,2)</text>
+<circle cx="1090" cy="640" r="7" class="node"/>
+<text x="1102" y="647" class="tiny">V-J (18,2)</text>
+<circle cx="1090" cy="527.5" r="7" class="node"/>
+<text x="1102" y="532.5" class="tiny">V-EXIT</text>
+<rect x="1145" y="485" width="220" height="55" rx="10" fill="#e3f3e7" stroke="#69a782"/>
+<text x="1158" y="508" class="label">FG 存放×6</text>
+<text x="1158" y="529" class="tiny">卸完才 EXITED；不自動刪除</text>
+<circle cx="1090" cy="707.5" r="7" class="node"/>
+<text x="995" y="752" class="tiny">V-SCRAP</text>
+<rect x="1145" y="678" width="220" height="60" rx="10" fill="#fcebe8" stroke="#cb8779"/>
+<text x="1158" y="702" class="label">報廢存放×6</text>
+<text x="1158" y="725" class="tiny">卸完才 SCRAP_STORED</text>
+<rect x="745" y="545" width="263" height="42" rx="10" fill="#fff2d9" stroke="#e7ad50"/>
+<text x="758" y="563" class="tiny">Q-G合格×1／Q-S隔離×1</text>
+<text x="758" y="581" class="tiny">共用Q端口鎖，V1負責送往兩終端</text>
+<rect x="35" y="395" width="130" height="110" rx="10" fill="#e9eef6" stroke="#bac7d3"/>
+<text x="47" y="418" class="label">有限外部料源</text>
+<text x="47" y="442" class="tiny">補料推車×1</text>
+<text x="47" y="464" class="tiny">由H0取料</text>
+<text x="47" y="486" class="tiny">空車返源才釋放</text>
+<rect x="35" y="790" width="1330" height="225" rx="10" fill="#ffffff" stroke="#bac7d3"/>
+<text x="55" y="821" class="label">圖與邏輯必須共用節點／邊資料；線條不是裝飾動線。</text>
+<text x="55" y="853" class="tiny">藍：人行＋有人補料推車。每段容量1、雙向共鎖；整趟原子預約；未取得路權在PW/AW/QW等候。</text>
+<text x="55" y="879" class="tiny">青：單台V1的空載／載貨網。每段容量1；全路線預約；裝卸各6秒；沒有多車避碰的驗收主張。</text>
+<text x="55" y="905" class="tiny">橘：物流端口與站內搬移互鎖。人員操作側與AGV物流側分離；維護進入則停止該端口裝卸。</text>
+<text x="55" y="931" class="tiny">FG／報廢終端均有限容量6，清空Q-G/Q-S的是V1；滿載就明確阻塞，不自動移除貨物。</text>
+<text x="55" y="957" class="tiny">所有工時、尺寸、寬度、數量與座標僅為提案假設；未做通道淨寬、設備包絡、人體工學或職安驗證。</text>
+<text x="55" y="987" class="tiny">審查附件：minimal-slice-spec-G1-draft.md ＋ g1-state-resource-matrices.md｜G1仍待人工推演與使用者接受</text>
+</svg>

@@ -1,0 +1,11 @@
+**/node_modules/
+**/dist/
+**/__pycache__/
+**/*.pyc
+slice-g3/records/embedded.js
+slice-g3/records/*.json.gz
+slice-g3/evidence/
+slice-g2/evidence/
+slice-g2_1/evidence/
+*.zip
+*.tar.gz

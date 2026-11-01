@@ -1,0 +1,443 @@
+{
+  "schema": "g2.1-layout-proposal-1",
+  "status": "PARAMETER_CANDIDATE_REVIEWED_NOT_MESH_ACCEPTED",
+  "assumed": true,
+  "units": "metres/radians",
+  "worldTransform": "[coreX,height,-coreY]",
+  "heading": {
+    "zeroForwardCore": [
+      0,
+      -1
+    ],
+    "positiveQuarterForwardCore": [
+      1,
+      0
+    ],
+    "formula": "atan2(dx,-dy)",
+    "localPlanarConvention": "[right,backward]",
+    "rotateLocalToCore": "[u*cos(h)-v*sin(h),u*sin(h)+v*cos(h)]"
+  },
+  "cart": {
+    "id": "C1",
+    "home": "CART_HOME",
+    "parkHeading": 0,
+    "bodyRoot": "persistent cart body center, not worker root",
+    "bodyFootprint": {
+      "width": 0.7,
+      "length": 1.25
+    },
+    "maximumLoadFootprint": {
+      "width": 0.55,
+      "length": 1.0
+    },
+    "operatorRootLocalCore": [
+      0,
+      0.95
+    ],
+    "handleLocalWorld": [
+      [
+        -0.3,
+        1.15,
+        -0.55
+      ],
+      [
+        0.3,
+        1.15,
+        -0.55
+      ]
+    ],
+    "palmRadius": 0.065,
+    "operatorPlanarEnvelopeRadius": 0.55,
+    "clearanceAllowance": 0.1,
+    "turnSweepRadius": 1.6,
+    "homeOperatorPosition": [
+      -4,
+      17.95
+    ],
+    "handleAccess": [
+      -4,
+      18.3
+    ],
+    "attachDetachPath": [
+      [
+        -4,
+        18.3
+      ],
+      [
+        -4,
+        17.95
+      ]
+    ],
+    "attachDetachMs": 2000,
+    "maxCartTurnRadPerSec": 0.2617993877991494,
+    "maxOperatorArcSpeed": 0.6,
+    "trajectory": "smoothstep; peak factor1.5 included",
+    "handleBar": {
+      "axis": "localWorldX",
+      "endpointsX": [
+        -0.325,
+        0.325
+      ],
+      "centerY": 1.15,
+      "centerZ": -0.53,
+      "radius": 0.02,
+      "contactsMeaning": "rear cylinder surface at Z-.55, not axis center"
+    }
+  },
+  "networks": {
+    "human": {
+      "nodes": {
+        "H0": [
+          0,
+          10
+        ],
+        "HB": [
+          -3,
+          10
+        ],
+        "HP": [
+          3,
+          10
+        ],
+        "HA": [
+          9,
+          10
+        ],
+        "HQ": [
+          15,
+          10
+        ],
+        "P-OP": [
+          3,
+          7.5
+        ],
+        "A-OP": [
+          9,
+          7.5
+        ],
+        "Q-OP": [
+          15,
+          7.5
+        ],
+        "ACCESS_WEST": [
+          -6.3,
+          10
+        ],
+        "ACCESS_REAR": [
+          -6.3,
+          18.3
+        ],
+        "HANDLE_ACCESS": [
+          -4,
+          18.3
+        ],
+        "PW": [
+          3,
+          11.2
+        ],
+        "AW": [
+          9,
+          11.2
+        ],
+        "QW": [
+          15,
+          11.2
+        ],
+        "HB_W1": [
+          -3,
+          8.8
+        ],
+        "HB_W2": [
+          -3,
+          11.2
+        ]
+      },
+      "edges": [
+        [
+          "H0",
+          "HB"
+        ],
+        [
+          "H0",
+          "HP"
+        ],
+        [
+          "HP",
+          "HA"
+        ],
+        [
+          "HA",
+          "HQ"
+        ],
+        [
+          "HP",
+          "P-OP"
+        ],
+        [
+          "HA",
+          "A-OP"
+        ],
+        [
+          "HQ",
+          "Q-OP"
+        ],
+        [
+          "HB",
+          "ACCESS_WEST"
+        ],
+        [
+          "ACCESS_WEST",
+          "ACCESS_REAR"
+        ],
+        [
+          "ACCESS_REAR",
+          "HANDLE_ACCESS"
+        ],
+        [
+          "HP",
+          "PW"
+        ],
+        [
+          "HA",
+          "AW"
+        ],
+        [
+          "HQ",
+          "QW"
+        ],
+        [
+          "HB",
+          "HB_W1"
+        ],
+        [
+          "HB",
+          "HB_W2"
+        ]
+      ],
+      "ordinaryWorkerRadius": 0.55,
+      "nodeCapacity": 1
+    },
+    "cart": {
+      "nodes": {
+        "CART_HOME": [
+          -4,
+          17
+        ],
+        "CP": [
+          3,
+          17
+        ],
+        "CQ": [
+          15,
+          17
+        ],
+        "C-P": [
+          3,
+          14.5
+        ],
+        "C-Q": [
+          15,
+          14.5
+        ]
+      },
+      "edges": [
+        [
+          "CART_HOME",
+          "CP"
+        ],
+        [
+          "CP",
+          "CQ"
+        ],
+        [
+          "CP",
+          "C-P"
+        ],
+        [
+          "CQ",
+          "C-Q"
+        ]
+      ],
+      "eligibleWorkers": "one attached worker only; other worker never uses cart graph",
+      "corridorSweepRadius": 1.6
+    },
+    "agv": {
+      "policy": "UNCHANGED from G2; do not regenerate or relocate nodes"
+    }
+  },
+  "bays": {
+    "CART_HOME": {
+      "center": [
+        -4,
+        17
+      ],
+      "capacity": 1,
+      "sweepRadius": 1.6,
+      "allowedHeadings": [
+        0,
+        1.5707963267948966,
+        3.141592653589793,
+        -1.5707963267948966
+      ],
+      "turnTie": "positivePi",
+      "conflicts": [
+        "cart:CART_HOME|CP",
+        "human:ACCESS_REAR|HANDLE_ACCESS",
+        "attachment:CART_HOME"
+      ]
+    },
+    "CP": {
+      "center": [
+        3,
+        17
+      ],
+      "capacity": 1,
+      "sweepRadius": 1.6,
+      "allowedHeadings": [
+        0,
+        1.5707963267948966,
+        3.141592653589793,
+        -1.5707963267948966
+      ],
+      "turnTie": "positivePi",
+      "conflicts": [
+        "cart:CART_HOME|CP",
+        "cart:CP|CQ",
+        "cart:C-P|CP"
+      ]
+    },
+    "CQ": {
+      "center": [
+        15,
+        17
+      ],
+      "capacity": 1,
+      "sweepRadius": 1.6,
+      "allowedHeadings": [
+        0,
+        1.5707963267948966,
+        3.141592653589793,
+        -1.5707963267948966
+      ],
+      "turnTie": "positivePi",
+      "conflicts": [
+        "cart:CP|CQ",
+        "cart:C-Q|CQ"
+      ]
+    },
+    "C-P": {
+      "center": [
+        3,
+        14.5
+      ],
+      "capacity": 1,
+      "sweepRadius": 1.6,
+      "allowedHeadings": [
+        0,
+        1.5707963267948966,
+        3.141592653589793,
+        -1.5707963267948966
+      ],
+      "turnTie": "positivePi",
+      "conflicts": [
+        "cart:C-P|CP"
+      ]
+    },
+    "C-Q": {
+      "center": [
+        15,
+        14.5
+      ],
+      "capacity": 1,
+      "sweepRadius": 1.6,
+      "allowedHeadings": [
+        0,
+        1.5707963267948966,
+        3.141592653589793,
+        -1.5707963267948966
+      ],
+      "turnTie": "positivePi",
+      "conflicts": [
+        "cart:C-Q|CQ"
+      ]
+    }
+  },
+  "materialRackAnchorsCore": {
+    "frame": [
+      0,
+      12.2
+    ],
+    "fork": [
+      1.6,
+      12.2
+    ],
+    "wheel": [
+      3.2,
+      12.2
+    ],
+    "drive": [
+      4.8,
+      12.2
+    ],
+    "fastener": [
+      6.4,
+      12.2
+    ],
+    "repair": [
+      15,
+      12.2
+    ]
+  },
+  "materialRackFootprint": [
+    1.345,
+    0.505
+  ],
+  "service": {
+    "C-P": [
+      "frame",
+      "fork",
+      "wheel",
+      "drive",
+      "fastener"
+    ],
+    "C-Q": [
+      "repair"
+    ],
+    "unloadMeaning": "finite material ledger transfer at delivery bay; individual box carry/reach to each rack not modeled or visually claimed"
+  },
+  "resourceProtocol": {
+    "conservativeTripReservation": "atomically reserve complete cart roundtrip edges+bays+home attachment access before attaching; retain through detach; home occupancy belongs persistently to C1",
+    "homeOccupancy": "entity C1 remains owner while parked; task receives subordinate use token, not second conflicting owner",
+    "humanConflict": "only ACCESS_REAR|HANDLE_ACCESS conflicts with CART_HOME turn/attachment; reserve it before approach and retain until detach ends and operator clears the swept home disk",
+    "clearanceRelease": "Keep home-turn and access lock until detached worker reaches ACCESS_REAR via recorded walking; HANDLE_ACCESS remains inside sweep disk.",
+    "returnEgressTarget": [
+      -6.3,
+      18.3
+    ],
+    "noOpMutexRequired": "candidate separated envelope; still pending mesh sweep"
+  },
+  "forbidden": [
+    "cart on human HP/HA/HQ or OP routes",
+    "ordinary walkers on cart spine/C-P/C-Q",
+    "yaw reset at travel start/end",
+    "release home conflict while worker remains within sweep disk",
+    "hand-carry animation claiming all rack stock transfer is modeled"
+  ],
+  "gateEvidenceNeeded": [
+    "full yaw cart/load/worker/handle mesh against racks/OP/gantry",
+    "home approach/attach/detach/egress continuity and clearance",
+    "edge/bay conflict atomicity and blocked retained ownership",
+    "cart normal and shortage return completion with finite time bounds"
+  ],
+  "personnelNodeContract": "While attached, physical pose/cart node is authoritative; personnel node remains last walking HANDLE_ACCESS plus explicit attached mode, never treats cart graph node as ordinary walk node.",
+  "measurementEvidence": {
+    "walking41GaitSamplesMaxVertexRadius": 0.5319234299594492,
+    "ordinaryEnvelope": 0.55,
+    "note": "sampled current mesh poses, not continuous motion proof",
+    "attachedReach101SamplesMaxVertexRadius": 0.5134835979215585
+  },
+  "restNodes": {
+    "W1": "HB_W1",
+    "W2": "HB_W2"
+  }
+}

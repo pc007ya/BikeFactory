@@ -1,0 +1,40 @@
+{
+  "capturedUTC": "2026-10-31T20:46:47.544Z",
+  "core": {
+    "engine.js": "a1c170b761e740720eb6dba177b1497f4ae2b9825b26c0f6b65c3d3ab0857f71",
+    "drive-profile.js": "fb1aa708f4a2d6de688f4a671280414e36f21ebc56bbde28a2a6a7117d1b24a1",
+    "record-contract.js": "298b3e9f00933d9e3a323ac9aeb9a35f9a908638c9eefe7b66eccd2fe5de33f2",
+    "mobility-core.js": "1c6d9ee822395d0487ed0ec8e5f5be81aa4842ef7c035e609e8bf289f8b99852",
+    "pose-itinerary.js": "e4b8a6d2357800c4a660e3a42028f7b6f98d7eb6d90fea8b96e859684a75fa25",
+    "state-projection.js": "af19e77d5390d72c83c072fd1347ab04761011789d4883ba0c862a52cffe4058",
+    "layout.js": "37696fb813c787c33719422322e06fd64f827cf4753d5df4f24aff328e10a9a6",
+    "config.js": "26888983f2ffcd1e5198995f58b649c3da5b34e068fefa0ba3cf6293abc6d27e",
+    "personnel.js": "500b0ae8e2c981e1e86208819237debd5d360a509b21121e1e599312a830f1c7",
+    "inventory.js": "857e8725206d514fba89f6f55e31f3cf936b1df1af88b3079f91f7bb2d2b7ae8",
+    "routing.js": "97ddf561ae71575c735c99c6a6ee4182ef4478ecf8e0ff100ee4304a276c8721"
+  },
+  "renderer": {
+    "anchors.js": "9b6a3212f5fda579a563897f26f3af1ac81190984100091d61b181dc744893fa",
+    "app.js": "c6220e8edd7319d91d3e54254b332a9909735f37248e08100d99117194441ee5",
+    "arm-kinematics.js": "d7b43289b2e4bc9bb40384cc6ff07b22deabf7f8d01018ae406e18b1e8020c21",
+    "dashboard.js": "bdefae6fb22146ee91f1f69943035e364719cbe1804ea700c818d432e803a0be",
+    "models.js": "3d9118b91722fc9e27e9215e7ed84cb3ac2bdf9af428d5a088753f1943fc7d4d",
+    "record-player.js": "050ebeb60f63b6fe5617e3703afb4cd46d6879392a11d2a05c4aa41addac5f9a",
+    "scene.js": "55075815cc39b10fd4951107c1ba1a52b82e0cf26d31d351e386513c21d2a3ab",
+    "state-adapter.js": "ed26d3bb023433fff81a7b4e7ce7a4a182220319d206df1ae23d1c52522bfab2",
+    "transfer-motion.js": "4e7063aa947bd44af9fc5497f8284fa493ed4452976bb3798efabe0cc9af7d70",
+    "transfer-route.js": "23f3975b795f1fac155cf0cac8491560eb125f5babb89b9c000032ca347299d7",
+    "view-framing.js": "caa83799a601146962285b926a9adaf8a3785504693f41e9a9a3beef16d9a3fb",
+    "viewer-controller.js": "2eb03aa12f0cf00e16661fa0a9687a8443804447eaa63a86e81c43961ec865f7"
+  },
+  "records": {
+    "normal": "7d943aaa4d32450784499efdaee983da44c8ed6511bbf9fd30f5244b445b5778",
+    "quality": "3025fbf41a732c268edbb910164c02eae993f89f5f47c8e3ea08938c60e56d88",
+    "shortage": "29ac94597108ae40f5e8d646451851811ca8a142636189732df100e53f788c24",
+    "interruption": "ef4c9a9a88d1f9225c53706593a079ed3b0db4e8a861ee49b805f8c1c7821cb8",
+    "missing-worker": "19eda703dbd3d6079bed9bd25a3e785aaf678679e16415d30d7cce3b4b02fd32",
+    "full-terminal": "378740663d23bb489dcf876ff5676ad0a8920fed9828d88f95683c83b1eb03d3",
+    "shift-rest": "19018803ce2dc6259baa59778ca4173765ed2a32e026161525e39eac2fc5b7b8"
+  },
+  "html": "e596f904aa91ba098982bc90b3906d3b2ad43d683f23e18b026e151a643baa93"
+}

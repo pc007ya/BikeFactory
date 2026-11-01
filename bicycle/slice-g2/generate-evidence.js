@@ -1,0 +1,8 @@
+import fs from 'node:fs';
+import {FactorySlice} from './engine.js';import {defaultConfig} from './config.js';
+fs.mkdirSync('evidence',{recursive:true});
+const results=[];
+function run(name,overrides={},horizon=1800000){const sim=new FactorySlice({runId:'evidence-'+name,...overrides});const outcome=sim.runUntil(horizon);sim.assertInvariants();results.push({name,assumptions:sim.config.assumptions,runId:sim.runId,configHash:sim.configHash,elapsedMs:sim.now,outcome:outcome.outcome,kpi:sim.kpi,metrics:sim.metrics,waiting:outcome.pending,workerExclusions:outcome.workerExclusions,eventCount:sim.events.length,finalStateHash:sim.productionHash()});return sim;}
+const normal=run('normal');fs.writeFileSync('evidence/normal-record.json',JSON.stringify(normal.exportRecord()));fs.writeFileSync('evidence/normal-events.jsonl',normal.events.map(({state,...event})=>JSON.stringify(event)).join('\n')+'\n');
+const c=defaultConfig();run('missing-qc',{workers:c.workers.map(w=>w.id==='W2'?{...w,shifts:[]}:w),autoReplenish:false});run('finite-frame-replenishment',{initialStock:{...c.initialStock,frame:0}});run('quality-rework-and-scrap',{quality:{B003:['FAIL','PASS'],B004:['FAIL','FAIL']}});run('finished-storage-full',{buffers:{...c.buffers,FG:1}});run('prefilled-input',{initialJobs:[{id:'B001',location:'A_IN'},{id:'B002',location:'A_IN'}]});
+fs.writeFileSync('evidence/scenario-summary.json',JSON.stringify({scope:'G2 logic only; synthetic assumptions; no visual acceptance',results},null,2));console.log(JSON.stringify(results.map(({name,outcome,elapsedMs,kpi})=>({name,outcome,elapsedMs,kpi})),null,2));

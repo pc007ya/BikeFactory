@@ -1,0 +1,2 @@
+import test from 'node:test';import assert from 'node:assert/strict';import{overviewFraming}from'../view-framing.js';
+test('overview sphere fits portrait and landscape FOV without inventing scene motion',()=>{for(const aspect of [.4,.56,.75,1,1.3,1.777,2,2.5]){const a=overviewFraming(aspect);assert.ok(a.distance*Math.sin(a.limitingFov/2)>=a.radius-1e-10);assert.ok(a.distance+a.radius<400);assert.ok(a.distance<200);assert.deepEqual(a,overviewFraming(aspect));}assert.throws(()=>overviewFraming(0));});

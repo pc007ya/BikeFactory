@@ -1,0 +1,5 @@
+/** Fixed-length analytic display geometry only: no forces, dynamics or body-root motion. */
+export const ARM_LENGTHS=Object.freeze({upper:.24,forearm:.22,palmRadius:.065});
+export function solveArm(shoulder,wrist,side=1){
+ if(![...shoulder,...wrist].every(Number.isFinite))throw Error('Nonfinite arm target');const d=wrist.map((n,i)=>n-shoulder[i]),r=Math.hypot(...d),{upper:l1,forearm:l2}=ARM_LENGTHS;if(r>l1+l2+1e-8||r<Math.abs(l1-l2)-1e-8)throw Error(`Unreachable fixed-length wrist ${r}`);const u=d.map(n=>n/r),pole=[side<0?-1:1,0,0],dot=pole.reduce((n,v,i)=>n+v*u[i],0),p=pole.map((n,i)=>n-dot*u[i]);let len=Math.hypot(...p);if(len<1e-8){const axis=[0,0,0];axis[u.map(Math.abs).indexOf(Math.min(...u.map(Math.abs)))]=1;const projection=axis.reduce((n,v,i)=>n+v*u[i],0);for(let i=0;i<3;i++)p[i]=axis[i]-projection*u[i];len=Math.hypot(...p);}const a=(l1*l1-l2*l2+r*r)/(2*r),h=Math.sqrt(Math.max(0,l1*l1-a*a)),elbow=shoulder.map((n,i)=>n+a*u[i]+h*p[i]/len);return {shoulder:[...shoulder],elbow,wrist:[...wrist],upperLength:l1,forearmLength:l2,assumed:true};
+}
