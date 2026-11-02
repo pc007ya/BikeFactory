@@ -1,10 +1,10 @@
 import * as THREE from './vendor/three.module.js';
 import {GLTFLoader} from './vendor/addons/loaders/GLTFLoader.js';
-import {fitPerspectiveBounds,framingContentBounds} from './view-framing.js?v=a523bf62b7df';
-import {createCraneController} from './assets/original/crane-v2/controller.mjs?v=a523bf62b7df';
-import {simulate,exampleConfig} from './simulation.js?v=a523bf62b7df';
-import {defaultCrane,compileCrane,sampleCrane,CRANE_ID} from './crane.js?v=a523bf62b7df';
-import {createSceneModel} from './scene-model.js?v=a523bf62b7df';
+import {fitPerspectiveBounds,framingContentBounds} from './view-framing.js?v=307311a1019b';
+import {createCraneController} from './assets/original/crane-v2/controller.mjs?v=307311a1019b';
+import {simulate,exampleConfig} from './simulation.js?v=307311a1019b';
+import {defaultCrane,compileCrane,sampleCrane,CRANE_ID} from './crane.js?v=307311a1019b';
+import {createSceneModel} from './scene-model.js?v=307311a1019b';
 const $=id=>document.getElementById(id),scene=new THREE.Scene();scene.background=new THREE.Color('#152333');
 const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.shadowMap.enabled=true;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.1;$('view').append(renderer.domElement);
 const camera=new THREE.PerspectiveCamera(48,1,.1,200),controls={target:new THREE.Vector3(),azimuth:.65,elevation:.55,distance:30,update(){camera.position.copy(this.target).add(new THREE.Vector3(Math.sin(this.azimuth)*Math.cos(this.elevation),Math.sin(this.elevation),Math.cos(this.azimuth)*Math.cos(this.elevation)).multiplyScalar(this.distance));camera.lookAt(this.target);}},model=createSceneModel();scene.add(model.root);scene.add(new THREE.HemisphereLight(0xcfe9ff,0x5a4c3e,2.4));const sun=new THREE.DirectionalLight(0xffffff,3);sun.position.set(7,16,9);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-18,right:18,top:18,bottom:-18});scene.add(sun);

@@ -18,3 +18,7 @@ main>aside,main>article{min-width:0}
 #scene-section{overflow-anchor:none}#transport-debug,#asset-debug{height:260px;max-height:260px;overflow:auto;font-size:11px;white-space:pre-wrap;overflow-wrap:anywhere}#asset-inspector{white-space:pre-wrap;max-height:180px;overflow:auto}
 #scene-replay-toggle{position:absolute;z-index:3;right:10px;top:10px;background:#142b3de8;font-size:12px}.replay-toolbar{margin:12px 0;align-items:center}#transport-results{min-width:0}
 #export-download[hidden]{display:none}#export-download{text-decoration:none;overflow-wrap:anywhere}
+
+#wheel-debug{height:280px;max-height:280px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px}#wheel-results{min-width:0;overflow:auto}#wheel-panel.selected{outline:1px solid #d8b768}
+
+#steerer-debug{max-height:280px;overflow:auto;font-size:11px}#steerer-results{min-width:0;overflow-wrap:anywhere}#steerer-results table{width:100%}

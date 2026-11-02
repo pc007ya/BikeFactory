@@ -1,5 +1,5 @@
-import {sampleLogistics,LOGISTICS_GEOMETRY,WAREHOUSE_WORKER_ID} from './logistics.js?v=a523bf62b7df';
-import {compilePlantLayout,shortestAngle} from './plant-layout.js?v=a523bf62b7df';
+import {sampleLogistics,LOGISTICS_GEOMETRY,WAREHOUSE_WORKER_ID} from './logistics.js?v=307311a1019b';
+import {compilePlantLayout,shortestAngle} from './plant-layout.js?v=307311a1019b';
 const PI=Math.PI, clamp=x=>Math.max(0,Math.min(1,x)), smooth=x=>{x=clamp(x);return x*x*(3-2*x)}, lerp=(a,b,u)=>a+(b-a)*u, mix=(a,b,u)=>a.map((v,i)=>lerp(v,b[i],u));
 const distance=(a,b)=>Math.hypot(b[0]-a[0],b[2]-a[2]), forward=h=>[Math.sin(h),0,Math.cos(h)];
 const offset=(p,v,amount=1)=>p.map((x,i)=>x+v[i]*amount);

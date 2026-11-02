@@ -19,3 +19,81 @@ availability（uptime）= 班內未故障秒／排班秒；utilization = 班內�
 滾筒供料：可選 `conveyor.enabled`，與 AMR 互斥。外部有限存貨依 inletSeconds 入空首區；每區單件，以 length/speed 曆時運行、班外暫停，運行完成但無下區空位或首站緩衝時保留原件並計 blocked。區域完成／下游釋位同刻由引擎 settle 下游優先交接。出輸送末區才建立生產 job，因此 production conservation 不含輸送件；獨立 conveyor ledger 包含 source/conveyor/productionWIP/finished。觀察期輸送 WIP 與區域狀態積分只覆蓋 (warmup,horizon]，期末件不強制清空。`visible` 僅影響渲染，不能改事件與產出。未設輸送故障、滑移、載荷力學、PLC 或任意路由；首站內部轉運是抽象交接。
 
 人工板車 `manualCart.enabled`：同時只能選 AMR／滾筒／板車之一；單車容量1、實體收料口1，工站既有邏輯buffer未改。實際首站 roster 人員從接任到回到原站位整趟保留（含抓放、推行、倒退牽回及班外暫停）；加工配置不得再次分配此 ID。來源有限，裝車才從來源提交車載，卸料完成才投產；收料口非空不派新趟以免單人自等待死鎖。跨班保存動作phaseU與料件，人員仍保留，恢復後續做。WIP積分及用工秒只覆蓋觀察窗，總推行／等候秒另標0–horizon。車上 WIP不混入原生產WIP；若已卸料但尚未加工，實體料台顯示同一件而非車上複製。
+
+## Wheel subassembly slice (unapproved demo)
+
+`wheelAssembly.enabled` adds finite, individually identified prebuilt bare-wheel,
+inner-tube and outer-tire stock. The bare-wheel SKU already includes hub, spokes
+and rim tape: this slice does not build a wheel from a bare rim. A kit atomically
+holds one of each SKU when the existing first-station input capacity accepts it.
+The five ordered `processKind` roles belong to one configured station; removing
+that station or breaking role order rejects simulation instead of dropping BOM
+relationships. Existing station machines, seconds, labor, faults and shifts apply.
+
+At the inspection role, three input IDs become embodied in a new `wheel:unit:N`
+identity with parent genealogy. Default quality is Hold. Explicit demo Pass/Fail
+are scenario assumptions, never measured pressure/leak/fit evidence. Hold/Fail
+occupy a finite quarantine buffer and cannot proceed or count as good output;
+when this buffer is full the completed gate machine remains blocked. Scrap,
+repair and rework routes are not implemented. Per-SKU inventory obeys initial =
+available + held + embodied; original job conservation counts assembly-equivalent
+orders. Raw-part time-weighted WIP (parts) and formed subassembly WIP (assemblies)
+are reported separately and must not be summed without unit conversion.
+
+This slice temporarily excludes all four optional logistics supply modes. It does
+not silently substitute a three-part kit for a prior generic transport box. Input
+staging and station handoffs are discrete events, without walking/picking motion.
+Original procedural wheel meshes use U1 dimensional research as reference only;
+no Nevo original mesh is loaded. The independent tire/tube rigid positioning,
+actual rim valve opening and concentric final placement are geometric schematics,
+not elastic bead insertion, inflation, collision or manufacturing approval.
+
+UI: add the wheel station, edit its five ordinary subprocess rows, edit finite
+stock and quality scenario, then rerun. All edits/undo/import invalidate old
+results. Phase buttons sample actual processing segments; animation pauses across
+shifts/faults. Part IDs remain selectable before and after merge. JSON preserves
+recipe settings and station/operation IDs. The fork steerer-cut slice is not yet
+implemented in this checkpoint.
+
+## Steerer-cut workpiece slice (unapproved demo)
+
+`steererCut` is an independent finite-input material runtime sharing the existing
+station queues, machine pools, named workers, failure/repair, shifts, quarantine
+and job-conservation mechanisms with wheel assembly. The two material slices and
+four logistics modes are mutually exclusive in this first bounded implementation.
+Input is an original independent hollow steerer blank, not a complete fork or the
+old Nevo crown collar. Its original ID is preserved in genealogy; cutting produces
+a new retained-workpiece version and a separately identified offcut. The offcut
+stays in the station scrap staging area, not attached to the finished workpiece.
+Cut-input length = retained length + offcut length + kerf loss (all millimeters).
+Kerf is a length equivalent, not simulated chips or dust. Offcut reuse is absent.
+
+The mandatory ordered roles are identify, cut, end finish, and dimension gate.
+Aluminium and carbon require distinct tooling codes and produce distinct finish
+events. Tool suitability, dust extraction, clamping damage and real machining
+physics are not verified. All lengths, tolerance, tooling and times are explicitly
+editable demo assumptions, with no universal manufacturer cut length or headset
+preload gap. Material or recipe geometry edits clear the form's lock; a new lock
+is required before rerun. Each released input freezes settings plus operation
+configuration in its recipe snapshot. An imported configuration is still validated.
+
+Measurement defaults to unknown/null and Hold. Even explicit demo-release cannot
+release an unknown value. A measured value outside the demo target tolerance gives
+Fail; within tolerance remains Hold unless demo-release was explicitly selected.
+Demo-release does not assert engineering approval. No actual measuring instrument,
+per-item measurement distribution, manufacturer acceptance, rework or scrap route
+is modeled. One entered measurement scenario applies to all pieces in the run.
+Quality Hold/Fail use the finite quarantine mechanism and remain WIP. Raw blank WIP
+and cut-workpiece WIP are separately time integrated; side-product IDs/lengths do
+not inflate good-output count. Station handoffs and offcut staging are discrete
+abstract events. A rigid blade-progress schematic follows actual active processing
+segments; it is not cutting-force, collision, dust or human contact simulation.
+
+Steerer QA corrections: focus bounds use only visible geometry. Original blank
+IDs always resolve to the active retained workpiece group; offcut IDs resolve
+only after their separate mesh is visible. Whole-slice focus is distinct from
+per-piece focus. Editing any field of the selected steerer station or its
+operations, including seconds/tool name/process role/machine count/labor/failure
+parameters or structural order, clears the recipe lock and invalidates results.
+Relock is required before rerun; retained demonstration measurement inputs remain
+scenario values and are not evidence of a new physical measurement.

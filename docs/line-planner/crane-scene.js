@@ -1,7 +1,7 @@
 import * as THREE from './vendor/three.module.js';
 import {GLTFLoader} from './vendor/addons/loaders/GLTFLoader.js';
-import {createCraneController} from './assets/original/crane-v2/controller.mjs?v=a523bf62b7df';
-import {compileCrane,sampleCrane,CRANE_ID} from './crane.js?v=a523bf62b7df';
+import {createCraneController} from './assets/original/crane-v2/controller.mjs?v=307311a1019b';
+import {compileCrane,sampleCrane,CRANE_ID} from './crane.js?v=307311a1019b';
 // Visual resources never allocate production capacity. The DES owns every material.
 export function createCraneScene({loader=new GLTFLoader(),onChange=()=>{}}={}){
  const root=new THREE.Group();root.name=CRANE_ID;root.visible=false;

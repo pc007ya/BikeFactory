@@ -181,8 +181,15 @@ export function createSceneModel() {
       b.box([.23,.17,.1],[0,1.65,.05],'lightPaint',true);
     }else b.box([.78,.48,.6],[0,1.3,0],'lightPaint',true);
   }
+  function wheel(b){
+    // Original demonstrator support bench; no mounted bicycle/frame decoration.
+    for(const x of[-.76,.76])for(const z of[-.36,1.04]){b.box([.065,1.04,.065],[x,.52,z],'brushed');b.cylinder(.055,.04,[x,.02,z],'rubber');}
+    b.box([1.72,.07,1.7],[0,1.065,.34],'metal',true);b.box([.24,.028,.24],[0,1.1,0],'rubber',true);b.cylinder(.012,.09,[0,1.155,0],'brushed');
+    b.box([1.55,.045,.12],[0,.78,-.42],'paint',true);
+  }
+  function steerer(b){table(b);b.box([.75,.018,.35],[.05,1.055,0],'rubber',true);b.box([.18,.08,.13],[-.47,1.09,-.32],'paint',true);}
   function category(station,operation){
-    if(['prep','assembly','qc','generic'].includes(operation.visualType))return operation.visualType;
+    if(['prep','assembly','qc','generic','wheel','steerer'].includes(operation.visualType))return operation.visualType;
     const resolve=value=>{
       const label=String(value||'').toLowerCase();
       if(/品管|檢測|檢查|量測|檢驗|inspect|quality|\bqc\b|gauge|roller/.test(label))return 'qc';
@@ -222,7 +229,7 @@ export function createSceneModel() {
           const status=!metrics?'pending':metrics.down>metrics.busy?'fault-dominant':metrics.blocked>metrics.busy?'blocked-dominant':'available-summary';
           const machine=new THREE.Group();machine.name=machineId;machine.position.set(...position);machine.userData={...metadata,role:'logical-machine',selected:false,status};group.add(machine);
           const visual=new THREE.Group();visual.name=`visual:${resolvedCategory}`;visual.userData={role:'visual',category:resolvedCategory,detailLevel};machine.add(visual);
-          const parts=builder();if(detailLevel==='compact')compact(parts,resolvedCategory);else ({assembly,prep,qc,generic}[resolvedCategory])(parts);
+          const parts=builder();if(detailLevel==='compact')compact(parts,resolvedCategory);else ({assembly,prep,qc,generic,wheel,steerer}[resolvedCategory])(parts);
           // Tower lamp is the only KPI-colored component. It is an observation
           // summary, never presented as the live instantaneous machine state.
           parts.tube([-.6,.23,-.42],[-.6,1.93,-.42],.018,'brushed');

@@ -1,6 +1,6 @@
 import * as THREE from './vendor/three.module.js';
 import {GLTFLoader} from './vendor/addons/loaders/GLTFLoader.js';
-import {compileConveyor,sampleConveyor,conveyorPoint} from './conveyor.js?v=a523bf62b7df';
+import {compileConveyor,sampleConveyor,conveyorPoint} from './conveyor.js?v=307311a1019b';
 // Derive the physical axle from ORIGINAL GLB vertex extents. The v2 exported
 // evaluation track uses -Z for both models, but a05's cylinder is long in X.
 // Playing that a05 track would tumble the roller. Preserve provenance, correct

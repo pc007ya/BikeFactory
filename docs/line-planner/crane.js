@@ -1,4 +1,4 @@
-import {compilePlantLayout} from './plant-layout.js?v=a523bf62b7df';
+import {compilePlantLayout} from './plant-layout.js?v=307311a1019b';
 export const CRANE_ID='original:crane:1';
 export function defaultCrane(){return {enabled:false,maxItems:6,bridgeMps:.6,trolleyMps:.4,hoistMps:.3,attachSeconds:8,detachSeconds:8,operators:1}}
 export function compileCrane(c){const settings={...defaultCrane(),...c.crane},l=compilePlantLayout(c),s=l.stations[0];return {enabled:settings.enabled,settings,craneId:CRANE_ID,stationId:s.stationId,operationId:c.stations[0].operations[0].id,origin:[s.position[0]-.5,0,-.25],source:{bridge:3.4,trolley:-2.2,hook:1.5},destination:{bridge:-(l.dock[2]+.25),trolley:.5,hook:1.5},clearance:4.5,deckY:.71,capacity:1,notice:'原創天車v2；獨立倉儲暫存台→首站單件交接台。單台吊機／一名獨立操作員整趟互斥，未建模人物掛鉤、吊載擺動、碰撞或工程安全。'}}

@@ -121,3 +121,23 @@ Chrome 開啟 `http://127.0.0.1:8876/`。或從 repo 根目錄的靜態 server �
 主表單另設「原創天車 v2」面板，與 NVIDIA 資產標示分開。四種供料模式互斥；同配置驅動參數、機台數、天車3D與DES，改值／換序／撤銷／匯入均使舊結果失效。單台天車、單件吊載及一名獨立邏輯操作員，只涵蓋倉儲暫存台至首站緩衝；未動畫人物掛鉤。期末台帳與重播時刻分開，提供起吊、橫移、落料、返回與堵塞階段定位。來源與原始控制文件保留於 assets/original/crane-v2；模型是本專案原創，非 NVIDIA。
 
 固定8m跨距與六柱腳保守包圍盒會拒絕重疊機台／倉儲的配置，並非所有大型產線都適用。原點為首站中心左移0.5m，避開預設貨架，小車目的位移相應補償。吊鉤／雙繩／吊載接點沿原控制介面；未建模載重、擺動、碰撞或工程安全。獨立首輪404e2a7頁面快照保持不變，主入口另版驗收，不以該頁通過取代主入口測試。
+
+### Wheel subassembly checkpoint
+
+The main form now offers `＋ 新增輪組次組裝工站`. Its original independent bare-wheel,
+inner-tube and tire meshes follow finite BOM and actual subprocess events, with
+new output identity and default quality Hold. See ENGINE.md for units, finite
+quarantine semantics and unsupported operations. The Nevo U1 model itself is not
+included: dimensions are referenced from the user's Library research handoff
+`自行車流水線設計與資產盤點_v1.0_20261102.md`. This is an unapproved demo recipe;
+fit codes and cycle times are editable scenario inputs, not factory specifications.
+It is separate from the four logistics slices and has no elastic tire physics.
+
+### Steerer-cut checkpoint
+
+The main form offers `＋ 新增舵管裁切工站`, finite original hollow-tube blanks,
+material-specific demo tooling, recipe lock, retained/offcut geometry and length
+ledger, end-finish events and a dimension gate. Unknown measurement defaults to
+Hold. No complete fork or native Nevo steerer is supplied; no manufacturer's cut
+length, tolerance, tooling approval or engineering safety is implied. See ENGINE.md
+for exact runtime semantics and intentionally unsupported physical processes.
