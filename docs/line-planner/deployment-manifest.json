@@ -1,25 +1,45 @@
 {
   "schema": 1,
   "generatedBy": "BikeFactory line-planner static build",
-  "sourceCommit": "307311a1019b62cadf0a03d5eac12e60851395e2",
-  "generatedAt": "2026-11-02T10:15:29.919Z",
-  "buildId": "c7671e8f68c96c4e8a47",
+  "sourceCommit": "d8f8dc727047a579d31ad97a4c3d74f67758f454",
+  "generatedAt": "2026-11-22T01:24:19.361730+00:00",
+  "buildId": "04479a159eac2274fdf3",
   "entrypoint": "index.html",
   "files": [
     {
-      "path": "app.js",
-      "bytes": 62692,
-      "sha256": "3ef9a7b42fb813d62d76c1f49472371ba1e20f82c4e43ee1d0b297f1109e29c5"
-    },
-    {
-      "path": "asset-framing.js",
-      "bytes": 893,
-      "sha256": "258e771a95e5e76d21437cb4335a6934b4d98a47c3a215711d29f63a4ac02368"
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "path": "ASSET-SOURCES.md",
       "bytes": 6193,
       "sha256": "d80f31f09f1dacca2fb37818fbcd0ee9e3d87506c39ec86084442b6db1dec0f4"
+    },
+    {
+      "path": "ENGINE.md",
+      "bytes": 10375,
+      "sha256": "f9c26c67247c0f9fa1eee979f3869f240e9800fda6f555fedb4cf774c2819c53"
+    },
+    {
+      "path": "MIGRATION-R187.md",
+      "bytes": 6479,
+      "sha256": "c0c2d5c381da23bfe02fd8552b4512b04a7fd754907afc86df554206ded9818c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 22429,
+      "sha256": "e0f8246c7adb4813c5a2a858fe40e9ccba6e515a6689c38beabbecf96906a886"
+    },
+    {
+      "path": "app.js",
+      "bytes": 63454,
+      "sha256": "f366816ca4f01f713bc9e77e20a1bcf6783b17c6a1546ee4f57ebf99fef8e9d4"
+    },
+    {
+      "path": "asset-framing.js",
+      "bytes": 893,
+      "sha256": "258e771a95e5e76d21437cb4335a6934b4d98a47c3a215711d29f63a4ac02368"
     },
     {
       "path": "assets/nvidia/industrial/interfaces/cart-application-interface.json",
@@ -117,6 +137,11 @@
       "sha256": "962f762c90655546183693b2dc23fc9c231560f24f23e6dd685f28b4dbb7dc44"
     },
     {
+      "path": "assets/original/crane-v2/README-v2.md",
+      "bytes": 4279,
+      "sha256": "12db65f5c59596f5a6f791a257490861ec60251289ae9482e4110fd8108e3aaa"
+    },
+    {
       "path": "assets/original/crane-v2/build-report.json",
       "bytes": 733,
       "sha256": "a1184f945742e3390d66faeba7194bcfe254d7f1aecc70d9d4f622eef3ef214e"
@@ -145,11 +170,6 @@
       "path": "assets/original/crane-v2/r187-validation-v2.json",
       "bytes": 2622,
       "sha256": "65bf782616766368affb5cf7fb9aabbb36949604ed069bc97a79285ffc7c96ee"
-    },
-    {
-      "path": "assets/original/crane-v2/README-v2.md",
-      "bytes": 4279,
-      "sha256": "12db65f5c59596f5a6f791a257490861ec60251289ae9482e4110fd8108e3aaa"
     },
     {
       "path": "cart-datums.js",
@@ -207,9 +227,34 @@
       "sha256": "35ca5cd3ef7b891b829e4295ae2d177e7d2633a095563fb659bb842761418e08"
     },
     {
-      "path": "ENGINE.md",
-      "bytes": 10375,
-      "sha256": "f9c26c67247c0f9fa1eee979f3869f240e9800fda6f555fedb4cf774c2819c53"
+      "path": "fatigue-data.js",
+      "bytes": 1676,
+      "sha256": "a38f76210c09c770041d1d01d92bb1e431f99cc06aa15d18a72ab66fdc709bc0"
+    },
+    {
+      "path": "fatigue-machine.js",
+      "bytes": 2664,
+      "sha256": "aa93fa168286385d13ebf1f4cefe502e928a95ad5a63faf7b3de23bd66598d98"
+    },
+    {
+      "path": "fatigue-rig.js",
+      "bytes": 3020,
+      "sha256": "b277c45435a11bf3c8cb51252a5e0cded8781f847b29e2d5bf4bf621c20efbff"
+    },
+    {
+      "path": "fatigue.css",
+      "bytes": 2950,
+      "sha256": "f78521195d514a787d75f80140673938f1fc944b0ce3e0f5a7af20a8f332e12a"
+    },
+    {
+      "path": "fatigue.html",
+      "bytes": 2860,
+      "sha256": "64cfef7ecb5de2430598e33cc83af8e4efaa976a89b515df7033632a0ec4aebc"
+    },
+    {
+      "path": "fatigue.js",
+      "bytes": 7664,
+      "sha256": "89433b038956cb088552c16120cdb4846964149a83ef75fb10e5e834c5065393"
     },
     {
       "path": "handling-motion.js",
@@ -223,8 +268,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 12758,
-      "sha256": "6f41ad4b3f10161f6b268dcf7bb38e346825c853357378554d2e581b696d0cb3"
+      "bytes": 13032,
+      "sha256": "17591fc28c8e6a36c8027ed16d986dc213f286032c86e174541d7ac8055d3283"
     },
     {
       "path": "industrial-assets.js",
@@ -242,11 +287,6 @@
       "sha256": "3dd2babd0071de2019bbaf23c0e234b5f81e1e3fb3966869c9f797b95096d116"
     },
     {
-      "path": "MIGRATION-R187.md",
-      "bytes": 6479,
-      "sha256": "c0c2d5c381da23bfe02fd8552b4512b04a7fd754907afc86df554206ded9818c"
-    },
-    {
       "path": "nvidia-assets.js",
       "bytes": 27060,
       "sha256": "bec44fb0edc1dbb69029225fbda80250fe422428f6aaddd4465f16fc5cb5b0cc"
@@ -262,24 +302,19 @@
       "sha256": "502d61abe2796826b868ccb7c05100435760fce8136df8a9d38763d185b75985"
     },
     {
-      "path": "README.md",
-      "bytes": 22429,
-      "sha256": "e0f8246c7adb4813c5a2a858fe40e9ccba6e515a6689c38beabbecf96906a886"
-    },
-    {
       "path": "scene-model.js",
-      "bytes": 20239,
-      "sha256": "13eb13e4c4940cb0641b79a9a1cc0429e11ae4d4c9afbc467b89384cc6c76726"
+      "bytes": 21097,
+      "sha256": "66ab768c2d029dfe807727eba25690ca70d40ed62745cf8f265fba1e42bfdc18"
     },
     {
       "path": "scene.js",
-      "bytes": 33265,
-      "sha256": "dd88b7968ff39b0032662b814fde5c57a58bb5113fb898e80ee1d69e34069987"
+      "bytes": 33261,
+      "sha256": "ed5133b2c265f118296cd8b8a924ff3c1b4c5cc7db7b977a1f03eb8ab90d9e1d"
     },
     {
       "path": "simulation.js",
-      "bytes": 17892,
-      "sha256": "638ca529464c0d75d6d65eb10674677b8477c28de85e7268ef988e178642545b"
+      "bytes": 17910,
+      "sha256": "076bc3992f76e3ae597b9b4df38dc5143f965e78fa66ef6dd1c7dbe037919589"
     },
     {
       "path": "steerer-cut.js",
@@ -307,6 +342,16 @@
       "sha256": "8d6075b4c5ec30c8af8d2e287b7b1737f491a52eafb94b12208776f0ddcbb1b9"
     },
     {
+      "path": "vendor/README.txt",
+      "bytes": 907,
+      "sha256": "44b8ca64df48451cc73b7eb07254eac53843da7c4460649314a8f00e347a4742"
+    },
+    {
+      "path": "vendor/THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
       "path": "vendor/addons/loaders/GLTFLoader.js",
       "bytes": 119877,
       "sha256": "eedeafc3e90a360570045e72005333a2abde65f96bc332be1b05a19d0241460d"
@@ -325,16 +370,6 @@
       "path": "vendor/manifest.json",
       "bytes": 1079,
       "sha256": "a5de24eebc468a0e53b229d143c49e43b624e5b2623d3389fc31bc9ac9807d6c"
-    },
-    {
-      "path": "vendor/README.txt",
-      "bytes": 907,
-      "sha256": "44b8ca64df48451cc73b7eb07254eac53843da7c4460649314a8f00e347a4742"
-    },
-    {
-      "path": "vendor/THREE-LICENSE.txt",
-      "bytes": 1081,
-      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
     },
     {
       "path": "vendor/three.core.js",
@@ -370,11 +405,6 @@
       "path": "wheel-scene.js",
       "bytes": 6170,
       "sha256": "c9446fe319d9dd69a3bbe14bdc29b3165bb31ea5f555dbf0e11325847b9fa969"
-    },
-    {
-      "path": ".nojekyll",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     }
   ]
 }
