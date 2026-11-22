@@ -3,8 +3,8 @@ import {defaultWheelAssembly,wheelSettings,makeWheelStation,WHEEL_ROLES,WHEEL_LA
 import {defaultCrane,CRANE_ID} from './crane.js?v=307311a1019b';
 import {defaultManualCart} from './manual-cart.js?v=307311a1019b';
 import {defaultConveyor} from './conveyor.js?v=307311a1019b';
-import {createPlannerScene} from './scene.js?v=307311a1019b';
-import {exampleConfig,validateConfig,simulate} from './simulation.js?v=307311a1019b';
+import {createPlannerScene} from './scene.js?v=fatigue1';
+import {exampleConfig,validateConfig,simulate} from './simulation.js?v=fatigue1';
 import {defaultLogistics} from './logistics.js?v=307311a1019b';
 const $=s=>document.querySelector(s), copy=x=>structuredClone(x), esc=x=>String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let steererRenderedResult=null,steererRenderedRevision=-1;
@@ -20,7 +20,7 @@ const status=s=>$('#status').textContent=s;
 function invalidate(){stopReplay();replaySeconds=0;dirty=true;result=null;$('#scene-performance').textContent='配置變更，需重新量測畫面。';if(sceneView)syncScene();$('#results').innerHTML='<div class="notice">配置已變更，舊結果已隱藏。請重新模擬。</div>';}
 function remember(){stopReplay();replaySeconds=0;result=null;history.push(copy(config));if(history.length>50)history.shift();revision++;dirty=true; if(result)$('#results').innerHTML='<div class="notice">配置已變更，舊結果已隱藏。請重新模擬。</div>'; $('#revision').textContent=`v1 · 修訂 ${revision} · 待重算`;}
 function input(label,key,value,type='number',extra=''){return `<label>${label}<input data-key="${key}" type="${type}" value="${esc(value)}" ${extra}></label>`}
-function visualSelect(o){return `<label>3D 造型<select data-key="visualType">${[['auto','自動辨識'],['prep','備料工作台'],['assembly','裝配治具'],['qc','檢測台'],['generic','通用設備'],['wheel','輪組治具台（示意）'],['steerer','舵管治具台（示意）']].map(([v,label])=>`<option value="${v}" ${(o.visualType||'auto')===v?'selected':''}>${label}</option>`).join('')}</select></label>`;}
+function visualSelect(o){return `<label>3D 造型<select data-key="visualType">${[['auto','自動辨識'],['prep','備料工作台'],['assembly','裝配治具'],['qc','檢測台'],['generic','通用設備'],['wheel','輪組治具台（示意）'],['steerer','舵管治具台（示意）'],['fatigue','水平力疲勞試驗台']].map(([v,label])=>`<option value="${v}" ${(o.visualType||'auto')===v?'selected':''}>${label}</option>`).join('')}</select></label>`;}
 function processSelect(o){return `<label>子工序製程角色<select data-key="processKind">${[['generic','一般工序'],...WHEEL_ROLES.map(k=>[k,WHEEL_LABELS[k]]),...STEERER_ROLES.map(k=>[k,STEERER_LABELS[k]])].map(([k,v])=>`<option value="${k}" ${(o.processKind||'generic')===k?'selected':''}>${esc(v)}</option>`).join('')}</select></label>`;}
 function render(){
  renderLogisticsConditions();renderConveyorConditions();renderCartConditions();renderCraneConditions();renderWheelConditions();renderSteererConditions();
@@ -76,6 +76,8 @@ function syncScene(){
  updateInspector();renderAssets();
 }
 function updateInspector(){
+ const chosen=config.stations.find(s=>s.id===selected?.stationId)?.operations.find(o=>o.id===selected?.operationId);
+ $('#inspect-fatigue').hidden=chosen?.visualType!=='fatigue';
  if(dirty){$('#scene-selection').textContent='配置已變更，機台 KPI 待重新模擬。';return;}
  if(!selected?.machineId){$('#scene-selection').textContent='選取機台以檢視工序與工時；其他資產已選取時不保留舊機台 KPI。';return;}
  const s=config.stations.find(s=>s.id===selected.stationId),o=s?.operations.find(o=>o.id===selected.operationId),m=(!dirty?result:null)?.stations.find(x=>x.id===s?.id)?.machines.find(x=>x.id===selected.machineId);
@@ -182,6 +184,17 @@ function unlockSteererRecipe(){if(!config.steererCut)return;config.steererCut.re
 function disableSteerer(){if(config.steererCut)config.steererCut.enabled=false;$('#enable-steerer').checked=false;}
 function renderSteererConditions(){const p=steererSettings(config);$('#enable-steerer').checked=p.enabled;const select=(key,label,values)=>`<label>${label}<select data-steerer-key="${key}">${values.map(([v,t])=>`<option value="${v}" ${p[key]===v?'selected':''}>${esc(t)}</option>`).join('')}</select></label>`;$('#steerer-conditions').innerHTML=`<label>配方工站<select data-steerer-key="stationId"><option value="">選擇工站</option>${config.stations.map(s=>`<option value="${esc(s.id)}" ${p.stationId===s.id?'selected':''}>${esc(s.name)}</option>`).join('')}</select></label>`+select('material','材料分支',[['aluminium','鋁舵管示範'],['carbon','碳舵管示範（獨立工具／端面處理）']])+[['quantity','需求（件）',1,20],['stock','原料庫存（件）',0,100],['holdCapacity','隔離容量（件）',1,20],['originalLengthMm','切前長度（mm；示範）',50,1000],['targetLengthMm','切後目標（mm；示範）',20,999],['kerfMm','鋸縫（mm；示範）',.1,10],['toleranceMm','量測公差（mm；示範）',.01,10],['measuredLengthMm','模擬量測值（mm；空白未知）',.01,1000],['outerDiameterMm','外徑（mm；示意）',10,60],['wallMm','管壁（mm；示意）',.5,8]].map(([key,label,min,max])=>`<label>${label}<input data-steerer-key="${key}" type="number" step="any" value="${p[key]??''}" min="${min}" max="${max}"></label>`).join('')+`<label>示範配方版本<input data-steerer-key="recipeVersion" type="text" value="${esc(p.recipeVersion)}"></label><label><input data-steerer-key="recipeLocked" type="checkbox" ${p.recipeLocked?'checked':''}>鎖定本次示範配方（修改仍須重算）</label>`+select('qualityMode','品質情境',[['hold','預設Hold（未知原廠規範）'],['demo-release','量測在示範範圍內才示範放行']]);}
 function renderSteerer(snap){const a=snap?.steererCut,r=!dirty?result?.steererCut:null;$('#steerer-status').textContent=!config.steererCut?.enabled?'舵管切片關閉；不執行工件轉換。':r?`${r.formed}件已裁切／${r.passed}示範放行／${r.held}Hold／${r.failed}Fail · ${esc(r.settings.material)}／${esc(r.settings.tooling)}`:`配置待重算，舊裁切與量測結果已隱藏。${steererSettings(config).recipeLocked?'示範配方已鎖定':'配方已變更，須重新勾選鎖定'} · ${steererSettings(config).material}／${steererSettings(config).tooling}`;$('#steerer-focus').disabled=!a?.enabled;for(const b of document.querySelectorAll?.('[data-steerer-jump]')||[])b.disabled=!r;$('#steerer-debug').textContent=JSON.stringify({scene:a,ledger:r?.ledger,units:r?.units,events:r?.events},null,2);if(steererRenderedResult===r&&steererRenderedRevision===revision)return;steererRenderedResult=r;steererRenderedRevision=revision;if(!r){$('#steerer-results').innerHTML='';return;}const l=r.ledger;$('#steerer-results').innerHTML=`<h3>舵管期末台帳（非重播時刻）</h3><p>原料 ${l.initial} = 可用${l.available}＋在製${l.held}＋已轉換${l.transformed}件；守恆 ${r.conserved?'通過':'失敗'}。${r.shortage?'缺料，未滿足需求。':''}</p><p>已切工件總長 ${n(l.cutInputLengthMm,3)}mm = 保留 ${n(l.retainedLengthMm,3)}＋餘料 ${n(l.offcutLengthMm,3)}＋鋸縫損耗 ${n(l.kerfLengthMm,3)}mm。損耗為長度當量，未模擬切屑。</p><p>觀察 ${n(result.warmupSeconds)}–${n(result.horizonSeconds)}秒，原料均WIP ${n(r.rawPartWip,3)}件，切後均WIP ${n(r.subassemblyWip,3)}件；完工 ${r.finished}件。</p><table><tr><th>原工件ID → 新版本ID</th><th>餘料ID</th><th>示範量測／品質</th></tr>${r.units.map(u=>`<tr><td>${esc(u.inputId)} → ${esc(u.outputId||'未切')}</td><td>${esc(u.offcutId||'未形成')}</td><td>${esc(u.dimension)}／${esc(u.quality||'未量測')}</td></tr>`).join('')}</table><p class="hint">${esc(r.notice)}</p>`;}
+$('#add-fatigue').onclick=()=>{
+  remember();
+  const stationId=uid(),operationId=uid();
+  config.stations.push({id:stationId,name:'車架水平力疲勞試驗',workers:1,buffer:2,operations:[
+    {id:operationId,name:'水平推拉 · 示範批次',visualType:'fatigue',machineType:'水平力試驗台',
+      machines:1,seconds:20,labor:1,mtbf:0,mttr:0}
+  ]});
+  render();
+  selectEntity({stationId,operationId,machineId:operationId+':1'},false,true);
+  status('已加入試驗台。排程以每件 20 秒示範，台架面板可另行操作。');
+};
 $('#add-steerer-station').onclick=()=>{remember();const id=uid();config.stations.unshift(makeSteererStation(id,STEERER_ROLES.map(()=>uid())));config.steererCut={...defaultSteererCut(),enabled:true,stationId:id};disableTransportForWheel();if(config.wheelAssembly)config.wheelAssembly.enabled=false;$('#enable-wheel').checked=false;render();status('已新增舵管示範工站；未知量測預設Hold，須重新模擬。');};
 $('#steerer-focus').onclick=()=>selectAsset({steererView:true});
 document.addEventListener('click',e=>{const role=e.target.dataset.steererJump;if(!role||dirty||!result?.steererCut)return;const u=result.steererCut.units[0];if(!u)return;const segment=u.segments.find(s=>s.role===role),event=u.timeline.find(s=>s.phase===role),time=segment?(segment.start+segment.end)/2:event?.time;if(time===undefined)return;stopReplay();setReplay(time);selectAsset({steererId:u.inputId});});

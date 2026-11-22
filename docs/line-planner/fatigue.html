@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>水平力疲勞試驗台 · BikeFactory</title><link rel="stylesheet" href="fatigue.css"></head>
+<body><header><a href="./index.html" id="back">← 產線規劃實驗室</a><span>BikeFactory　/　車架試驗室</span></header>
+<main><div class="title"><div><h1>水平力疲勞試驗台</h1><p id="specimen">BikeFactory 組裝站車架 · 水平推拉</p></div><strong id="source">模擬訊號</strong></div>
+<div class="workspace"><section class="visual"><div class="scene" id="scene"><div class="views"><button id="operator">操作員視角</button><button id="side">側視</button></div><div class="legend"><i></i> 施力方向　<span id="scaleText">位移顯示 ×10</span></div></div>
+<div class="actions"><button id="play" class="primary">開始試驗</button><button id="peak">停在最大推力</button><button id="reset">歸零</button><output id="state" role="status">待機</output></div>
+<p class="hint">拖曳旋轉、滾輪縮放。點選金色前軸可停在推力峰值。</p></section>
+<aside><h2>試驗讀值</h2><div class="metrics"><div>目標力 <small>N</small><b id="target">0</b></div><div>回授力 <small>N</small><b id="force">0</b></div><div>前軸位移 <small>mm</small><b id="disp">0.00</b></div><div>已完成循環<b id="count">0</b></div></div>
+<h2>模擬條件</h2><fieldset id="settings"><label>推拉振幅（N）<input id="amp" required type="number" min="10" max="1500" step="1" value="300"></label><label>頻率（Hz）<input id="freq" required type="number" min="0.1" max="5" step="0.1" value="1"></label><label>目標循環數<input id="limit" required type="number" min="1" max="10000" step="1" value="20"></label></fieldset>
+<p class="hint">示範假設等效剛度 200 N/mm。畫面放大軸向位移以辨認方向，讀值保留原單位。參數只供操作演練。</p></aside></div>
+<section class="record"><div><h2>力－位移曲線</h2><p class="hint"><span class="key early"></span>第一循環　<span class="key"></span>目前循環　<span id="clock">0.00 s</span></p><canvas id="chart" aria-label="力與位移對照圖"></canvas></div>
+<div class="data"><h2>試驗紀錄</h2><button id="save">匯出 CSV</button><label class="file">載入 CSV 回放<input id="file" type="file" accept=".csv,text/csv"></label><button id="demo" hidden>回到模擬</button><p class="hint">匯入依時間、已完成循環、目標力、回授力與位移回放。CSV 使用匯出檔的五個欄名。試驗合格與疲勞壽命須另以實機驗證。</p><label id="seekLabel" hidden>回放位置 <input id="seek" type="range" step="any"></label><output id="message" role="status"></output></div></section>
+</main><script type="module" src="fatigue.js"></script></body></html>

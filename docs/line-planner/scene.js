@@ -5,7 +5,7 @@ import {sampleCartHandling} from './cart-handling.js?v=307311a1019b';
 import {compileManualCart} from './manual-cart.js?v=307311a1019b';
 import {createConveyorScene} from './conveyor-scene.js?v=307311a1019b';
 import * as THREE from './vendor/three.module.js';
-import {createSceneModel} from './scene-model.js?v=307311a1019b';
+import {createSceneModel} from './scene-model.js?v=fatigue1';
 import {createNvidiaAssets} from './nvidia-assets.js?v=307311a1019b';
 import {createIndustrialAssets} from './industrial-assets.js?v=307311a1019b';
 import {compileLogistics,sampleLogistics} from './logistics.js?v=307311a1019b';

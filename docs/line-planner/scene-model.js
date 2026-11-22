@@ -1,3 +1,4 @@
+import {buildFatigueMachine} from './fatigue-machine.js';
 import * as THREE from './vendor/three.module.min.js';
 
 // The configuration owns logical machines. Their visual subtree is purely a
@@ -8,7 +9,7 @@ export function createSceneModel() {
   let inventory = { stations: [], machines: [], links: [] };
   let created = 0, disposed = 0, builds = 0, selected = null;
   const resources = new Set(), geometries = new Map(), materials = new Map();
-  const own = resource => { resources.add(resource); created++; return resource; };
+  const own = resource => { if(!resources.has(resource)){resources.add(resource);created++;} return resource; };
   const geometry = (key, build) => {
     if (!geometries.has(key)) geometries.set(key, own(build()));
     return geometries.get(key);
@@ -106,10 +107,11 @@ export function createSceneModel() {
     b.cylinder(.022,.02,[x-.065,y-.075,z+.073],'red',[Math.PI/2,0,0]);b.cylinder(.018,.02,[x+.025,y-.075,z+.073],'greenLamp',[Math.PI/2,0,0]);
     b.tube([x,y-.17,z],[x,.47,z],.009,'rubber');b.tube([x,.47,z],[.34,.35,0],.009,'rubber');
   }
-  function frame(b){
+  function frame(b, bare=false){
     const points={rear:[-.53,1.24,.04],bottom:[-.12,1.22,.04],seat:[-.23,1.73,.04],head:[.39,1.65,.04],fork:[.49,1.22,.04]};
     for(const [a,c] of [['rear','bottom'],['rear','seat'],['bottom','seat'],['seat','head'],['bottom','head']])b.tube(points[a],points[c],.023,'paint');
     b.tube([.39,1.72,.04],[.41,1.56,.04],.031,'brushed');b.tube([.41,1.57,.04],points.fork,.017,'metal');
+    if(bare)return;
     b.tube([-.23,1.7,.04],[-.25,1.83,.04],.016,'metal');b.box([.2,.035,.075],[-.26,1.84,.04],'rubber',true);
     b.tube([.39,1.73,.04],[.43,1.82,.04],.014,'metal');b.tube([.43,1.82,-.07],[.43,1.82,.16],.014,'rubber');
     for(const x of [-.53,-.12,.49]){b.box([.11,.08,.16],[x,1.1,.04],'safety',true);b.tube([x,1.055,.04],[x,1.22,.04],.025,'brushed');}
@@ -189,7 +191,7 @@ export function createSceneModel() {
   }
   function steerer(b){table(b);b.box([.75,.018,.35],[.05,1.055,0],'rubber',true);b.box([.18,.08,.13],[-.47,1.09,-.32],'paint',true);}
   function category(station,operation){
-    if(['prep','assembly','qc','generic','wheel','steerer'].includes(operation.visualType))return operation.visualType;
+    if(['prep','assembly','qc','generic','wheel','steerer','fatigue'].includes(operation.visualType))return operation.visualType;
     const resolve=value=>{
       const label=String(value||'').toLowerCase();
       if(/品管|檢測|檢查|量測|檢驗|inspect|quality|\bqc\b|gauge|roller/.test(label))return 'qc';
@@ -229,7 +231,17 @@ export function createSceneModel() {
           const status=!metrics?'pending':metrics.down>metrics.busy?'fault-dominant':metrics.blocked>metrics.busy?'blocked-dominant':'available-summary';
           const machine=new THREE.Group();machine.name=machineId;machine.position.set(...position);machine.userData={...metadata,role:'logical-machine',selected:false,status};group.add(machine);
           const visual=new THREE.Group();visual.name=`visual:${resolvedCategory}`;visual.userData={role:'visual',category:resolvedCategory,detailLevel};machine.add(visual);
-          const parts=builder();if(detailLevel==='compact')compact(parts,resolvedCategory);else ({assembly,prep,qc,generic,wheel,steerer}[resolvedCategory])(parts);
+          const parts=builder();if(resolvedCategory==='fatigue'){
+            const rig=buildFatigueMachine({fixturePart});
+            rig.root.scale.setScalar(.66);
+            rig.root.position.x=-.56;
+            rig.root.traverse(obj=>{
+              if(obj.geometry)own(obj.geometry);
+              if(obj.material)own(obj.material);
+              Object.assign(obj.userData,metadata);
+            });
+            visual.add(rig.root);
+          }else if(detailLevel==='compact')compact(parts,resolvedCategory);else ({assembly,prep,qc,generic,wheel,steerer}[resolvedCategory])(parts);
           // Tower lamp is the only KPI-colored component. It is an observation
           // summary, never presented as the live instantaneous machine state.
           parts.tube([-.6,.23,-.42],[-.6,1.93,-.42],.018,'brushed');
@@ -264,5 +276,13 @@ export function createSceneModel() {
     let meshCount=0,visibleMeshCount=0;root.traverse(object=>{if(object.isMesh){meshCount++;if(object.visible)visibleMeshCount++;}});
     return {...structuredClone(inventory),selected:selected?{...selected}:null,resources:{created,disposed,active:resources.size,cachedGeometries:geometries.size,ownedGeometries:[...resources].filter(r=>r.isBufferGeometry).length,materials:materials.size},builds,meshCount,visibleMeshCount};
   }
-  return {root,sync,select,snapshot,dispose(){clear();selected=null;}};
+  function fixturePart(kind) {
+    const group = new THREE.Group(), parts = builder();
+    if (kind === 'bench') table(parts);
+    else if (kind === 'specimen') frame(parts, true);
+    else throw new Error('Unknown fixture component');
+    parts.finish(group, {kind});
+    return group;
+  }
+  return {root,sync,select,snapshot,fixturePart,dispose(){clear();selected=null;}};
 }
